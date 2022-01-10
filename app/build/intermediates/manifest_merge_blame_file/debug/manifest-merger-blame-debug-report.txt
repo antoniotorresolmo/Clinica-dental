@@ -1,0 +1,87 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.clinicadental"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+8-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml
+10
+11    <application
+11-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:5:5-28:19
+12        android:allowBackup="true"
+12-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:6:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.7.0] C:\Users\Usuario\.gradle\caches\transforms-3\9339927e08badd09bc5459e4ba900d5f\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+14        android:debuggable="true"
+15        android:extractNativeLibs="false"
+16        android:icon="@mipmap/logo_round"
+16-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:7:9-42
+17        android:label="@string/app_name"
+17-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:8:9-41
+18        android:roundIcon="@mipmap/logo_round"
+18-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:9:9-47
+19        android:supportsRtl="true"
+19-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:10:9-35
+20        android:testOnly="true"
+21        android:theme="@style/Theme.ClinicaDental" >
+21-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:11:9-51
+22        <activity
+22-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:12:9-19:36
+23            android:name="com.example.clinicadental.views.BottomNav"
+23-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:13:13-44
+24            android:exported="true" >
+24-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:14:13-36
+25            <intent-filter>
+25-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:15:9-19:25
+26                <action android:name="android.intent.action.MAIN" />
+26-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:16:13-65
+26-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:16:21-62
+27
+28                <category android:name="android.intent.category.LAUNCHER" />
+28-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:18:13-73
+28-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:18:23-70
+29            </intent-filter>
+30        </activity>
+31        <activity
+31-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:20:9-23:20
+32            android:name="com.example.clinicadental.views.MainActivity"
+32-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:21:13-47
+33            android:exported="true" >
+33-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:22:13-36
+34        </activity>
+35
+36        <meta-data
+36-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:25:9-27:57
+37            android:name="preloaded_fonts"
+37-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:26:13-43
+38            android:resource="@array/preloaded_fonts" />
+38-->C:\Users\Usuario\Documents\GitHub\Clinica-dental\app\src\main\AndroidManifest.xml:27:13-54
+39
+40        <provider
+40-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+41            android:name="androidx.startup.InitializationProvider"
+41-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+42            android:authorities="com.example.clinicadental.androidx-startup"
+42-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+43            android:exported="false" >
+43-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+44            <meta-data
+44-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+45                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+45-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+46                android:value="androidx.startup" />
+46-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\09b79be83fba3907471fe1de63f439d3\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+47            <meta-data
+47-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\0e4a425e61d135d109d64d5f17d999df\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+48                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+48-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\0e4a425e61d135d109d64d5f17d999df\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+49                android:value="androidx.startup" />
+49-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Usuario\.gradle\caches\transforms-3\0e4a425e61d135d109d64d5f17d999df\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+50        </provider>
+51    </application>
+52
+53</manifest>

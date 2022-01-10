@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Clinica Dental</string>
+    <string name="nombre">Nombre</string>
+    <string name="password">Password</string>
+    <string name="recordar">Recordar password</string>
+    <string name="entrar">ENTRAR</string>
+    <string name="registrar">REGISTRAR</string>
+    <string name="lblTitulo">Los Chavales Dental</string>
+    <string name="itemInicio">Inicio</string>
+    <string name="itemRecetario">Recetario</string>
+    <string name="itemCogerCita">Coger cita</string>
+    <string name="itemContacta">Contacta</string>
+    <string name="itemPerfil">Perfil</string>
+    <string name="itemCerrarSesion">Cerrar sesión</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_inicio2">Inicio2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="Inicio">Inicio</string>
+    <string name="Perfil">Perfil</string>
+    <string name="CogerCita">Coger cita</string>
+    <string name="Recetario">Recetario</string>
+    <string name="Contacta">Contacta</string>
+    <string name="lblTituloInicio">Hola Nombre,</string>
+    <string name="lblTextoInicio">éstas son tus próximas citas:</string>
+    <string name="lblCitasInicio">No tienes citas en este momento</string>
+</resources>

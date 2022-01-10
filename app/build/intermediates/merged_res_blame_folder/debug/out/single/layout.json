@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_bottom_nav.xml",
+        "source": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\app\\src\\main\\res\\layout\\activity_bottom_nav.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_fr_inicio.xml",
+        "source": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\app\\src\\main\\res\\layout\\fragment_fr_inicio.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_fr_coger_cita.xml",
+        "source": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\app\\src\\main\\res\\layout\\fragment_fr_coger_cita.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\app\\src\\main\\res\\layout\\activity_main.xml"
+    }
+]

@@ -1,0 +1,19 @@
+com/example/clinicadental/BuildConfig.java
+ com.example.clinicadental.BuildConfig
+com/example/clinicadental/databinding/ActivityBottomNavBinding.java
+ com.example.clinicadental.databinding.ActivityBottomNavBinding
+com/example/clinicadental/views/MainActivity.java
+ com.example.clinicadental.views.MainActivity
+com/example/clinicadental/databinding/FragmentFrInicioBinding.java
+ com.example.clinicadental.databinding.FragmentFrInicioBinding
+com/example/clinicadental/views/BottomNav.java
+ com.example.clinicadental.views.BottomNav
+ com.example.clinicadental.views.BottomNav$1
+com/example/clinicadental/views/FrInicio.java
+ com.example.clinicadental.views.FrInicio
+com/example/clinicadental/databinding/FragmentFrCogerCitaBinding.java
+ com.example.clinicadental.databinding.FragmentFrCogerCitaBinding
+com/example/clinicadental/databinding/ActivityMainBinding.java
+ com.example.clinicadental.databinding.ActivityMainBinding
+com/example/clinicadental/views/FrCogerCita.java
+ com.example.clinicadental.views.FrCogerCita
