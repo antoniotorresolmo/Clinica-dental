@@ -1,6 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Vistas-Perfil</string>
     <!-- TODO: Remove or change this placeholder text -->
+
     <string name="txtUsuario">Usuario</string>
     <string name="txtContrasena">Contraseña</string>
     <string name="txtCorreo">Correo</string>

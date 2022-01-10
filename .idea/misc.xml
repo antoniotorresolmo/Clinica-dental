@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/app/src/main/res/drawable/redondeadoH.xml" value="0.11203703703703703" />
+        <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/app/src/main/res/drawable/redondeadoh.xml" value="0.1875" />
+        <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/app/src/main/res/font/quicksand.xml" value="0.11203703703703703" />
+        <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/app/src/main/res/layout-land/fragment_fr_perfil.xml" value="0.33" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/app/src/main/res/layout/activity_main.xml" value="0.17239583333333333" />
+        <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/app/src/main/res/layout/fragment_fr_perfil.xml" value="0.25" />
       </map>
     </option>
   </component>
