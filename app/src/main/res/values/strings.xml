@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Clinica Dental</string>
+    <string name="nombre">Nombre</string>
+    <string name="password">Password</string>
+    <string name="recordar">Recordar password</string>
+    <string name="entrar">ENTRAR</string>
+    <string name="registrar">REGISTRAR</string>
+</resources>
