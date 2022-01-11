@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Vistas-Perfil</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="txtUsuario">Usuario</string>
+    <string name="txtContrasena">Contraseña</string>
+    <string name="txtCorreo">Correo</string>
+    <string name="txtDireccion">Dirección</string>
+    <string name="txtTelefono">Teléfono</string>
+    <string name="txtCancelar">Cancelar</string>
+    <string name="txtRegistro">Registrarse</string>
+</resources>
