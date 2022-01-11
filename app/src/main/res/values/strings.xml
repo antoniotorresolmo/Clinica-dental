@@ -4,7 +4,7 @@
     <string name="txtUsuario">Usuario</string>
     <string name="txtContrasena">Contraseña</string>
     <string name="txtCorreo">Correo</string>
-    <string name="txtDireccion">Direccion</string>
-    <string name="txtTelefono">Telefono</string>
-    <string name="CerrarS">Cerrar Sesion > </string>
+    <string name="txtDireccion">Dirección</string>
+    <string name="txtTelefono">Teléfono</string>
+    <string name="CerrarS">Cerrar Sesión > </string>
 </resources>

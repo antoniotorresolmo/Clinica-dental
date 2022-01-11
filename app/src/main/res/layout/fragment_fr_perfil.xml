@@ -100,7 +100,7 @@
                     android:id="@+id/txtDireccion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Direccion"
+                    android:hint="@string/txtDireccion"
                     android:paddingStart="0dp"
                     android:textColor="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -118,7 +118,7 @@
                     android:id="@+id/txtTelefono"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Telefono"
+                    android:hint="@string/txtTelefono"
                     android:inputType="phone"
                     android:paddingStart="0dp"
                     android:textColor="@color/black" />
@@ -132,7 +132,7 @@
                 android:backgroundTint="@color/fondoBoton"
                 android:text="@string/CerrarS"
                 android:textAlignment="viewStart"
-                android:textColor="@color/design_default_color_error"
+                android:textColor="@color/cerrarSesion"
                 android:textStyle="bold"
                 app:cornerRadius="20dp"
                 app:rippleColor="#FFFFFF" />

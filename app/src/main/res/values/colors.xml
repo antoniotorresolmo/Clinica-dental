@@ -7,10 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
     <color name="Rosita">#e093a0</color>
     <color name="Azulito">#89CFF0</color>
-
     <color name="AzulFondo" />
     <color name="colorFondo">#2BA7B6</color>
     <color name="fondoBoton">#E3E3E3</color>
+    <color name="cerrarSesion">#b00020</color>
 </resources>
