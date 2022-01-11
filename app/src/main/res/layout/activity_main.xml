@@ -30,28 +30,36 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="10:00" />
+            android:backgroundTint="@color/primario"
+            android:text="10:00"
+            app:cornerRadius="30dp" />
 
         <Button
             android:id="@+id/btn2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="11:00" />
+            android:backgroundTint="@color/primario"
+            android:text="11:00"
+            app:cornerRadius="30dp" />
 
         <Button
             android:id="@+id/btn3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="12:00" />
+            android:backgroundTint="@color/primario"
+            android:text="12:00"
+            app:cornerRadius="30dp" />
 
         <Button
             android:id="@+id/btn4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="12:00" />
+            android:backgroundTint="@color/primario"
+            android:text="12:00"
+            app:cornerRadius="30dp" />
 
     </LinearLayout>
 
@@ -71,28 +79,36 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="13:00" />
+            android:backgroundTint="@color/primario"
+            android:text="13:00"
+            app:cornerRadius="30dp" />
 
         <Button
             android:id="@+id/btn6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="16:00" />
+            android:backgroundTint="@color/primario"
+            android:text="16:00"
+            app:cornerRadius="30dp" />
 
         <Button
             android:id="@+id/btn7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="17:00" />
+            android:backgroundTint="@color/primario"
+            android:text="17:00"
+            app:cornerRadius="30dp" />
 
         <Button
             android:id="@+id/btn8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="18:00" />
+            android:backgroundTint="@color/primario"
+            android:text="18:00"
+            app:cornerRadius="30dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
