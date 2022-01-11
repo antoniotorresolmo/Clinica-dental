@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Clinica Dental</string>
+    <string name="nombre">Nombre</string>
+    <string name="password">Password</string>
+    <string name="recordar">Recordar password</string>
+    <string name="entrar">ENTRAR</string>
+    <string name="registrar">REGISTRAR</string>
+    <string name="lblTitulo">Los Chavales Dental</string>
+    <string name="itemInicio">Inicio</string>
+    <string name="itemRecetario">Recetario</string>
+    <string name="itemCogerCita">Coger cita</string>
+    <string name="itemContacta">Contacta</string>
+    <string name="itemPerfil">Perfil</string>
+    <string name="itemCerrarSesion">Cerrar sesión</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_inicio2">Inicio2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="Inicio">Inicio</string>
+    <string name="Perfil">Perfil</string>
+    <string name="CogerCita">Coger cita</string>
+    <string name="Recetario">Recetario</string>
+    <string name="Contacta">Contacta</string>
+    <string name="lblTituloInicio">Hola Nombre,</string>
+    <string name="lblTextoInicio">éstas son tus próximas citas:</string>
+    <string name="lblCitasInicio">No tienes citas en este momento</string>
+    <string name="lblParrafo1Cont">En Los Chavales Dental encontrarás todos los beneficios de pertenecer a una clínica con la experiencia y el arraigo que conlleva estar atendiendo pacientes desde 2012. Para facilitarte la vida, ponemos a tu disposición la opción de financiación que necesites, así como diferentes promociones durante el año.</string>
+    <string name="lblSobreNosotrosCont">Sobre nosotros</string>
+    <string name="lblTratamientosCont">Nuestros tratamientos</string>
+    <string name="lblParafo2Cont">Somos una clínica dental multiespecialidad. Eso quiere decir que podemos hacer cualquier tratamiento odontológico: implantes, prótesis dentales, ortodoncia, periodoncia, endodoncia, estética dental y odontopediatría. Disponemos de teleradiografía, ortopantomografía, motor de endodoncia rotatoria y lámpara de blanqueamiento por láser. Además, podemos realizar cirugía maxilofacial y anestesia con sedación.</string>
+    <string name="lblUbicacionCont">Ubicación</string>
+    <string name="lblContactaCont">Contacta</string>
+</resources>

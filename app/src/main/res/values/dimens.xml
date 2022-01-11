@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="altoImagenInicio">100dp</dimen>
+    <dimen name="textSizeInicio">20sp</dimen>
+    <dimen name="textSizeTituloInicio">25sp</dimen>
+    <dimen name="textSizeLblCitasInicio">25sp</dimen>
+    <dimen name="textSizeLblTitulosCont">25sp</dimen>
+    <dimen name="altoMapaCont">300dp</dimen>
+</resources>
