@@ -1,0 +1,14 @@
+com/example/clinicadental/BuildConfig.java
+ com.example.clinicadental.BuildConfig
+com/example/clinicadental/FrContacta.java
+ com.example.clinicadental.FrContacta
+com/example/clinicadental/MainActivity.java
+ com.example.clinicadental.MainActivity
+com/example/clinicadental/FrInicio.java
+ com.example.clinicadental.FrInicio
+com/example/clinicadental/FrMapa.java
+ com.example.clinicadental.FrMapa
+ com.example.clinicadental.FrMapa$1
+com/example/clinicadental/BottomNav.java
+ com.example.clinicadental.BottomNav
+ com.example.clinicadental.BottomNav$1
