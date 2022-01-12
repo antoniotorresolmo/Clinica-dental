@@ -2,10 +2,10 @@ package model;
 
 public class Receta {
 	
-	private int id_Receta;
-	private String descripcion;
-	private Medico id_Medico;
-	private Paciente id_Paciente;
+	private int id_Receta; //PK
+	private String descripcion; //NN
+	private Medico id_Medico; //FK
+	private Paciente id_Paciente; //FK
 	
 	public Receta(int id_Receta) {
 		
