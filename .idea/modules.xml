@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FrCogerCita.iml" filepath="$PROJECT_DIR$/.idea/modules/FrCogerCita.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FrCogerCita.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FrCogerCita.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ModeloCita.iml" filepath="$PROJECT_DIR$/.idea/modules/ModeloCita.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ModeloCita.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ModeloCita.app.iml" />
     </modules>
   </component>
 </project>
