@@ -43,6 +43,43 @@
                     android:orientation="vertical">
 
                     <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtUsuarioRegistro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/Rosita"
+                        app:boxBackgroundColor="#FFFFFF"
+                        app:boxStrokeColor="@color/Rosita"
+                        app:hintTextColor="@color/Rosita">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtUsuario"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/txtUsuario"
+                            android:paddingStart="0dp"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtContraRegistro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/Rosita"
+                        app:boxBackgroundColor="#FFFFFF"
+                        app:boxStrokeColor="@color/Rosita"
+                        app:hintTextColor="@color/Rosita">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtContraseña"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/txtContrasena"
+                            android:inputType="textPassword"
+                            android:paddingStart="0dp"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/txtCorreoRegistro"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -57,24 +94,6 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/txtCorreo"
                             android:inputType="textEmailAddress"
-                            android:paddingStart="0dp"
-                            android:textColor="@color/black" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/txtUsuarioRegistro"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColorHint="@color/Rosita"
-                        app:boxBackgroundColor="#FFFFFF"
-                        app:boxStrokeColor="@color/Rosita"
-                        app:hintTextColor="@color/Rosita">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtUsuario"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/txtUsuario"
                             android:paddingStart="0dp"
                             android:textColor="@color/black" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -116,25 +135,6 @@
                             android:textColor="@color/black" />
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/txtContraRegistro"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColorHint="@color/Rosita"
-                        app:boxBackgroundColor="#FFFFFF"
-                        app:boxStrokeColor="@color/Rosita"
-                        app:hintTextColor="@color/Rosita">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtContraseña"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/txtContrasena"
-                            android:inputType="textPassword"
-                            android:paddingStart="0dp"
-                            android:textColor="@color/black" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
                     <Button
                         android:id="@+id/btnRegistro"
                         android:layout_width="match_parent"
@@ -149,7 +149,7 @@
                         app:rippleColor="#FFFFFF" />
 
                     <Button
-                        android:id="@+id/btnCancelar"
+                        android:id="@+id/btnCerrarSesion"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"

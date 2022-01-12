@@ -172,7 +172,7 @@
                         app:rippleColor="#FFFFFF" />
 
                     <Button
-                        android:id="@+id/btnCancelar"
+                        android:id="@+id/btnCerrarSesion"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
