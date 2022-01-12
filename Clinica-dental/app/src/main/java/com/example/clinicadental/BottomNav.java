@@ -37,7 +37,7 @@ public class BottomNav extends AppCompatActivity {
                     loadFragment(new FrInicio());
                     return true;
                 case R.id.itemContacta:
-                    loadFragment(new FrRegistro());
+                    loadFragment(new FrContacta());
                     return true;
                 case R.id.itemRecetario:
                     loadFragment(new FrRecetario());
