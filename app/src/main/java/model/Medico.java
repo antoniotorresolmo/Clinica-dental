@@ -2,12 +2,12 @@ package model;
 
 public class Medico {
 
-    private int id_Medico;
-    private String usuario;
-    private String password;
-    private String correo;
-    private String direccion;
-    private String telefono;
+    private int id_Medico; //PK
+    private String usuario; //NN
+    private String password; //NN
+    private String correo;//NN
+    private String direccion; //NN
+    private String telefono; //NN
 
     public Medico(int id_Medico) {
         this.id_Medico = id_Medico;
