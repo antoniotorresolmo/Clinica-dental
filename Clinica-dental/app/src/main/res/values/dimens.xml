@@ -3,12 +3,15 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="altoImagenInicio">100dp</dimen>
+    <dimen name="textyButtonsWidth">200dp</dimen>
     <dimen name="textSizeInicio">20sp</dimen>
     <dimen name="textSizeTituloInicio">25sp</dimen>
-    <dimen name="textSizeLblCitasInicio">25sp</dimen>
+    <dimen name="textSizeLblCitasInicio">15sp</dimen>
     <dimen name="textSizeLblTitulosCont">25sp</dimen>
+    <dimen name="fotos">80dp</dimen>
     <dimen name="altoMapaCont">300dp</dimen>
-    <dimen name="textSizeLblRecetarioVacio">25sp</dimen>
+    <dimen name="textSizeLblRecetarioVacio">20sp</dimen>
     <dimen name="textSizeLblTituloRecetario">25sp</dimen>
     <dimen name="alturaTxtPerfilHori">60dp</dimen>
+    <dimen name="cornerButton">20dp</dimen>
 </resources>

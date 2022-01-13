@@ -114,7 +114,7 @@
             app:layout_constraintTop_toBottomOf="@+id/lblContactaCont">
 
             <ImageButton
-                android:id="@+id/imgFacebook"
+                android:id="@+id/imgWhatsapp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -123,7 +123,7 @@
                 android:src="@drawable/facebook" />
 
             <ImageButton
-                android:id="@+id/imgGmail"
+                android:id="@+id/imgTwitter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -131,7 +131,7 @@
                 android:src="@drawable/gmail" />
 
             <ImageButton
-                android:id="@+id/imgInstagram"
+                android:id="@+id/imgPinterest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

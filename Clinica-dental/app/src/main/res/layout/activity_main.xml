@@ -4,59 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorFondo"
     tools:context=".MainActivity">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtContraseña"
+        style="@style/inputText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/Rosita"
+        app:boxBackgroundColor="@color/logo_background"
+        app:boxCornerRadiusBottomEnd="30dp"
+        app:boxCornerRadiusBottomStart="30dp"
+        app:boxCornerRadiusTopEnd="30dp"
+        app:boxCornerRadiusTopStart="30dp"
+        app:boxStrokeColor="@color/Rosita"
+        app:constraint_referenced_tags="30dp"
+        app:hintTextColor="@color/Rosita"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUsuario">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/TextosInterior2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txtContrasena" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
-
-    <EditText
-        android:id="@+id/txtPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:ems="10"
-        android:fontFamily="@font/quicksand_light"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:maxLength="20"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
-
-    <EditText
-        android:id="@+id/txtNombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:fontFamily="@font/quicksand_light"
-        android:hint="@string/nombre"
-        android:inputType="textPersonName"
-        android:maxLength="255"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+        app:srcCompat="@drawable/dentista" />
 
     <Button
         android:id="@+id/btnEntrar"
-        android:layout_width="0dp"
+        style="@style/BotonesInicio"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="@color/principal"
-        android:fontFamily="@font/quicksand_light"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/Azulito"
+        android:fontFamily="@font/quicksandregular"
         android:text="@string/entrar"
+        app:cornerRadius="@dimen/cornerButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chbRecordar" />
 
@@ -65,26 +63,46 @@
         style="@style/Theme.ClinicaDental"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:fontFamily="@font/quicksand_light"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/quicksandregular"
         android:text="@string/recordar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/txtContraseña" />
 
     <Button
         android:id="@+id/btnRegistrar"
-        android:layout_width="0dp"
+        style="@style/BotonesInicio"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/secundario"
-        android:fontFamily="@font/quicksand_light"
+        android:fontFamily="@font/quicksandregular"
         android:text="@string/registrar"
+        app:cornerRadius="@dimen/cornerButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnEntrar"
         app:layout_constraintVertical_bias="0.072" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtUsuario"
+        style="@style/inputText"
+        app:boxBackgroundColor="@color/logo_background"
+        app:boxCornerRadiusBottomEnd="30dp"
+        app:boxCornerRadiusBottomStart="30dp"
+        app:boxCornerRadiusTopEnd="30dp"
+        app:boxCornerRadiusTopStart="30dp"
+        app:boxStrokeColor="@color/Rosita"
+        app:hintTextColor="@color/Rosita"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/TextosInterior2"
+            android:hint="@string/txtUsuario" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
