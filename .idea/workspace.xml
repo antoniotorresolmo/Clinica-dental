@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="AndroidLayouts">
     <shared>
       <config />
     </shared>
   </component>
+=======
+>>>>>>> 9175c67d0c2dbba1c019368633e2c8b4c5d8c602
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="d48accf2-cd95-4a8e-bc5a-0d2b9c2bba6c" name="Default Changelist" comment="ewtrt" />
+=======
+    <list default="true" id="7847ec0f-2fb2-4518-9677-28efcee3f45a" name="Default Changelist" comment="" />
+>>>>>>> 9175c67d0c2dbba1c019368633e2c8b4c5d8c602
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Usuario\.android\avd\Pixel_5_API_27.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -36,6 +44,12 @@
   </component>
   <component name="ProjectId" id="23XnQJgr6Z2qApPTYiUq94CKam8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="23amF9XovFlNzU5RmahnCVDvwzc" />
+>>>>>>> 9175c67d0c2dbba1c019368633e2c8b4c5d8c602
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -43,6 +57,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+<<<<<<< HEAD
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Clinica-dental" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -115,10 +130,14 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Clinica-dental" />
+>>>>>>> 9175c67d0c2dbba1c019368633e2c8b4c5d8c602
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="d48accf2-cd95-4a8e-bc5a-0d2b9c2bba6c" name="Default Changelist" comment="" />
       <created>1641889286226</created>
       <option name="number" value="Default" />
@@ -151,4 +170,14 @@
     <MESSAGE value="ewtrt" />
     <option name="LAST_COMMIT_MESSAGE" value="ewtrt" />
   </component>
+=======
+      <changelist id="7847ec0f-2fb2-4518-9677-28efcee3f45a" name="Default Changelist" comment="" />
+      <created>1641980468358</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1641980468358</updated>
+    </task>
+    <servers />
+  </component>
+>>>>>>> 9175c67d0c2dbba1c019368633e2c8b4c5d8c602
 </project>
