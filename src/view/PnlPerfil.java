@@ -24,18 +24,19 @@ public class PnlPerfil extends JPanel {
 	private JTextField txtTelefonoMedico;
 
 	public PnlPerfil() {
+		contentPanel.setBackground(view.JDialogLogin.principal);
 		setBounds(100, 100, 450, 342);
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPanel.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(view.JDialogLogin.principal);
+		panel.setBackground(Color.white);
 		panel.setBounds(0, 0, 130, 300);
 		contentPanel.add(panel);
 		panel.setLayout(null);
 		
 		JLabel lblIcono = new JLabel("");
-		lblIcono.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\images\\perfil.png"));
+		lblIcono.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\images\\logo.png"));
 		lblIcono.setBounds(10, 107, 100, 100);
 		panel.add(lblIcono);
 		
