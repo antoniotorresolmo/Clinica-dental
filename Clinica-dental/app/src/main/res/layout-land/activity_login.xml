@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorFondo"
     tools:context=".MainActivity">
 
     <ImageView
@@ -34,6 +35,7 @@
 
     <Button
         android:id="@+id/btnRegistrar"
+        style="@style/BotonesInicio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -41,6 +43,7 @@
         android:backgroundTint="@color/secundario"
         android:fontFamily="@font/quicksandregular"
         android:text="@string/registrar"
+        app:cornerRadius="@dimen/cornerButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -50,14 +53,16 @@
 
     <Button
         android:id="@+id/btnEntrar"
+        style="@style/BotonesInicio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="25dp"
-        android:backgroundTint="@color/principal"
+        android:backgroundTint="@color/Azulito"
         android:fontFamily="@font/quicksandregular"
         android:text="@string/entrar"
+        app:cornerRadius="@dimen/cornerButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imgLogo"
