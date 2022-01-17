@@ -20,7 +20,7 @@
     </FrameLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtPasswordRegistro"
+        android:id="@+id/txtPasswordLogin"
         style="@style/inputText"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
@@ -42,7 +42,8 @@
             style="@style/TextosInterior2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/txtContrasena" />
+            android:hint="@string/txtContrasena"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
@@ -77,10 +78,12 @@
         android:layout_marginTop="10dp"
         android:fontFamily="@font/quicksandregular"
         android:text="@string/recordar"
+        android:textColorHighlight="@color/Rosita"
+        android:textColorLink="@color/Rosita"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPasswordRegistro" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPasswordLogin" />
 
     <Button
         android:id="@+id/btnRegistrar"
@@ -112,6 +115,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imgLogo">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtUsuarioLogin"
             style="@style/TextosInterior2"
             android:hint="@string/txtUsuario" />
     </com.google.android.material.textfield.TextInputLayout>
