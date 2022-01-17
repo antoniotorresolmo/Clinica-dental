@@ -28,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void guardarUsuario(){
 
-        File oFile = new File("rem/savedUser.obj");
-
         txtUsuario = findViewById(R.id.txtUsuario);
         txtPassword = findViewById(R.id.txtPasswordLogin);
 
@@ -41,13 +39,10 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(sUsuario);
 
         try {
-            FileOutputStream fosFichero = new FileOutputStream(oFile);
-            ObjectOutputStream oosBuffer = new ObjectOutputStream(fosFichero);
+            try (FileOutputStream fos = this.openFileOutput(filename, Context.MODE_PRIVATE)) {
+                fos.write(fileContents.toByteArray());
+            }
 
-            oosBuffer.writeObject(oPaciente);
-
-            oosBuffer.close();
-            fosFichero.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
