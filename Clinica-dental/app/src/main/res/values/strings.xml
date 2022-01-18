@@ -52,4 +52,7 @@
 
     <string name="txtCancelar">Cancelar</string>
     <string name="txtRegistro">Registrarse</string>
+    <string name="lblOperacion">Operación</string>
+    <string name="lblHora">Hora</string>
+    <string name="lblDia">Día</string>
 </resources>

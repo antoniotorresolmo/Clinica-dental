@@ -44,14 +44,14 @@ public class Registro extends AppCompatActivity {
 
     private void cogerDatos() {
 
-        oPaciente.setsNombre(txtNombreRegistro.getText().toString());
-        oPaciente.setsApellidos(txtApellidosRegistro.getText().toString());
-        oPaciente.setsDNI(txtDniRegistro.getText().toString());
-        oPaciente.setsUsuario(txtUsuarioRegistro.getText().toString());
-        oPaciente.setsPassword(txtContraRegistro.getText().toString());
-        oPaciente.setsCorreo(txtCorreoRegistro.getText().toString());
-        oPaciente.setsTelefono(txtTelefonoRegistro.getText().toString());
-        oPaciente.setsDireccion(txtDireccionRegistro.getText().toString());
+        oPaciente.setNombre(txtNombreRegistro.getText().toString());
+        oPaciente.setApellidos(txtApellidosRegistro.getText().toString());
+        oPaciente.setDNI(txtDniRegistro.getText().toString());
+        oPaciente.setUsuario(txtUsuarioRegistro.getText().toString());
+        oPaciente.setPassword(txtContraRegistro.getText().toString());
+        oPaciente.setCorreo(txtCorreoRegistro.getText().toString());
+        oPaciente.setTelefono(txtTelefonoRegistro.getText().toString());
+        oPaciente.setDireccion(txtDireccionRegistro.getText().toString());
 
     }
 

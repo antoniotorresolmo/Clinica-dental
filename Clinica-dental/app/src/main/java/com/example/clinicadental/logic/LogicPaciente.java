@@ -18,14 +18,14 @@ public class LogicPaciente {
     public static void insert(Paciente oPaciente, Context oContext){
 
         String url = ILogic.hosting + "proyecto/Paciente/ins_paciente.php?" +
-                "&sUsuario=" + oPaciente.getsUsuario() +
-                "&sPassword=" + oPaciente.getsPassword() +
-                "&sCorreo=" + oPaciente.getsCorreo() +
-                "&sNombre=" + oPaciente.getsNombre() +
-                "&sApellidos=" + oPaciente.getsApellidos() +
-                "&sTelefono=" + oPaciente.getsTelefono() +
-                "&sDireccion=" + oPaciente.getsDireccion() +
-                "&sDNI=" + oPaciente.getsDNI();
+                "&sUsuario=" + oPaciente.getUsuario() +
+                "&sPassword=" + oPaciente.getPassword() +
+                "&sCorreo=" + oPaciente.getCorreo() +
+                "&sNombre=" + oPaciente.getNombre() +
+                "&sApellidos=" + oPaciente.getApellidos() +
+                "&sTelefono=" + oPaciente.getTelefono() +
+                "&sDireccion=" + oPaciente.getDireccion() +
+                "&sDNI=" + oPaciente.getDNI();
 
         Volley.newRequestQueue(oContext).add(new StringRequest(Request.Method.GET, url,
                 s -> {
@@ -48,7 +48,7 @@ public class LogicPaciente {
     public static void getByIdUser(Context oContext) {
 
         String url = ILogic.hosting +   "proyecto/Paciente/get_idpaciente_by_user.php?" +
-                                        "sUsuario=" + BottomNav.oPaciente.getsUsuario();
+                                        "sUsuario=" + BottomNav.oPaciente.getUsuario();
 
         Volley.newRequestQueue(oContext).add(new StringRequest(Request.Method.GET, url,
                 s -> {

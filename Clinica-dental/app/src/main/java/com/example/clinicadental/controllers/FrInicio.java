@@ -31,7 +31,7 @@ public class FrInicio extends Fragment {
         View view = inflater.inflate(R.layout.fragment_fr_inicio, container, false);
 
         lblTituloInicio = view.findViewById(R.id.lblTituloInicio);
-        lblTituloInicio.setText("Hola " + BottomNav.oPaciente.getsNombre());
+        lblTituloInicio.setText("Hola " + BottomNav.oPaciente.getNombre());
 
         getActivity().setTitle("Inicio");
 

@@ -4,133 +4,133 @@ import java.util.Objects;
 
 public class Paciente {
 
-    private int iID_Paciente; // PK
-    private String sUsuario; // NN U
-    private String sPassword; // NN
-    private String sCorreo; // NN
-    private String sNombre; // NN
-    private String sApellidos;// NN
-    private String sTelefono; // NN
-    private String sDireccion; // NN
-    private String sDNI; // NN
+    private int ID_Paciente; // PK
+    private String Usuario; // NN U
+    private String Password; // NN
+    private String Correo; // NN
+    private String Nombre; // NN
+    private String Apellidos;// NN
+    private String Telefono; // NN
+    private String Direccion; // NN
+    private String DNI; // NN
 
     public Paciente(){}
 
-    public Paciente(int iID_Paciente) {
-        this.setiID_Paciente(iID_Paciente);
+    public Paciente(int ID_Paciente) {
+        this.setID_Paciente(ID_Paciente);
     }
 
     public Paciente(String sUsuario, String sPassword) {
-        this.sUsuario = sUsuario;
-        this.sPassword = sPassword;
+        this.Usuario = sUsuario;
+        this.Password = sPassword;
     }
 
-    public Paciente(int iID_Paciente, String sUsuario, String sPassword, String sCorreo) {
-        this.setiID_Paciente(iID_Paciente);
-        this.setsUsuario(sUsuario);
-        this.setsPassword(sPassword);
-        this.setsCorreo(sCorreo);
+    public Paciente(int ID_Paciente, String sUsuario, String sPassword, String sCorreo) {
+        this.setID_Paciente(ID_Paciente);
+        this.setUsuario(sUsuario);
+        this.setPassword(sPassword);
+        this.setCorreo(sCorreo);
     }
 
-    public Paciente(int iID_Paciente, String sUsuario, String sPassword, String sCorreo, String sNombre, String sApellidos, String sTelefono, String sDireccion, String sDNI) {
-        this.setiID_Paciente(iID_Paciente);
-        this.setsUsuario(sUsuario);
-        this.setsPassword(sPassword);
-        this.setsCorreo(sCorreo);
-        this.setsNombre(sNombre);
-        this.setsApellidos(sApellidos);
-        this.setsTelefono(sTelefono);
-        this.setsDireccion(sDireccion);
-        this.setsDNI(sDNI);
+    public Paciente(int ID_Paciente, String sUsuario, String sPassword, String sCorreo, String sNombre, String sApellidos, String sTelefono, String sDireccion, String sDNI) {
+        this.setID_Paciente(ID_Paciente);
+        this.setUsuario(sUsuario);
+        this.setPassword(sPassword);
+        this.setCorreo(sCorreo);
+        this.setNombre(sNombre);
+        this.setApellidos(sApellidos);
+        this.setTelefono(sTelefono);
+        this.setDireccion(sDireccion);
+        this.setDNI(sDNI);
     }
 
-    public int getiID_Paciente() {
-        return iID_Paciente;
+    public int getID_Paciente() {
+        return ID_Paciente;
     }
 
-    public void setiID_Paciente(int iID_Paciente) {
-        if(iID_Paciente > 0){
-            this.iID_Paciente = iID_Paciente;
+    public void setID_Paciente(int ID_Paciente) {
+        if(ID_Paciente > 0){
+            this.ID_Paciente = ID_Paciente;
         }
     }
 
-    public String getsUsuario() {
-        return sUsuario;
+    public String getUsuario() {
+        return Usuario;
     }
 
-    public void setsUsuario(String sUsuario) {
-        if(!sUsuario.isEmpty() && sUsuario.length() < 255){
-            this.sUsuario = sUsuario;
+    public void setUsuario(String usuario) {
+        if(!usuario.isEmpty() && usuario.length() < 255){
+            this.Usuario = usuario;
         }
     }
 
-    public String getsPassword() {
-        return sPassword;
+    public String getPassword() {
+        return Password;
     }
 
-    public void setsPassword(String sPassword) {
-        if(!sPassword.isEmpty() && sPassword.length() < 20){
-            this.sPassword = sPassword;
+    public void setPassword(String password) {
+        if(!Usuario.isEmpty() && Usuario.length() < 20){
+            this.Usuario = Usuario;
         }
     }
 
-    public String getsCorreo() {
-        return sCorreo;
+    public String getCorreo() {
+        return Correo;
     }
 
-    public void setsCorreo(String sCorreo) {
-        if(!sCorreo.isEmpty() && sCorreo.length() < 255){
-            this.sCorreo = sCorreo;
+    public void setCorreo(String correo) {
+        if(!correo.isEmpty() && correo.length() < 255){
+            this.Correo = correo;
         }
     }
 
-    public String getsNombre() {
-        return sNombre;
+    public String getNombre() {
+        return Nombre;
     }
 
-    public void setsNombre(String sNombre) {
-        if(!sNombre.isEmpty() && sNombre.length() < 255){
-            this.sNombre = sNombre;
+    public void setNombre(String nombre) {
+        if(!nombre.isEmpty() && nombre.length() < 255){
+            this.Nombre = nombre;
         }
     }
 
-    public String getsApellidos() {
-        return sApellidos;
+    public String getApellidos() {
+        return Apellidos;
     }
 
-    public void setsApellidos(String sApellidos) {
-        if(!sApellidos.isEmpty() && sApellidos.length() < 255){
-            this.sApellidos = sApellidos;
+    public void setApellidos(String apellidos) {
+        if(!apellidos.isEmpty() && apellidos.length() < 255){
+            this.Apellidos = apellidos;
         }
     }
 
-    public String getsTelefono() {
-        return sTelefono;
+    public String getTelefono() {
+        return Telefono;
     }
 
-    public void setsTelefono(String sTelefono) {
-        if(!sTelefono.isEmpty() && sTelefono.length() == 9){
-            this.sTelefono = sTelefono;
+    public void setTelefono(String telefono) {
+        if(!telefono.isEmpty() && telefono.length() == 9){
+            this.Telefono = telefono;
         }
     }
 
-    public String getsDireccion() {
-        return sDireccion;
+    public String getDireccion() {
+        return Direccion;
     }
 
-    public void setsDireccion(String sDireccion) {
-        if(!sDireccion.isEmpty() && sDireccion.length() < 255){
-            this.sDireccion = sDireccion;
+    public void setDireccion(String direccion) {
+        if(!direccion.isEmpty() && direccion.length() < 255){
+            this.Direccion = direccion;
         }
     }
 
-    public String getsDNI() {
-        return sDNI;
+    public String getDNI() {
+        return DNI;
     }
 
-    public void setsDNI(String sDNI) {
-        if(!sDNI.isEmpty() && sDNI.length() == 9){
-            this.sDNI = sDNI;
+    public void setDNI(String DNI) {
+        if(!DNI.isEmpty() && DNI.length() == 9){
+            this.DNI = DNI;
         }
     }
 
@@ -139,26 +139,26 @@ public class Paciente {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Paciente paciente = (Paciente) o;
-        return iID_Paciente == paciente.iID_Paciente;
+        return ID_Paciente == paciente.ID_Paciente;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(iID_Paciente);
+        return Objects.hash(ID_Paciente);
     }
 
     @Override
     public String toString() {
         return "Paciente{" +
-                "iID_Paciente=" + iID_Paciente +
-                ", sUsuario='" + sUsuario + '\'' +
-                ", sPassword='" + sPassword + '\'' +
-                ", sCorreo='" + sCorreo + '\'' +
-                ", sNombre='" + sNombre + '\'' +
-                ", sApellidos='" + sApellidos + '\'' +
-                ", sTelefono='" + sTelefono + '\'' +
-                ", sDireccion='" + sDireccion + '\'' +
-                ", sDNI='" + sDNI + '\'' +
+                "iID_Paciente=" + ID_Paciente +
+                ", sUsuario='" + Usuario + '\'' +
+                ", sPassword='" + Password + '\'' +
+                ", sCorreo='" + Correo + '\'' +
+                ", sNombre='" + Nombre + '\'' +
+                ", sApellidos='" + Apellidos + '\'' +
+                ", sTelefono='" + Telefono + '\'' +
+                ", sDireccion='" + Direccion + '\'' +
+                ", sDNI='" + DNI + '\'' +
                 '}';
     }
 }
