@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".FrRegistro">
+    tools:context=".Registro">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -41,6 +41,57 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtNombreRegistro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/Rosita"
+                        app:boxBackgroundColor="#FFFFFF"
+                        app:boxStrokeColor="@color/Rosita"
+                        app:hintTextColor="@color/Rosita">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtNombre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nombre"
+                            android:paddingStart="0dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtApellidosRegistro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/Rosita"
+                        app:boxBackgroundColor="#FFFFFF"
+                        app:boxStrokeColor="@color/Rosita"
+                        app:hintTextColor="@color/Rosita">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtApellidos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Apellidos"
+                            android:paddingStart="0dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtDniRegistro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/Rosita"
+                        app:boxBackgroundColor="#FFFFFF"
+                        app:boxStrokeColor="@color/Rosita"
+                        app:hintTextColor="@color/Rosita">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtDni"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="DNI"
+                            android:paddingStart="0dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/txtUsuarioRegistro"
@@ -140,10 +191,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:backgroundTint="@color/fondoBoton"
+                        android:backgroundTint="@color/Azulito"
                         android:text="@string/txtRegistro"
                         android:textAlignment="center"
-                        android:textColor="@color/colorFondo"
+                        android:textColor="@color/white"
                         android:textStyle="bold"
                         app:cornerRadius="20dp"
                         app:rippleColor="#FFFFFF" />
@@ -153,10 +204,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:backgroundTint="@color/fondoBoton"
+                        android:backgroundTint="@color/Rosita"
                         android:text="@string/txtCancelar"
                         android:textAlignment="center"
-                        android:textColor="@color/cerrarSesion"
+                        android:textColor="@color/white"
                         android:textStyle="bold"
                         app:cornerRadius="20dp"
                         app:rippleColor="#FFFFFF" />

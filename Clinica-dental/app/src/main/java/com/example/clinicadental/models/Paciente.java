@@ -8,11 +8,11 @@ public class Paciente {
     private String sUsuario; // NN U
     private String sPassword; // NN
     private String sCorreo; // NN
-    private String sNombre;
-    private String sApellidos;
-    private String sTelefono;
-    private String sDireccion;
-    private String sDNI;
+    private String sNombre; // NN
+    private String sApellidos;// NN
+    private String sTelefono; // NN
+    private String sDireccion; // NN
+    private String sDNI; // NN
 
     public Paciente(){}
 
