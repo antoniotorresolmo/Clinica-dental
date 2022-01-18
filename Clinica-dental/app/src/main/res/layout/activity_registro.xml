@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".controllers.Registro">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorFondo"
+        android:backgroundTint="@color/AzulFondo">
+
+        <LinearLayout
+            android:id="@+id/lytDatos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/redondeado"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="25dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtNombreRegistro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/Rosita"
+                        app:boxBackgroundColor="#FFFFFF"
+                        app:boxStrokeColor="@color/Rosita"
+                        app:hintTextColor="@color/Rosita">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtNombre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nombre"
+                            android:paddingStart="0dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtApellidosRegistro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/Rosita"
+                        app:boxBackgroundColor="#FFFFFF"
+                        app:boxStrokeColor="@color/Rosita"
+                        app:hintTextColor="@color/Rosita">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtApellidos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Apellidos"
+                            android:paddingStart="0dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtDniRegistro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/Rosita"
+                        app:boxBackgroundColor="#FFFFFF"
+                        app:boxStrokeColor="@color/Rosita"
+                        app:hintTextColor="@color/Rosita">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtDni"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="DNI"
+                            android:paddingStart="0dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtUsuarioRegistro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/Rosita"
+                        app:boxBackgroundColor="#FFFFFF"
+                        app:boxStrokeColor="@color/Rosita"
+                        app:hintTextColor="@color/Rosita">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtUsuario"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/txtUsuario"
+                            android:paddingStart="0dp"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtContraRegistro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/Rosita"
+                        app:boxBackgroundColor="#FFFFFF"
+                        app:boxStrokeColor="@color/Rosita"
+                        app:hintTextColor="@color/Rosita">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtPasswordLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/txtContrasena"
+                            android:inputType="textPassword"
+                            android:paddingStart="0dp"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtCorreoRegistro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/Rosita"
+                        app:boxBackgroundColor="#FFFFFF"
+                        app:boxStrokeColor="@color/Rosita"
+                        app:hintTextColor="@color/Rosita">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtCorreo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/txtCorreo"
+                            android:inputType="textEmailAddress"
+                            android:paddingStart="0dp"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtTlfRegistro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/Rosita"
+                        app:boxBackgroundColor="#FFFFFF"
+                        app:boxStrokeColor="@color/Rosita"
+                        app:hintTextColor="@color/Rosita">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtTelefono"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/txtTelefono"
+                            android:inputType="phone"
+                            android:paddingStart="0dp"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtDireccionRegistro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/Rosita"
+                        app:boxBackgroundColor="#FFFFFF"
+                        app:boxStrokeColor="@color/Rosita"
+                        app:hintTextColor="@color/Rosita">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtDireccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/txtDireccion"
+                            android:paddingStart="0dp"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btnRegistro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="@color/Azulito"
+                        android:text="@string/txtRegistro"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:cornerRadius="20dp"
+                        app:rippleColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/btnCerrarSesion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="@color/Rosita"
+                        android:text="@string/txtCancelar"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:cornerRadius="20dp"
+                        app:rippleColor="#FFFFFF" />
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="116dp"
+            android:layout_height="119dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/diente"
+            tools:src="@drawable/diente" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
