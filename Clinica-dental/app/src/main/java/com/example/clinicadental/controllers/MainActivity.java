@@ -18,6 +18,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.clinicadental.R;
 import com.example.clinicadental.controllers.BottomNav;
 import com.example.clinicadental.controllers.Registro;
+import com.example.clinicadental.logic.LogicPaciente;
 import com.example.clinicadental.models.Paciente;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.gson.Gson;
@@ -55,31 +56,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void obtenerEste() {
         txtUsuario =  findViewById(R.id.txtUsuario);
-        String url = Hosting + "/proyecto/Paciente/get_usuario.php?sUsuario=" + txtUsuario.getEditText().getText().toString();
 
-
-        Volley.newRequestQueue(this).add(new StringRequest(Request.Method.GET, url,
-
-                s -> {
-
-                    if (s.equals("null")) {
-                        Toast.makeText(getApplicationContext(), "No se ha encontrado.", Toast.LENGTH_SHORT).show();
-                    } else {
-
-
-                        oPaciente  = new Gson().fromJson(s, new TypeToken<Paciente>() {
-                        }.getType());
-
-                        Log.d("Antonio",oPaciente.toString());
-                        comprobarUsuario();
-                    }
-
-                }, volleyError -> {
+        oPaciente = (Paciente) LogicPaciente.obtenerUsuario(this, txtUsuario.getEditText().getText().toString());
+        if (oPaciente != null) {
+            comprobarUsuario();
+        } else {
 
         }
-
-
-        ));
     }
 
     private void comprobarUsuario() {

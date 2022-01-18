@@ -8,6 +8,7 @@ import android.widget.Toast;
 import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.clinicadental.R;
 import com.example.clinicadental.controllers.BottomNav;
 import com.example.clinicadental.models.Paciente;
 import com.google.gson.Gson;
@@ -15,6 +16,7 @@ import com.google.gson.reflect.TypeToken;
 
 public class LogicPaciente {
 
+    private static Paciente oPaciente1;
     public static void insert(Paciente oPaciente, Context oContext){
 
         String url = ILogic.hosting + "proyecto/Paciente/ins_paciente.php?" +
@@ -62,6 +64,37 @@ public class LogicPaciente {
         }
         ));
 
+    }
+
+    public static Object obtenerUsuario(Context oContext, String sUsuario){
+
+
+        String url = ILogic.hosting + "/proyecto/Paciente/get_usuario.php?sUsuario=" + sUsuario;
+
+        Volley.newRequestQueue(oContext).add(new StringRequest(Request.Method.GET, url,
+
+                s -> {
+
+                    if (s.equals("null")) {
+                        Toast.makeText(oContext, "No se ha encontrado.", Toast.LENGTH_SHORT).show();
+                    } else {
+
+                       oPaciente1  = new Gson().fromJson(s, new TypeToken<Paciente>() {
+                        }.getType());
+
+                        Log.d("Antonio",oPaciente1.toString());
+
+                    }
+
+                }, volleyError -> {
+
+        }
+
+
+        ));
+
+
+        return oPaciente1;
     }
 
 }
