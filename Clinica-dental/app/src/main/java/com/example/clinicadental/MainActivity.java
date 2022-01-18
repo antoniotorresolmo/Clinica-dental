@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    String Hosting = "http://loschavalesden;tal.atwebpages.com"
+    String Hosting = "http://loschavalesdental.atwebpages.com"
     EditText txtId;
     TextView lblResultado;
     coche Coche;
