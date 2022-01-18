@@ -1,5 +1,6 @@
 package com.example.clinicadental;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,6 +26,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     String Hosting = "http://loschavalesdental.atwebpages.com";
     TextInputLayout txtUsuario;
+    TextInputLayout txtPassword;
     Paciente oPaciente;
 
 
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.btnEntrar).setOnClickListener(v-> {
         obtenerEste();
+
         });
 
     }
@@ -60,13 +63,12 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "No se ha encontrado.", Toast.LENGTH_SHORT).show();
                     } else {
 
-                     
+
                         oPaciente  = new Gson().fromJson(s, new TypeToken<Paciente>() {
                         }.getType());
 
                         Log.d("Antonio",oPaciente.toString());
-                        Toast.makeText(getApplicationContext(), oPaciente.toString(), Toast.LENGTH_SHORT).show();
-
+                                              comprobarUsuario();
                     }
 
                 }, volleyError -> {
@@ -75,6 +77,22 @@ public class MainActivity extends AppCompatActivity {
 
 
         ));
+    }
+
+    private void comprobarUsuario() {
+        txtPassword = findViewById(R.id.txtPasswordLogin);
+
+        String contraseña = txtPassword.getEditText().getText().toString();
+        Toast.makeText(getApplicationContext(), contraseña, Toast.LENGTH_SHORT).show();
+
+        if (oPaciente.getPassword().equals(contraseña)) {
+
+
+          BottomNav.oPaciente = oPaciente;
+          Intent ventana = new Intent(this, BottomNav.class);
+          startActivity(ventana);
+        }
+
     }
 
 

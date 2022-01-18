@@ -9,12 +9,14 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.clinicadental.R;
+import com.example.clinicadental.models.Paciente;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-@SuppressWarnings("ALL")
 public class BottomNav extends AppCompatActivity {
 
     private boolean firstTime = true;
+    public static Paciente oPaciente;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +25,6 @@ public class BottomNav extends AppCompatActivity {
 
         BottomNavigationView navigation = findViewById(R.id.bottom_navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-        //navigation.setSelectedItemId(navigation.getSelectedItemId());
-
-
 
     }
 

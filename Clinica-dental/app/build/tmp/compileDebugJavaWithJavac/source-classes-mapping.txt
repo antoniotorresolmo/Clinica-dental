@@ -1,9 +1,8 @@
 com/example/clinicadental/FrMapa.java
  com.example.clinicadental.FrMapa
  com.example.clinicadental.FrMapa$1
-com/example/clinicadental/BottomNav.java
- com.example.clinicadental.BottomNav
- com.example.clinicadental.BottomNav$1
+com/example/clinicadental/Registro.java
+ com.example.clinicadental.Registro
 com/example/clinicadental/FrInicio.java
  com.example.clinicadental.FrInicio
 com/example/clinicadental/FrRecetario.java
@@ -22,12 +21,13 @@ com/example/clinicadental/models/Paciente.java
  com.example.clinicadental.models.Paciente
 com/example/clinicadental/models/Cita.java
  com.example.clinicadental.models.Cita
+com/example/clinicadental/models/Paciente_Medico.java
+ com.example.clinicadental.models.Paciente_Medico
+com/example/clinicadental/models/Receta.java
+ com.example.clinicadental.models.Receta
 com/example/clinicadental/MainActivity.java
  com.example.clinicadental.MainActivity
  com.example.clinicadental.MainActivity$1
-com/example/clinicadental/models/Receta.java
- com.example.clinicadental.models.Receta
-com/example/clinicadental/Registro.java
- com.example.clinicadental.Registro
-com/example/clinicadental/models/Paciente_Medico.java
- com.example.clinicadental.models.Paciente_Medico
+com/example/clinicadental/BottomNav.java
+ com.example.clinicadental.BottomNav
+ com.example.clinicadental.BottomNav$1

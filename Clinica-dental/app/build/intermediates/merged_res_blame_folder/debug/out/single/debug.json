@@ -32,20 +32,20 @@
         "source": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\Clinica-dental\\app\\src\\main\\res\\drawable-v24\\tw.png"
     },
     {
-        "merged": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\Clinica-dental\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_facebook.png.flat",
-        "source": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\Clinica-dental\\app\\src\\main\\res\\drawable-v24\\facebook.png"
-    },
-    {
         "merged": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\Clinica-dental\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_login.xml.flat",
         "source": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\Clinica-dental\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\Clinica-dental\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\Clinica-dental\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\Clinica-dental\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_facebook.png.flat",
+        "source": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\Clinica-dental\\app\\src\\main\\res\\drawable-v24\\facebook.png"
     },
     {
         "merged": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\Clinica-dental\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\Clinica-dental\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\Clinica-dental\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\Clinica-dental\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\Clinica-dental\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_instagram.png.flat",
