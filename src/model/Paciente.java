@@ -2,112 +2,128 @@ package model;
 
 public class Paciente {
 	
-	private int id_Paciente; //PK
-	private String usuario; //NN
-	private String password; //NN
-	private String correo; //NN
-	private String nombre; //NN
-	private String apellidos; //NN
-	private String telfono; //NN
-	private String direccion; //NN
-	private String dni; //NN
+	private int ID_Paciente; //PK
+	private String Usuario; //NN
+	private String Password; //NN
+	private String Correo; //NN
+	private String Nombre; //NN
+	private String Apellidos; //NN
+	private String Telefono; //NN
+	private String Direccion; //NN
+	private String DNI; //NN
 	
-	public Paciente(int id_Paciente) {
+	public Paciente(int ID_Paciente) {
 		
-		this.id_Paciente = id_Paciente;
+		this.ID_Paciente = ID_Paciente;
 	}
 
-	public Paciente(int id_Paciente, String usuario, String password, String correo, String nombre, String apellidos,
-			String telfono, String direccion, String dni) {
+	public Paciente(int ID_Paciente, String Usuario, String Password, String Correo, String Nombre, String Apellidos,
+			String Telefono, String Direccion, String DNI) {
 		
-		this.id_Paciente = id_Paciente;
-		this.usuario = usuario;
-		this.password = password;
-		this.correo = correo;
-		this.nombre = nombre;
-		this.apellidos = apellidos;
-		this.telfono = telfono;
-		this.direccion = direccion;
-		this.dni = dni;
+		setID_Paciente(ID_Paciente);
+		setUsuario(Usuario);
+		setPassword(Password);
+		setCorreo(Correo);
+		setNombre(Nombre);
+		setApellidos(Apellidos);
+		setTelefono(Telefono);
+		setDireccion(Direccion);
+		setDNI(DNI);
 	}
 
-	public int getId_Paciente() {
-		return id_Paciente;
+	public int getID_Paciente() {
+		return ID_Paciente;
 	}
 
-	public void setId_Paciente(int id_Paciente) {
-		this.id_Paciente = id_Paciente;
+	public void setID_Paciente(int ID_Paciente) {
+		this.ID_Paciente = ID_Paciente;
 	}
 
 	public String getUsuario() {
-		return usuario;
+		return Usuario;
 	}
 
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
+	public void setUsuario(String Usuario) {
+		if (Usuario != null && Usuario.length() <= 255) {
+			this.Usuario = Usuario;
+		}
 	}
 
 	public String getPassword() {
-		return password;
+		return Password;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPassword(String Password) {
+		if (Password != null && Password.length() <= 20) {
+			this.Password = Password;
+		}
 	}
 
 	public String getCorreo() {
-		return correo;
+		return Correo;
 	}
 
-	public void setCorreo(String correo) {
-		this.correo = correo;
+	public void setCorreo(String Correo) {
+		if (Correo != null && Correo.length() <= 255) {
+			this.Correo = Correo;
+		}
 	}
 
 	public String getNombre() {
-		return nombre;
+		return Nombre;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setNombre(String Nombre) {
+		if (Nombre != null && Nombre.length() <= 255) {
+			this.Nombre = Nombre;
+		}
 	}
 
 	public String getApellidos() {
-		return apellidos;
+		return Apellidos;
 	}
 
-	public void setApellidos(String apellidos) {
-		this.apellidos = apellidos;
+	public void setApellidos(String Apellidos) {
+		if (Apellidos != null && Apellidos.length() <= 255) {
+			this.Apellidos = Apellidos;
+		}
 	}
 
-	public String getTelfono() {
-		return telfono;
+	public String getTelefono() {
+		return Telefono;
 	}
 
-	public void setTelfono(String telfono) {
-		this.telfono = telfono;
+	public void setTelefono(String Telefono) {
+		if (Telefono != null && Telefono.length() == 9) {
+			this.Telefono = Telefono;
+		}
 	}
 
 	public String getDireccion() {
-		return direccion;
+		return Direccion;
 	}
 
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
+	public void setDireccion(String Direccion) {
+		if (Direccion != null && Direccion.length() <= 255) {
+			this.Direccion = Direccion;
+		}
 	}
 
-	public String getDni() {
-		return dni;
+	public String getDNI() {
+		return DNI;
 	}
 
-	public void setDni(String dni) {
-		this.dni = dni;
+	public void setDNI(String DNI) {
+		if (DNI != null && DNI.length() == 9) {
+			this.DNI = DNI;
+		}
 	}
 
 	@Override
 	public String toString() {
-		return "Paciente [id_Paciente=" + id_Paciente + ", usuario=" + usuario + ", password=" + password + ", correo="
-				+ correo + ", nombre=" + nombre + ", apellidos=" + apellidos + ", telfono=" + telfono + ", direccion="
-				+ direccion + ", dni=" + dni + "]";
+		return "Paciente [ID_Paciente=" + ID_Paciente + ", Usuario=" + Usuario + ", Password=" + Password + ", Correo="
+				+ Correo + ", Nombre=" + Nombre + ", Apellidos=" + Apellidos + ", Telefono=" + Telefono + ", Direccion="
+				+ Direccion + ", DNI=" + DNI + "]";
 	}
 
 }
