@@ -4,15 +4,15 @@ public class Receta {
 	
 	private int ID_Receta; //PK
 	private String Descripcion; //NN
-	private Medico ID_Medico; //FK
-	private Paciente ID_Paciente; //FK
+	private int ID_Medico; //FK
+	private int ID_Paciente; //FK
 	
 	public Receta(int ID_Receta) {
 		
 		this.ID_Receta = ID_Receta;
 	}
 
-	public Receta(int ID_Receta, String Descripcion, Medico ID_Medico, Paciente ID_Paciente) {
+	public Receta(int ID_Receta, String Descripcion, int ID_Medico, int ID_Paciente) {
 		
 		setID_Receta(ID_Receta);
 		setDescripcion(Descripcion);
@@ -38,19 +38,19 @@ public class Receta {
 		}
 	}
 
-	public Medico getID_Medico() {
+	public int getID_Medico() {
 		return ID_Medico;
 	}
 
-	public void setID_Medico(Medico ID_Medico) {
+	public void setID_Medico(int ID_Medico) {
 		this.ID_Medico = ID_Medico;
 	}
 
-	public Paciente getID_Paciente() {
+	public int getID_Paciente() {
 		return ID_Paciente;
 	}
 
-	public void setID_Paciente(Paciente ID_Paciente) {
+	public void setID_Paciente(int ID_Paciente) {
 		this.ID_Paciente = ID_Paciente;
 	}
 
