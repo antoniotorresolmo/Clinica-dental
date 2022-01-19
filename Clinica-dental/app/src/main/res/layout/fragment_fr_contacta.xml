@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:context=".controllers.FrContacta">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@color/colorFondo">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvSobre"
+            style="@style/cardViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/lblSobreNosotrosCont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/lblSobreNosotrosCont"
+                android:textAlignment="center"
+                android:textSize="@dimen/textSizeLblTitulosCont"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvTratamientos"
+            style="@style/cardViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvSobreTxt">
+
+            <TextView
+                android:id="@+id/lblTratamientosCont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/lblTratamientosCont"
+                android:textSize="@dimen/textSizeLblTitulosCont"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvTratamientosTxt"
+            style="@style/cardViews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvTratamientos">
+
+            <TextView
+                android:id="@+id/lblParrafo1Cont"
+                style="@style/Textos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/lblParrafo1Cont"
+                android:textAlignment="center" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvSobreTxt"
+            style="@style/cardViews"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvSobre">
+
+            <TextView
+                android:id="@+id/lblSobre"
+                style="@style/Textos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/lblParafo2Cont"
+                android:textAlignment="center" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvUbicacion"
+            style="@style/cardViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvTratamientosTxt">
+
+            <TextView
+                android:id="@+id/lblUbicacionCont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/lblUbicacionCont"
+                android:textSize="@dimen/textSizeLblTitulosCont"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMapa"
+            style="@style/cardViews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="40dp"
+
+            app:cardElevation="10dp"
+            app:cardMaxElevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvUbicacion">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView"
+                android:name="com.example.clinicadental.controllers.FrMapa"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/altoMapaCont"
+                tools:layout="@layout/fragment_fr_mapa" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvContacta"
+            style="@style/cardViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvMapa">
+
+            <TextView
+                android:id="@+id/lblContactaCont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/lblContactaCont"
+                android:textSize="@dimen/textSizeLblTitulosCont"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvContacta">
+
+            <ImageButton
+                android:id="@+id/imgWhatsapp"
+                android:layout_width="@dimen/fotos"
+                android:layout_height="@dimen/fotos"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:backgroundTint=" #00000000"
+                android:backgroundTintMode="src_in"
+                android:scaleType="fitCenter"
+                android:src="@drawable/was" />
+
+            <ImageButton
+                android:id="@+id/imgTwitter"
+                android:layout_width="@dimen/fotos"
+                android:layout_height="@dimen/fotos"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:backgroundTint=" #00000000"
+                android:backgroundTintMode="src_in"
+                android:scaleType="fitCenter"
+                android:src="@drawable/twitter" />
+
+            <ImageButton
+                android:id="@+id/imgPinterest"
+                android:layout_width="@dimen/fotos"
+                android:layout_height="@dimen/fotos"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:backgroundTint=" #00000000"
+                android:backgroundTintMode="src_in"
+                android:scaleType="fitCenter"
+                android:src="@drawable/pint" />
+
+            <ImageButton
+                android:id="@+id/imgDropbox"
+                android:layout_width="@dimen/fotos"
+                android:layout_height="@dimen/fotos"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:backgroundTint="#00000000"
+                android:backgroundTintMode="src_in"
+                android:scaleType="fitCenter"
+                android:src="@drawable/drop" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

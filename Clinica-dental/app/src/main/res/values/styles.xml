@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <style name="TextosInterior">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Textos">
+        <item name="android:layout_width">@dimen/textyButtonsWidth</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:textColorHint">@color/secundario</item>
+    </style>
+
+    <style name="BotonesInicio">
+        <item name="android:layout_width">@dimen/textyButtonsWidth</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:backgroundTint">@color/principal</item>
+        <item name="android:fontFamily">@font/quicksandregular</item>
+    </style>
+
+    <style name="textosContacta">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="titulosContacta">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">35dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/textSizeLblTitulosCont</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="cardViews">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginEnd">30dp</item>
+        <item name="android:elevation">10dp</item>
+    </style>
+
+    <style name="botonesHoras">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:backgroundTint">@color/Azulito</item>
+    </style>
+
+    <style name="inputText" parent="Textos">
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/Rosita</item>
+    </style>
+
+    <style name="TextosInterior2" parent="TextosInterior">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">15dp</item>
+    </style>
+
+</resources>
