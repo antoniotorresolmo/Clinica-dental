@@ -68,9 +68,9 @@ public class Paciente {
         return Password;
     }
 
-    public void setPassword(String password) {
-        if(!Usuario.isEmpty() && Usuario.length() < 20){
-            this.Usuario = Usuario;
+    public void setPassword(String Password) {
+        if(!Password.isEmpty() && Password.length() < 20){
+            this.Password = Password;
         }
     }
 
