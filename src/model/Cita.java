@@ -2,80 +2,93 @@ package model;
 
 public class Cita {
 	
-	private int id_Cita; //PK
-	private String dia; //NN
-	private String hora; //NN
-	private String operacion; //NN
-	private int id_Medico; //FK
-	private int id_Paciente; //FK
+	private int ID_Cita; //PK
+	private String Dia; //NN
+	private String Hora; //NN
+	private String Operacion; //NN
+	private boolean Terminada; //NN
+	private int ID_Medico; //FK
+	private int ID_Paciente; //FK
 	
-	public Cita(int id_Cita) {
+	public Cita(int ID_Cita) {
 		
-		this.id_Cita = id_Cita;
+		this.ID_Cita = ID_Cita;
 	}
 
-	public Cita(int id_Cita, String dia, String hora, String operacion, int id_Medico, int id_Paciente) {
+	public Cita(int ID_Cita, String Dia, String Hora, String Operacion, boolean Terminada, int ID_Medico,
+			int ID_Paciente) {
 		
-		this.id_Cita = id_Cita;
-		this.dia = dia;
-		this.hora = hora;
-		this.operacion = operacion;
-		this.id_Medico = id_Medico;
-		this.id_Paciente = id_Paciente;
+		setID_Cita(ID_Cita);
+		setDia(Dia);
+		setHora(Hora);
+		setOperacion(Operacion);
+		setTerminada(Terminada);
+		setID_Medico(ID_Medico);
+		setID_Paciente(ID_Paciente);
 	}
 
-	public int getId_Cita() {
-		return id_Cita;
+	public int getID_Cita() {
+		return ID_Cita;
 	}
 
-	public void setId_Cita(int id_Cita) {
-		this.id_Cita = id_Cita;
+	public void setID_Cita(int ID_Cita) {
+		ID_Cita = ID_Cita;
 	}
 
 	public String getDia() {
-		return dia;
+		return Dia;
 	}
 
-	public void setDia(String dia) {
-		this.dia = dia;
+	public void setDia(String Dia) {
+		Dia = Dia;
 	}
 
 	public String getHora() {
-		return hora;
+		return Hora;
 	}
 
-	public void setHora(String hora) {
-		this.hora = hora;
+	public void setHora(String Hora) {
+		Hora = Hora;
 	}
 
 	public String getOperacion() {
-		return operacion;
+		return Operacion;
 	}
 
-	public void setOperacion(String operacion) {
-		this.operacion = operacion;
+	public void setOperacion(String Operacion) {
+		if (Operacion != null && Operacion.length() <= 255) {
+			Operacion = Operacion;
+		}
 	}
 
-	public int getId_Medico() {
-		return id_Medico;
+	public boolean isTerminada() {
+		return Terminada;
 	}
 
-	public void setId_Medico(int id_Medico) {
-		this.id_Medico = id_Medico;
+	public void setTerminada(boolean terminada) {
+		Terminada = terminada;
 	}
 
-	public int getId_Paciente() {
-		return id_Paciente;
+	public int getID_Medico() {
+		return ID_Medico;
 	}
 
-	public void setId_Paciente(int id_Paciente) {
-		this.id_Paciente = id_Paciente;
+	public void setID_Medico(int ID_Medico) {
+		ID_Medico = ID_Medico;
+	}
+
+	public int getID_Paciente() {
+		return ID_Paciente;
+	}
+
+	public void setID_Paciente(int ID_Paciente) {
+		ID_Paciente = ID_Paciente;
 	}
 
 	@Override
 	public String toString() {
-		return "Cita [id_Cita=" + id_Cita + ", dia=" + dia + ", hora=" + hora + ", operacion=" + operacion
-				+ ", id_Medico=" + id_Medico + ", id_Paciente=" + id_Paciente + "]";
+		return "Cita [ID_Cita=" + ID_Cita + ", Dia=" + Dia + ", Hora=" + Hora + ", Operacion=" + Operacion
+				+ ", Terminada=" + Terminada + ", ID_Medico=" + ID_Medico + ", ID_Paciente=" + ID_Paciente + "]";
 	}
 
 }
