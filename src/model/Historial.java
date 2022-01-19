@@ -5,14 +5,14 @@ public class Historial {
 	private int ID_Consulta; //PK
 	private String Operacion; //NN
 	private String Observacines; //NN
-	private Paciente ID_Paciente; //FK
+	private int ID_Paciente; //FK
 	
 	public Historial(int ID_Consulta) {
 		
 		this.ID_Consulta = ID_Consulta;
 	}
 
-	public Historial(int ID_Consulta, String Operacion, String Observacines, Paciente ID_Paciente) {
+	public Historial(int ID_Consulta, String Operacion, String Observacines, int ID_Paciente) {
 		
 		setId_Consulta(ID_Consulta);
 		setOperacion(Operacion);
@@ -48,11 +48,11 @@ public class Historial {
 		}
 	}
 
-	public Paciente getId_Paciente() {
+	public int getId_Paciente() {
 		return ID_Paciente;
 	}
 
-	public void setId_Paciente(Paciente ID_Paciente) {
+	public void setId_Paciente(int ID_Paciente) {
 		this.ID_Paciente = ID_Paciente;
 	}
 
