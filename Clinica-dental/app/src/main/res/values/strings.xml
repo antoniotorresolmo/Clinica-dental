@@ -55,4 +55,7 @@
     <string name="lblOperacion">Operación</string>
     <string name="lblHora">Hora</string>
     <string name="lblDia">Día</string>
+    <string name="btnModificar">Modificar</string>
+    <string name="btnGuardar">Guardar</string>
+    <string name="btnCancelar">Cancelar</string>
 </resources>

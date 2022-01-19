@@ -135,18 +135,68 @@
                             android:textColor="@color/black" />
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <Button
-                        android:id="@+id/btnCerrarSesion"
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:backgroundTint="@color/fondoBoton"
-                        android:text="@string/CerrarS"
-                        android:textAlignment="center"
-                        android:textColor="@color/cerrarSesion"
-                        android:textStyle="bold"
-                        app:cornerRadius="20dp"
-                        app:rippleColor="#FFFFFF" />
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/btnModificar"
+                            style="@style/BotonesInicio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/Azulito"
+                            android:text="@string/btnModificar"
+                            android:textStyle="bold"
+                            app:cornerRadius="@dimen/cornerButton"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/btnGuardar"
+                            style="@style/BotonesInicio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="24dp"
+                            android:backgroundTint="@color/Rosita"
+                            android:text="@string/btnGuardar"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            app:cornerRadius="@dimen/cornerButton"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/btnModificar" />
+
+                        <Button
+                            android:id="@+id/btnCerrarSesion"
+                            style="@style/BotonesInicio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/fondoBoton"
+                            android:text="@string/CerrarS"
+                            android:textAlignment="center"
+                            android:textColor="@color/cerrarSesion"
+                            android:textStyle="bold"
+                            app:cornerRadius="@dimen/cornerButton"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/btnGuardar"
+                            app:rippleColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/btnCancelar"
+                            style="@style/BotonesInicio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginEnd="20dp"
+                            android:text="@string/btnCancelar"
+                            app:cornerRadius="@dimen/cornerButton"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/btnModificar" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
                 </LinearLayout>
             </ScrollView>
 
