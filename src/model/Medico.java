@@ -2,80 +2,115 @@ package model;
 
 public class Medico {
 	
-	private int id_Medico; //PK
-	private String usuario; //NN
-	private String password; //NN
-	private String correo; //NN
-	private String direccion; //NN
-	private String telefono; //NN
+	private int ID_Medico; //PK
+	private String Nombre; //NN
+	private String Apellidos; //NN
+	private String Usuario; //NN
+	private String Password; //NN
+	private String Correo; //NN
+	private String Direccion; //NN
+	private String Telefono; //NN
 	
-	public Medico(int id_Medico) {
+	public Medico(int ID_Medico) {
 		
-		this.id_Medico = id_Medico;
+		this.ID_Medico = ID_Medico;
 	}
 
-	public Medico(int id_Medico, String usuario, String password, String correo, String direccion, String telefono) {
+	public Medico(int ID_Medico, String Nombre, String Apellidos, String Usuario, String Password, String Correo, String Direccion, String Telefono) {
 		
-		this.id_Medico = id_Medico;
-		this.usuario = usuario;
-		this.password = password;
-		this.correo = correo;
-		this.direccion = direccion;
-		this.telefono = telefono;
+		setId_Medico(ID_Medico);
+		setNombre(Nombre);
+		setApellidos(Apellidos);
+		setUsuario(Usuario);
+		setPassword(Password);
+		setCorreo(Correo);
+		setDireccion(Direccion);
+		setTelefono(Telefono);
 	}
 
 	public int getId_Medico() {
-		return id_Medico;
+		return ID_Medico;
 	}
 
-	public void setId_Medico(int id_Medico) {
-		this.id_Medico = id_Medico;
+	public void setId_Medico(int ID_Medico) {
+		this.ID_Medico = ID_Medico;
+	}
+	
+	public String getNombre() {
+		return Nombre;
+	}
+
+	public void setNombre(String Nombre) {
+		if (Nombre != null && Nombre.length() <= 255) {
+			Nombre = Nombre;
+		}
+	}
+
+	public String getApellidos() {
+		return Apellidos;
+	}
+
+	public void setApellidos(String Apellidos) {
+		if (Apellidos != null && Apellidos.length() <= 255) {
+			Apellidos = Apellidos;
+		}
 	}
 
 	public String getUsuario() {
-		return usuario;
+		return Usuario;
 	}
 
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
+	public void setUsuario(String Usuario) {
+		if (Usuario != null && Usuario.length() <= 255) {
+			Usuario = Usuario;
+		}
 	}
 
 	public String getPassword() {
-		return password;
+		return Password;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPassword(String Password) {
+		if (Password != null && Password.length() <= 20) {
+			Password = Password;
+		}
 	}
 
 	public String getCorreo() {
-		return correo;
+		return Correo;
 	}
 
-	public void setCorreo(String correo) {
-		this.correo = correo;
+	public void setCorreo(String Correo) {
+		if (Correo != null && Correo.length() <= 255) {
+			Correo = Correo;
+		}
 	}
 
 	public String getDireccion() {
-		return direccion;
+		return Direccion;
 	}
 
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
+	public void setDireccion(String Direccion) {
+		if (Direccion != null && Direccion.length() <= 255) {
+			Direccion = Direccion;
+		}
 	}
 
 	public String getTelefono() {
-		return telefono;
+		return Telefono;
 	}
 
-	public void setTelefono(String telefono) {
-		this.telefono = telefono;
+	public void setTelefono(String Telefono) {
+		if (Telefono != null && Telefono.length() == 9) {
+			Telefono = Telefono;
+		}
 	}
 
 	@Override
 	public String toString() {
-		return "Medico [id_Medico=" + id_Medico + ", usuario=" + usuario + ", password=" + password + ", correo="
-				+ correo + ", direccion=" + direccion + ", telefono=" + telefono + "]";
+		return "Medico [ID_Medico=" + ID_Medico + ", Nombre=" + Nombre + ", Apellidos=" + Apellidos + ", usuario="
+				+ Usuario + ", password=" + Password + ", correo=" + Correo + ", direccion=" + Direccion + ", telefono="
+				+ Telefono + "]";
 	}
 	
 }
