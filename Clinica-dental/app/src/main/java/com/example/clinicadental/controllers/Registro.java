@@ -40,6 +40,11 @@ public class Registro extends AppCompatActivity {
             insert();
         });
 
+        findViewById(R.id.btnCerrarSesion).setOnClickListener(view -> {
+            Intent ventana = new Intent(Registro.this, MainActivity.class);
+            startActivity(ventana);
+        });
+
     }
 
     private void cogerDatos() {

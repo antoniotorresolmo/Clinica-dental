@@ -159,11 +159,13 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="24dp"
+                            android:layout_marginEnd="24dp"
                             android:backgroundTint="@color/Rosita"
                             android:text="@string/btnGuardar"
                             android:textStyle="bold"
                             android:visibility="visible"
                             app:cornerRadius="@dimen/cornerButton"
+                            app:layout_constraintEnd_toStartOf="@+id/btnCancelar"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/btnModificar" />
 
