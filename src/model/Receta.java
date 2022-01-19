@@ -2,60 +2,62 @@ package model;
 
 public class Receta {
 	
-	private int id_Receta; //PK
-	private String descripcion; //NN
-	private Medico id_Medico; //FK
-	private Paciente id_Paciente; //FK
+	private int ID_Receta; //PK
+	private String Descripcion; //NN
+	private Medico ID_Medico; //FK
+	private Paciente ID_Paciente; //FK
 	
-	public Receta(int id_Receta) {
+	public Receta(int ID_Receta) {
 		
-		this.id_Receta = id_Receta;
+		this.ID_Receta = ID_Receta;
 	}
 
-	public Receta(int id_Receta, String descripcion, Medico id_Medico, Paciente id_Paciente) {
+	public Receta(int ID_Receta, String Descripcion, Medico ID_Medico, Paciente ID_Paciente) {
 		
-		this.id_Receta = id_Receta;
-		this.descripcion = descripcion;
-		this.id_Medico = id_Medico;
-		this.id_Paciente = id_Paciente;
+		setID_Receta(ID_Receta);
+		setDescripcion(Descripcion);
+		setID_Medico(ID_Medico);
+		setID_Paciente(ID_Paciente);
 	}
 
-	public int getId_Receta() {
-		return id_Receta;
+	public int getID_Receta() {
+		return ID_Receta;
 	}
 
-	public void setId_Receta(int id_Receta) {
-		this.id_Receta = id_Receta;
+	public void setID_Receta(int ID_Receta) {
+		this.ID_Receta = ID_Receta;
 	}
 
 	public String getDescripcion() {
-		return descripcion;
+		return Descripcion;
 	}
 
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
+	public void setDescripcion(String Descripcion) {
+		if (Descripcion != null && Descripcion.length() <= 1000) {
+			this.Descripcion = Descripcion;
+		}
 	}
 
-	public Medico getId_Medico() {
-		return id_Medico;
+	public Medico getID_Medico() {
+		return ID_Medico;
 	}
 
-	public void setId_Medico(Medico id_Medico) {
-		this.id_Medico = id_Medico;
+	public void setID_Medico(Medico ID_Medico) {
+		this.ID_Medico = ID_Medico;
 	}
 
-	public Paciente getId_Paciente() {
-		return id_Paciente;
+	public Paciente getID_Paciente() {
+		return ID_Paciente;
 	}
 
-	public void setId_Paciente(Paciente id_Paciente) {
-		this.id_Paciente = id_Paciente;
+	public void setID_Paciente(Paciente ID_Paciente) {
+		this.ID_Paciente = ID_Paciente;
 	}
 
 	@Override
 	public String toString() {
-		return "Receta [id_Receta=" + id_Receta + ", descripcion=" + descripcion + ", id_Medico=" + id_Medico
-				+ ", id_Paciente=" + id_Paciente + "]";
+		return "Receta [ID_Receta=" + ID_Receta + ", Descripcion=" + Descripcion + ", ID_Medico=" + ID_Medico
+				+ ", ID_Paciente=" + ID_Paciente + "]";
 	}
 
 }
