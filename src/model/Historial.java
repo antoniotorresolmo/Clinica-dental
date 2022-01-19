@@ -13,11 +13,11 @@ public class Historial {
 	}
 
 	public Historial(int ID_Consulta, String Operacion, String Observacines, Paciente ID_Paciente) {
-		super();
-		this.ID_Consulta = ID_Consulta;
-		this.Operacion = Operacion;
-		this.Observacines = Observacines;
-		this.ID_Paciente = ID_Paciente;
+		
+		setId_Consulta(ID_Consulta);
+		setOperacion(Operacion);
+		setObservacines(Observacines);
+		setId_Paciente(ID_Paciente);
 	}
 
 	public int getId_Consulta() {
