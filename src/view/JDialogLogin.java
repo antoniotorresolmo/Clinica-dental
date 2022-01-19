@@ -14,6 +14,8 @@ import javax.swing.JRadioButton;
 import java.awt.Color;
 import javax.swing.JCheckBox;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class JDialogLogin extends JDialog {
 
@@ -80,6 +82,11 @@ public class JDialogLogin extends JDialog {
 		contentPanel.add(btnEntrar);
 		
 		JButton btnRegistrar = new JButton("REGISTRARSE");
+		btnRegistrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
 		btnRegistrar.setFont(new Font("Quicksand", Font.BOLD, 11));
 		btnRegistrar.setBackground(secundario);
 		btnRegistrar.setBounds(309, 200, 115, 23);
