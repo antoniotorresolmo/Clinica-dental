@@ -2,38 +2,38 @@ package model;
 
 public class Paciente_Medico {
 	
-	private Medico id_Medico; //FK
-	private Paciente id_Paciente; //FK
+	private Medico ID_Medico; //FK
+	private Paciente ID_Paciente; //FK
 	
 	public Paciente_Medico() {
 		
 	}
 
-	public Paciente_Medico(Medico id_Medico, Paciente id_Paciente) {
+	public Paciente_Medico(Medico ID_Medico, Paciente ID_Paciente) {
 		
-		this.id_Medico = id_Medico;
-		this.id_Paciente = id_Paciente;
+		this.ID_Medico = ID_Medico;
+		this.ID_Paciente = ID_Paciente;
 	}
 
-	public Medico getId_Medico() {
-		return id_Medico;
+	public Medico getID_Medico() {
+		return ID_Medico;
 	}
 
-	public void setId_Medico(Medico id_Medico) {
-		this.id_Medico = id_Medico;
+	public void setID_Medico(Medico ID_Medico) {
+		this.ID_Medico = ID_Medico;
 	}
 
-	public Paciente getId_Paciente() {
-		return id_Paciente;
+	public Paciente getID_Paciente() {
+		return ID_Paciente;
 	}
 
-	public void setId_Paciente(Paciente id_Paciente) {
-		this.id_Paciente = id_Paciente;
+	public void setID_Paciente(Paciente ID_Paciente) {
+		this.ID_Paciente = ID_Paciente;
 	}
 
 	@Override
 	public String toString() {
-		return "Paciente_Medico [id_Medico=" + id_Medico + ", id_Paciente=" + id_Paciente + "]";
+		return "Paciente_Medico [ID_Medico=" + ID_Medico + ", ID_Paciente=" + ID_Paciente + "]";
 	}
 
 }
