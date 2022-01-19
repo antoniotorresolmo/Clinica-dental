@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 import com.example.clinicadental.R;
+import com.example.clinicadental.logic.LogicCita;
 
 public class FrInicio extends Fragment {
 
@@ -33,14 +34,14 @@ public class FrInicio extends Fragment {
         lblTituloInicio = view.findViewById(R.id.lblTituloInicio);
         lblTituloInicio.setText("Hola " + BottomNav.oPaciente.getNombre());
 
-        getActivity().setTitle("Inicio");
+        comprobarCitas(view);
 
         return view;
     }
 
-    public void comprobarCitas() {
+    public void comprobarCitas(View view) {
 
-
+        LogicCita.listByCita(BottomNav.oPaciente, getContext(), view);
 
     }
 }

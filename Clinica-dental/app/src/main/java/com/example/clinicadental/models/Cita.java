@@ -2,83 +2,83 @@ package com.example.clinicadental.models;
 
 public class Cita {
 
-    int id_Cita; //PK
-    String dia; //NN
-    String hora; //NN
-    String operacion; //NN
-    Medico id_Medico; //FK
-    Paciente id_Paciente; //FK
+    int ID_Cita; //PK
+    String Dia; //NN
+    String Hora; //NN
+    String Operacion; //NN
+    int IDMedico; //FK
+    int ID_Paciente; //FK
 
-    public Cita(int id_Cita) {
-        this.id_Cita = id_Cita;
+    public Cita(int ID_Cita) {
+        this.ID_Cita = ID_Cita;
     }
 
-    public Cita(int id_Cita, String dia, String hora, String operacion, Medico id_Medico, Paciente id_Paciente) {
-        this.id_Cita = id_Cita;
-        this.dia = dia;
-        this.hora = hora;
-        this.operacion = operacion;
-        this.id_Medico = id_Medico;
-        this.id_Paciente = id_Paciente;
+    public Cita(int ID_Cita, String Dia, String Hora, String Operacion, int IDMedico, int ID_Paciente) {
+        this.ID_Cita = ID_Cita;
+        this.Dia = Dia;
+        this.Hora = Hora;
+        this.Operacion = Operacion;
+        this.IDMedico = IDMedico;
+        this.ID_Paciente = ID_Paciente;
     }
 
     public int getId_Cita() {
-        return id_Cita;
+        return ID_Cita;
     }
 
     public void setId_Cita(int id_Cita) {
-        this.id_Cita = id_Cita;
+        this.ID_Cita = id_Cita;
     }
 
     public String getDia() {
-        return dia;
+        return Dia;
     }
 
-    public void setDia(String dia) {
-        this.dia = dia;
+    public void setDia(String Dia) {
+        this.Dia = Dia;
     }
 
     public String getHora() {
-        return hora;
+        return Hora;
     }
 
-    public void setHora(String hora) {
-        this.hora = hora;
+    public void setHora(String Hora) {
+        this.Hora = Hora;
     }
 
     public String getOperacion() {
-        return operacion;
+        return Operacion;
     }
 
-    public void setOperacion(String operacion) {
-        this.operacion = operacion;
+    public void setOperacion(String Operacion) {
+        this.Operacion = Operacion;
     }
 
-    public Medico getId_Medico() {
-        return id_Medico;
+    public int getId_Medico() {
+        return IDMedico;
     }
 
-    public void setId_Medico(Medico id_Medico) {
-        this.id_Medico = id_Medico;
+    public void setId_Medico(int IDMedico) {
+        this.IDMedico = IDMedico;
     }
 
-    public Paciente getId_Paciente() {
-        return id_Paciente;
+    public int getId_Paciente() {
+        return ID_Paciente;
     }
 
-    public void setId_Paciente(Paciente id_Paciente) {
-        this.id_Paciente = id_Paciente;
+    public void setId_Paciente(int ID_Paciente) {
+        this.ID_Paciente = ID_Paciente;
     }
 
     @Override
     public String toString() {
         return "Cita{" +
-                "id_Cita=" + id_Cita +
-                ", dia='" + dia + '\'' +
-                ", hora='" + hora + '\'' +
-                ", operacion='" + operacion + '\'' +
-                ", id_Medico=" + id_Medico +
-                ", id_Paciente=" + id_Paciente +
+                "id_Cita=" + ID_Cita +
+                ", dia='" + Dia + '\'' +
+                ", hora='" + Hora + '\'' +
+                ", operacion='" + Operacion + '\'' +
+                ", id_Medico=" + IDMedico +
+                ", id_Paciente=" + ID_Paciente +
                 '}';
     }
 }
