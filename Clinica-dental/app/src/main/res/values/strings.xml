@@ -56,4 +56,7 @@
     <string name="lblHora">Hora</string>
     <string name="lblDia">Día</string>
     <string name="lblDescripcionRVRecetario">Descripción</string>
+    <string name="btnModificar">Modificar</string>
+    <string name="btnGuardar">Guardar</string>
+    <string name="btnCancelar">Cancelar</string>
 </resources>

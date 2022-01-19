@@ -96,4 +96,34 @@ public class LogicPaciente {
         return oPaciente1;
     }
 
+    public static void update(Context oContext){
+
+        String url = ILogic.hosting + "proyecto/Paciente/upd_paciente.php?" +
+                "&sUsuario=" +  BottomNav.oPaciente.getUsuario() +
+                "&sPassword=" +  BottomNav.oPaciente.getPassword() +
+                "&sCorreo=" +  BottomNav.oPaciente.getCorreo() +
+                "&sNombre=" +  BottomNav.oPaciente.getNombre() +
+                "&sApellidos=" +  BottomNav.oPaciente.getApellidos() +
+                "&sTelefono=" +  BottomNav.oPaciente.getTelefono() +
+                "&sDireccion=" +  BottomNav.oPaciente.getDireccion() +
+                "&sDNI=" +  BottomNav.oPaciente.getDNI() +
+                "&sID_Paciente=" +  BottomNav.oPaciente.getID_Paciente();
+
+        Volley.newRequestQueue(oContext).add(new StringRequest(Request.Method.GET, url,
+                s -> {
+                    if (s.equals("null") || s.contains("Duplicate")) {
+                        Log.d("juan",s);
+                        Toast.makeText(oContext, "No se ha podido actualizar el usuario", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(oContext, "El usuario ha sido actualizado con éxito", Toast.LENGTH_SHORT).show();
+                        Log.d("pepe",s);
+                    }
+                }, volleyError -> {
+            Toast.makeText(oContext, volleyError.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+        ));
+
+    }
+
+
 }
