@@ -1,21 +1,17 @@
 package com.example.clinicadental.controllers;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
@@ -103,32 +99,5 @@ public class MainActivity extends AppCompatActivity {
     private void mostrarEste() {
         Toast.makeText(getApplicationContext(), oPaciente.toString(), Toast.LENGTH_SHORT).show();
     }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        // TODO Auto-generated method stub
-        if (keyCode == event.KEYCODE_BACK) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setMessage("¿Desea salir de Clinica Dental Los Chavales?")
-                    .setPositiveButton("Si", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            Intent intent = new Intent(Intent.ACTION_MAIN);
-                            intent.addCategory(Intent.CATEGORY_HOME);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
-                        }
-                    })
-                    .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            dialog.dismiss();
-                        }
-                    });
-            builder.show();
-        }
-
-        return super.onKeyDown(keyCode, event);
-    }
-
-
 
 }

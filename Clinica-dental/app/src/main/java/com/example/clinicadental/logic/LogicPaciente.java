@@ -55,7 +55,7 @@ public class LogicPaciente {
     public static void getByIdUser(Context oContext) {
 
         String url = ILogic.hosting +   "proyecto/Paciente/get_idpaciente_by_user.php?" +
-                "sUsuario=" + BottomNav.oPaciente.getUsuario();
+                                        "sUsuario=" + BottomNav.oPaciente.getUsuario();
 
         Volley.newRequestQueue(oContext).add(new StringRequest(Request.Method.GET, url,
                 s -> {
@@ -85,7 +85,7 @@ public class LogicPaciente {
 
                     } else {
 
-                        BottomNav.oPaciente  = new Gson().fromJson(s, new TypeToken<Paciente>() {
+                       BottomNav.oPaciente  = new Gson().fromJson(s, new TypeToken<Paciente>() {
                         }.getType());
                         Log.d("EL PEPEEEEEEEEEE", BottomNav.oPaciente.toString());
                         Intent ventana = new Intent(oContext, BottomNav.class);

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,54 +13,39 @@
         android:background="@color/colorFondo"
         android:backgroundTint="@color/AzulFondo">
 
-        <ScrollView
-            android:id="@+id/lytDatos1"
+        <LinearLayout
+            android:id="@+id/lytDatos"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
 
-            android:layout_marginStart="200dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/redondeadoh"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/redondeado"
             android:orientation="vertical"
-            android:paddingStart="50dp"
-            android:paddingTop="5dp"
-            android:paddingEnd="50dp"
-            android:paddingBottom="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="25dp">
 
                 <LinearLayout
-                    android:id="@+id/lytDatos"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-
-
-                    android:background="@drawable/redondeadoh"
-                    android:orientation="vertical"
-                    android:paddingStart="50dp"
-                    android:paddingTop="5dp"
-                    android:paddingEnd="50dp"
-                    android:paddingBottom="5dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/txtUsuarioRegistro"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/alturaTxtPerfilHori"
-                        android:layout_marginBottom="15dp"
+                        android:layout_height="wrap_content"
                         android:textColorHint="@color/Rosita"
                         app:boxBackgroundColor="#FFFFFF"
                         app:boxStrokeColor="@color/Rosita"
@@ -70,18 +54,16 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/txtUsuario"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:hint="@string/txtUsuario"
                             android:paddingStart="0dp"
-                            android:paddingBottom="30dp"
                             android:textColor="@color/black" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/txtContraRegistro"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/alturaTxtPerfilHori"
-                        android:layout_marginBottom="15dp"
+                        android:layout_height="wrap_content"
                         android:textColorHint="@color/Rosita"
                         app:boxBackgroundColor="#FFFFFF"
                         app:boxStrokeColor="@color/Rosita"
@@ -90,7 +72,7 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/txtPasswordLogin"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:hint="@string/txtContrasena"
                             android:inputType="textPassword"
                             android:paddingStart="0dp"
@@ -100,8 +82,7 @@
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/txtCorreoRegistro"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/alturaTxtPerfilHori"
-                        android:layout_marginBottom="15dp"
+                        android:layout_height="wrap_content"
                         android:textColorHint="@color/Rosita"
                         app:boxBackgroundColor="#FFFFFF"
                         app:boxStrokeColor="@color/Rosita"
@@ -110,7 +91,7 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/txtCorreo"
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/alturaTxtPerfilHori"
+                            android:layout_height="wrap_content"
                             android:hint="@string/txtCorreo"
                             android:inputType="textEmailAddress"
                             android:paddingStart="0dp"
@@ -118,29 +99,9 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/txtDireccionRegistro"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/alturaTxtPerfilHori"
-                        android:layout_marginBottom="30dp"
-                        android:textColorHint="@color/Rosita"
-                        app:boxBackgroundColor="#FFFFFF"
-                        app:boxStrokeColor="@color/Rosita"
-                        app:hintTextColor="@color/Rosita">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtDireccion"
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/alturaTxtPerfilHori"
-                            android:hint="@string/txtDireccion"
-                            android:paddingStart="0dp"
-                            android:textColor="@color/black" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/txtTlfRegistro"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/alturaTxtPerfilHori"
-                        android:layout_marginBottom="15dp"
+                        android:layout_height="wrap_content"
                         android:textColorHint="@color/Rosita"
                         app:boxBackgroundColor="#FFFFFF"
                         app:boxStrokeColor="@color/Rosita"
@@ -149,38 +110,107 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/txtTelefono"
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/alturaTxtPerfilHori"
-                            android:layout_marginBottom="30dp"
+                            android:layout_height="wrap_content"
                             android:hint="@string/txtTelefono"
                             android:inputType="phone"
                             android:paddingStart="0dp"
                             android:textColor="@color/black" />
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <Button
-                        android:id="@+id/btnCerrarSesion"
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtDireccionRegistro"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:backgroundTint="@color/fondoBoton"
-                        android:text="@string/CerrarS"
-                        android:textAlignment="viewStart"
-                        android:textColor="@color/design_default_color_error"
-                        android:textStyle="bold"
-                        app:cornerRadius="20dp"
-                        app:rippleColor="#FFFFFF" />
+                        android:textColorHint="@color/Rosita"
+                        app:boxBackgroundColor="#FFFFFF"
+                        app:boxStrokeColor="@color/Rosita"
+                        app:hintTextColor="@color/Rosita">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtDireccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/txtDireccion"
+                            android:paddingStart="0dp"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/btnModificar"
+                            style="@style/BotonesInicio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/Azulito"
+                            android:text="@string/btnModificar"
+                            android:textStyle="bold"
+                            app:cornerRadius="@dimen/cornerButton"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/btnGuardar"
+                            style="@style/BotonesInicio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginEnd="24dp"
+                            android:backgroundTint="@color/Rosita"
+                            android:text="@string/btnGuardar"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            app:cornerRadius="@dimen/cornerButton"
+                            app:layout_constraintEnd_toStartOf="@+id/btnCancelar"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/btnModificar" />
+
+                        <Button
+                            android:id="@+id/btnCerrarSesion"
+                            style="@style/BotonesInicio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/fondoBoton"
+                            android:text="@string/CerrarS"
+                            android:textAlignment="center"
+                            android:textColor="@color/cerrarSesion"
+                            android:textStyle="bold"
+                            app:cornerRadius="@dimen/cornerButton"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/btnGuardar"
+                            app:rippleColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/btnCancelar"
+                            style="@style/BotonesInicio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginEnd="20dp"
+                            android:text="@string/btnCancelar"
+                            app:cornerRadius="@dimen/cornerButton"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/btnModificar" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </ScrollView>
+            </ScrollView>
+
+        </LinearLayout>
 
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="116dp"
             android:layout_height="119dp"
-            android:layout_marginStart="32dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/lytDatos"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/diente"
