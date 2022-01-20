@@ -15,5 +15,16 @@ public class CtrlPrincipal {
 		
 	}
 	
+	public static void camposEditables() {
+		view.PnlPerfil.txtNombreMedico.setEditable(true);
+		view.PnlPerfil.txtApellidosMedico.setEditable(true);
+		view.PnlPerfil.txtUsuarioMedico.setEditable(true);
+		view.PnlPerfil.txtPasswordMedico.setEditable(true);
+		view.PnlPerfil.txtCorreoMedico.setEditable(true);
+		view.PnlPerfil.txtDireccionMedico.setEditable(true);
+		view.PnlPerfil.txtTelefonoMedico.setEditable(true);
+		
+	}
+	
 
 }
