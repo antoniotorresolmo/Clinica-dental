@@ -42,6 +42,7 @@ public class LogicPaciente {
                     } else {
                         Toast.makeText(oContext, "El usuario ha sido creado con éxito", Toast.LENGTH_SHORT).show();
                         BottomNav.oPaciente = oPaciente;
+                        getByIdUser(oContext);
                         Intent ventana = new Intent(oContext, BottomNav.class);
                         oContext.startActivity(ventana);
                     }
@@ -62,7 +63,8 @@ public class LogicPaciente {
                     if (s.equals("null") || s.contains("Duplicate")) {
                         Log.d("juan",s);
                     } else {
-                        Paciente oPaciente = new Gson().fromJson(s, new TypeToken<Paciente>() {}.getType());
+                        BottomNav.oPaciente = new Gson().fromJson(s, new TypeToken<Paciente>() {}.getType());
+                        Log.d("PEPITO", BottomNav.oPaciente.getID_Paciente()+"");
                     }
                 }, volleyError -> {
             Toast.makeText(oContext, volleyError.getMessage(), Toast.LENGTH_SHORT).show();
@@ -79,7 +81,7 @@ public class LogicPaciente {
         Volley.newRequestQueue(oContext).add(new StringRequest(Request.Method.GET, url,
 
                 s -> {
-                    Log.d("EL PEPEEEEEEEEEE", s);
+
                     if (s.equals("null")) {
                         Toast.makeText(oContext, "No se ha encontrado.", Toast.LENGTH_SHORT).show();
 
@@ -87,7 +89,8 @@ public class LogicPaciente {
 
                        BottomNav.oPaciente  = new Gson().fromJson(s, new TypeToken<Paciente>() {
                         }.getType());
-                        Log.d("EL PEPEEEEEEEEEE", BottomNav.oPaciente.toString());
+
+
                         Intent ventana = new Intent(oContext, BottomNav.class);
                         oContext.startActivity(ventana);
 
@@ -121,11 +124,11 @@ public class LogicPaciente {
         Volley.newRequestQueue(oContext).add(new StringRequest(Request.Method.GET, url,
                 s -> {
                     if (s.equals("null") || s.contains("Duplicate")) {
-                        Log.d("juan",s);
+
                         Toast.makeText(oContext, "No se ha podido actualizar el usuario", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(oContext, "El usuario ha sido actualizado con éxito", Toast.LENGTH_SHORT).show();
-                        Log.d("pepe",s);
+
                     }
                 }, volleyError -> {
             Toast.makeText(oContext, volleyError.getMessage(), Toast.LENGTH_SHORT).show();

@@ -38,6 +38,7 @@ public class Registro extends AppCompatActivity {
         findViewById(R.id.btnRegistro).setOnClickListener(v -> {
             cogerDatos();
             insert();
+
         });
 
         findViewById(R.id.btnCerrarSesion).setOnClickListener(view -> {
