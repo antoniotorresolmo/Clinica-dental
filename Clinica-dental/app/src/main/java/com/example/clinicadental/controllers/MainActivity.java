@@ -54,7 +54,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         findViewById(R.id.btnEntrar).setOnClickListener(v-> {
-            obtenerEste();
+            LogicPaciente.obtenerUsuario(MainActivity.this, txtUsuario.getEditText().getText().toString(), txtPassword.getEditText().getText().toString());
+
+
             guardarPreferencias();
         });
 
@@ -91,29 +93,6 @@ public class MainActivity extends AppCompatActivity {
         oSPEditor.putString("sPassword", sPassword);
 
         oSPEditor.commit();
-
-    }
-
-    private void obtenerEste() {
-
-        oPaciente = (Paciente) LogicPaciente.obtenerUsuario(this, txtUsuario.getEditText().getText().toString());
-        if (oPaciente != null) {
-            comprobarUsuario();
-        }
-    }
-
-    private void comprobarUsuario() {
-
-
-        String contraseña = txtPassword.getEditText().getText().toString();
-
-        if (oPaciente.getPassword().equals(contraseña)) {
-
-            BottomNav.oPaciente = oPaciente;
-            Intent ventana = new Intent(this, BottomNav.class);
-            startActivity(ventana);
-
-        }
 
     }
 

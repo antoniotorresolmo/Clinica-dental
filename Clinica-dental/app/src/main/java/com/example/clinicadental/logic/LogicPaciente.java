@@ -1,5 +1,7 @@
 package com.example.clinicadental.logic;
 
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
+
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -10,7 +12,9 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.clinicadental.R;
 import com.example.clinicadental.controllers.BottomNav;
+import com.example.clinicadental.controllers.MainActivity;
 import com.example.clinicadental.models.Paciente;
+import com.google.android.material.bottomappbar.BottomAppBarTopEdgeTreatment;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -67,21 +71,25 @@ public class LogicPaciente {
 
     }
 
-    public static Object obtenerUsuario(Context oContext, String sUsuario){
+    public static void obtenerUsuario(Context oContext, String sUsuario, String sPassword){
 
 
-        String url = ILogic.hosting + "/proyecto/Paciente/get_usuario.php?sUsuario=" + sUsuario;
+        String url = ILogic.hosting + "/proyecto/Paciente/get_usuario.php?sUsuario=" + sUsuario+"&sPassword="+sPassword;
 
         Volley.newRequestQueue(oContext).add(new StringRequest(Request.Method.GET, url,
 
                 s -> {
-
+                    Log.d("EL PEPEEEEEEEEEE", s);
                     if (s.equals("null")) {
                         Toast.makeText(oContext, "No se ha encontrado.", Toast.LENGTH_SHORT).show();
+
                     } else {
 
-                       oPaciente1  = new Gson().fromJson(s, new TypeToken<Paciente>() {
+                       BottomNav.oPaciente  = new Gson().fromJson(s, new TypeToken<Paciente>() {
                         }.getType());
+                        Log.d("EL PEPEEEEEEEEEE", BottomNav.oPaciente.toString());
+                        Intent ventana = new Intent(oContext, BottomNav.class);
+                        oContext.startActivity(ventana);
 
                     }
 
@@ -93,7 +101,8 @@ public class LogicPaciente {
         ));
 
 
-        return oPaciente1;
+
+
     }
 
     public static void update(Context oContext){
