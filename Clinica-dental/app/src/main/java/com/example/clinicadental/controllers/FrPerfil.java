@@ -1,5 +1,6 @@
 package com.example.clinicadental.controllers;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -15,6 +16,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class FrPerfil extends Fragment {
 
+    Button btnCerrarSesion;
 
     public FrPerfil() {
         // Required empty public constructor
@@ -30,9 +32,11 @@ public class FrPerfil extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
 
         }
+
     }
 
     @Override
@@ -42,7 +46,7 @@ public class FrPerfil extends Fragment {
         Button btnModificar = view.findViewById(R.id.btnModificar);
         Button btnGuardar = view.findViewById(R.id.btnGuardar);
         Button btnCancelar = view.findViewById(R.id.btnCancelar);
-
+        btnCerrarSesion = view.findViewById(R.id.btnCerrarSesion);
 
         btnGuardar.setVisibility(view.INVISIBLE);
         btnCancelar.setVisibility(view.INVISIBLE);
@@ -72,6 +76,12 @@ public class FrPerfil extends Fragment {
             btnModificar.setVisibility(view.VISIBLE);
 
         });
+
+        btnCerrarSesion.setOnClickListener(v->{
+            Intent ventana = new Intent(getContext(), MainActivity.class);
+            startActivity(ventana);
+        });
+
         return view;
     }
 
