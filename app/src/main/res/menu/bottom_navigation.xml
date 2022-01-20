@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/itemInicio"
+        android:icon="@drawable/inicio"
+        android:title="@string/itemInicio" />
+    <item
+        android:id="@+id/itemCogerCita"
+        android:icon="@drawable/cita"
+        android:title="@string/itemCogerCita" />
+    <item
+        android:id="@+id/itemRecetario"
+        android:icon="@drawable/recetario"
+        android:title="@string/itemRecetario" />
+    <item
+        android:id="@+id/itemContacta"
+        android:icon="@drawable/contacta"
+        android:title="@string/itemContacta" />
+    <item
+        android:id="@+id/itemPerfil"
+        android:icon="@drawable/perfil"
+        android:title="@string/itemPerfil" />
+</menu>
