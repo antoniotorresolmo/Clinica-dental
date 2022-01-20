@@ -19,15 +19,13 @@
             android:layout_height="match_parent"
 
 
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginStart="200dp"
             android:layout_marginEnd="25dp"
             android:background="@drawable/redondeado"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2">
+            app:layout_constraintStart_toEndOf="@+id/imageView2">
 
 
             <ScrollView
@@ -208,9 +206,9 @@
             android:id="@+id/imageView2"
             android:layout_width="116dp"
             android:layout_height="119dp"
-            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.071"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/diente"
