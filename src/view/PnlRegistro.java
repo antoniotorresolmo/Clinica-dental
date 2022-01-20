@@ -31,7 +31,7 @@ public class PnlRegistro extends JPanel {
 		
 		JLabel lblIconoRegistro = new JLabel("");
 		lblIconoRegistro.setIcon(new ImageIcon("C:\\Users\\JuanLoreLeo\\Desktop\\Proyecto 2\u00BA Trimestre\\Clinica-dental\\src\\images\\perfil.png"));
-		lblIconoRegistro.setBounds(20, 100, 100, 100);
+		lblIconoRegistro.setBounds(20, 122, 100, 100);
 		panel.add(lblIconoRegistro);
 		
 		JPanel panel_1 = new JPanel();
