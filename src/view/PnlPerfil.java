@@ -131,7 +131,6 @@ public class PnlPerfil extends JPanel {
 		contentPanel.add(lblNombreMedico);
 		
 		txtNombreMedico = new JTextField();
-		txtNombreMedico.setEditable(false);
 		txtNombreMedico.setFont(new Font("Quicksand", Font.PLAIN, 11));
 		txtNombreMedico.setBounds(196, 30, 228, 20);
 		contentPanel.add(txtNombreMedico);
