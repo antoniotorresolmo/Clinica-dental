@@ -12,10 +12,13 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvHola"
+        style="@style/cardViews"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         app:cardCornerRadius="40dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -46,9 +49,9 @@
         android:id="@+id/rvCitasInicio"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="150dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="50dp"
         android:background="@color/colorFondo"
         app:layout_constraintBottom_toBottomOf="parent"

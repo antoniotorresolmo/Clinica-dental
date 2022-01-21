@@ -2,9 +2,10 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schema.android.com/apk/res-auto"
     xmlns:app2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardViewCita"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="70dp"
     android:layout_marginTop="5dp"
     android:layout_marginBottom="5dp"
     app2:cardCornerRadius="25dp"
@@ -12,50 +13,82 @@
     app:cardCornerRadius="10dp"
     app:cardElevation="5dp">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        app2:srcCompat="@drawable/iconoinicio" />
-
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:scaleType="fitCenter"
+            app2:layout_constraintStart_toStartOf="parent"
+            app2:layout_constraintTop_toTopOf="parent"
+            app2:srcCompat="@drawable/citados" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp">
+            app2:layout_constraintBottom_toBottomOf="parent"
+            app2:layout_constraintEnd_toStartOf="@+id/imageButton"
+            app2:layout_constraintStart_toEndOf="@+id/imageView"
+            app2:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/lblDiaCV"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/lblDia"
-                android:textAlignment="center" />
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
-            <TextView
-                android:id="@+id/lblHoraCV"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/lblHora"
-                android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/lblDiaCV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/lblDia"
+                    android:textAlignment="center"
+                    app2:layout_constraintEnd_toEndOf="parent"
+                    app2:layout_constraintStart_toStartOf="parent"
+                    app2:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/lblOperacionCV"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/lblOperacion"
-                android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/lblHoraCV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/lblHora"
+                    android:textAlignment="center"
+                    app2:layout_constraintEnd_toEndOf="parent"
+                    app2:layout_constraintStart_toStartOf="parent"
+                    app2:layout_constraintTop_toBottomOf="@+id/lblDiaCV" />
+
+                <TextView
+                    android:id="@+id/lblOperacionCV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/lblOperacion"
+                    android:textAlignment="center"
+                    app2:layout_constraintEnd_toEndOf="parent"
+                    app2:layout_constraintStart_toStartOf="parent"
+                    app2:layout_constraintTop_toBottomOf="@+id/lblHoraCV" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
         </LinearLayout>
-    </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="50dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="#FFFFFF"
+            android:scaleType="fitCenter"
+            app2:layout_constraintBottom_toBottomOf="parent"
+            app2:layout_constraintEnd_toEndOf="parent"
+            app2:layout_constraintTop_toTopOf="parent"
+            app2:srcCompat="@drawable/cruz" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

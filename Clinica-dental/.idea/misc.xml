@@ -22,6 +22,7 @@
         <entry key="..\:/Users/Usuario/Desktop/Clinica-dental/app/src/main/res/layout/fragment_fr_recetario.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Usuario/Desktop/Clinica-dental/app/src/main/res/layout/fragment_fr_registro.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Usuario/Desktop/Clinica-dental/app/src/main/res/layout/receta_item.xml" value="0.33" />
+        <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/Clinica-dental/app/src/main/res/drawable-v24/ic_inicio.xml" value="0.2203125" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/Clinica-dental/app/src/main/res/layout-land/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/Clinica-dental/app/src/main/res/layout-land/fragment_fr_coger_cita.xml" value="0.21354166666666666" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/Clinica-dental/app/src/main/res/layout-land/fragment_fr_contacta.xml" value="0.16875" />
@@ -29,10 +30,10 @@
         <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/Clinica-dental/app/src/main/res/layout-land/fragment_fr_perfil.xml" value="0.17" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/Clinica-dental/app/src/main/res/layout-sw600dp/fragment_fr_perfil.xml" value="0.14027777777777778" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/Clinica-dental/app/src/main/res/layout/activity_bottom_nav.xml" value="0.1814814814814815" />
-        <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/Clinica-dental/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/Clinica-dental/app/src/main/res/layout/activity_login.xml" value="0.2980988593155893" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/Clinica-dental/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/Clinica-dental/app/src/main/res/layout/activity_registro.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/Clinica-dental/app/src/main/res/layout/cita_item.xml" value="0.25" />
+        <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/Clinica-dental/app/src/main/res/layout/cita_item.xml" value="0.33" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/Clinica-dental/app/src/main/res/layout/fragment_fr_coger_cita.xml" value="0.22" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/Clinica-dental/app/src/main/res/layout/fragment_fr_contacta.xml" value="0.25" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/Clinica-dental/Clinica-dental/app/src/main/res/layout/fragment_fr_inicio.xml" value="0.33" />
