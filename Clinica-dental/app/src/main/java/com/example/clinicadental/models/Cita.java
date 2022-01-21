@@ -6,19 +6,31 @@ public class Cita {
     String Dia; //NN
     String Hora; //NN
     String Operacion; //NN
-    int IDMedico; //FK
+    byte Terminada; // NN
+    int ID_Medico; //FK
     int ID_Paciente; //FK
+
+    public Cita(){}
 
     public Cita(int ID_Cita) {
         this.ID_Cita = ID_Cita;
     }
 
-    public Cita(int ID_Cita, String Dia, String Hora, String Operacion, int IDMedico, int ID_Paciente) {
+    public Cita(int ID_Cita, String Dia, String Hora, String Operacion, byte Terminada, int IDMedico, int ID_Paciente) {
         this.ID_Cita = ID_Cita;
         this.Dia = Dia;
         this.Hora = Hora;
         this.Operacion = Operacion;
-        this.IDMedico = IDMedico;
+        this.Terminada = Terminada;
+        this.ID_Medico = IDMedico;
+        this.ID_Paciente = ID_Paciente;
+    }
+    public Cita(String Dia, String Hora, String Operacion, byte Terminada, int IDMedico, int ID_Paciente) {
+        this.Dia = Dia;
+        this.Hora = Hora;
+        this.Operacion = Operacion;
+        this.Terminada = Terminada;
+        this.ID_Medico = IDMedico;
         this.ID_Paciente = ID_Paciente;
     }
 
@@ -54,12 +66,20 @@ public class Cita {
         this.Operacion = Operacion;
     }
 
+    public byte getTerminada() {
+        return Terminada;
+    }
+
+    public void setTerminada(byte terminada) {
+        Terminada = terminada;
+    }
+
     public int getId_Medico() {
-        return IDMedico;
+        return ID_Medico;
     }
 
     public void setId_Medico(int IDMedico) {
-        this.IDMedico = IDMedico;
+        this.ID_Medico = IDMedico;
     }
 
     public int getId_Paciente() {
@@ -77,7 +97,7 @@ public class Cita {
                 ", dia='" + Dia + '\'' +
                 ", hora='" + Hora + '\'' +
                 ", operacion='" + Operacion + '\'' +
-                ", id_Medico=" + IDMedico +
+                ", id_Medico=" + ID_Medico +
                 ", id_Paciente=" + ID_Paciente +
                 '}';
     }

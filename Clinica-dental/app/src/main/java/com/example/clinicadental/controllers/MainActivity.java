@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btnEntrar).setOnClickListener(v-> {
             LogicPaciente.obtenerUsuario(MainActivity.this, txtUsuario.getEditText().getText().toString(), txtPassword.getEditText().getText().toString());
 
-
             guardarPreferencias();
         });
 
