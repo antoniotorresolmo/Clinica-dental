@@ -5,7 +5,6 @@ public class CtrlPrincipal {
 	public static void inicio() {
 		
 		new view.JDialogLogin();
-	
 		
 	}
 	
@@ -16,6 +15,7 @@ public class CtrlPrincipal {
 	}
 	
 	public static void camposEditables() {
+		
 		view.PnlPerfil.txtNombreMedico.setEditable(true);
 		view.PnlPerfil.txtApellidosMedico.setEditable(true);
 		view.PnlPerfil.txtUsuarioMedico.setEditable(true);
