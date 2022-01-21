@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         txtUsuario =  findViewById(R.id.txtUsuario);
         txtPassword = findViewById(R.id.txtPasswordLogin);
+        chbRecordar = findViewById(R.id.chbRecordar);
 
         cargarPreferencias();
 
@@ -56,14 +57,29 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btnEntrar).setOnClickListener(v-> {
             LogicPaciente.obtenerUsuario(MainActivity.this, txtUsuario.getEditText().getText().toString(), txtPassword.getEditText().getText().toString());
 
-            guardarPreferencias();
+            if(chbRecordar.isChecked()){
+                guardarPreferencias();
+            }else{
+                borrarPreferencias();
+            }
+
         });
 
     }
 
-    private void cargarPreferencias(){
+    private void borrarPreferencias() {
 
-        chbRecordar = findViewById(R.id.chbRecordar);
+        SharedPreferences oSharedPreferences = getSharedPreferences("credenciales", Context.MODE_PRIVATE);
+        SharedPreferences.Editor oSPEditor = oSharedPreferences.edit();
+
+        oSPEditor.putString("sUsuario", "");
+        oSPEditor.putString("sPassword", "");
+
+        oSPEditor.commit();
+
+    }
+
+    private void cargarPreferencias(){
 
         SharedPreferences oSharedPreferences = getSharedPreferences("credenciales", Context.MODE_PRIVATE);
 
@@ -93,10 +109,6 @@ public class MainActivity extends AppCompatActivity {
 
         oSPEditor.commit();
 
-    }
-
-    private void mostrarEste() {
-        Toast.makeText(getApplicationContext(), oPaciente.toString(), Toast.LENGTH_SHORT).show();
     }
 
 }

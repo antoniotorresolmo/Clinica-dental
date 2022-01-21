@@ -1,6 +1,7 @@
 package com.example.clinicadental.logic;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -52,7 +53,6 @@ public class LogicCita {
                             CitaAdapter oCitaAdapter = new CitaAdapter(oContext);
                             recyclerView.setAdapter(oCitaAdapter);
 
-                            Log.d("juan", CitaStore.listCita.size() + "");
                         }
 
                     }
@@ -84,6 +84,27 @@ public class LogicCita {
 
                         Toast.makeText(oContext, "Cita concertada", Toast.LENGTH_SHORT).show();
                         listByDia(oCita.getDia(), oContext, view);
+
+                    }
+
+                }, volleyError -> {
+            Log.d("Volley Error", volleyError.toString());
+        }
+        ));
+
+    }
+
+    public static void borrar(int iID_Cita, Context oContext){
+
+        String url = ILogic.hosting + "proyecto/Cita/del_cita.php?iID_Cita=" + iID_Cita;
+
+        Volley.newRequestQueue(oContext).add(new StringRequest(Request.Method.GET, url,
+                s -> {
+                    if (s.equals("null")) {
+                        Log.d("juan", s);
+                        //Toast.makeText(oContext, "No se ha podido crear el usuario", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Log.d("juan", s);
 
                     }
 

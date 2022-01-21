@@ -10,7 +10,9 @@
         android:id="@+id/fragmentContainerView2"
         android:name="com.example.clinicadental.controllers.FrInicio"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/frame_container"
+        android:layout_alignParentTop="true" />
 
     <FrameLayout
         android:id="@+id/frame_container"

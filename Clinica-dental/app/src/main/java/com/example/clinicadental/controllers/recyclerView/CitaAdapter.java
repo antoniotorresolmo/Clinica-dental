@@ -1,15 +1,19 @@
 package com.example.clinicadental.controllers.recyclerView;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.clinicadental.R;
 import com.example.clinicadental.models.*;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class CitaAdapter extends RecyclerView.Adapter<CitaAdapter.ViewHolder> implements View.OnClickListener{
@@ -17,6 +21,7 @@ public class CitaAdapter extends RecyclerView.Adapter<CitaAdapter.ViewHolder> im
     Context context;
     LayoutInflater inflater;
     private View.OnClickListener listener;
+    int iPosicion;
 
     public CitaAdapter(Context context) {
         inflater = LayoutInflater.from(context);
@@ -46,6 +51,11 @@ public class CitaAdapter extends RecyclerView.Adapter<CitaAdapter.ViewHolder> im
         holder.txtDia.setText(strDia);
         holder.txtHora.setText(strHora);
         holder.txtOperacion.setText(strOperacion);
+
+        holder.imgCancelarCita.setOnClickListener(v -> {
+
+        });
+
     }
 
     @Override
@@ -69,12 +79,17 @@ public class CitaAdapter extends RecyclerView.Adapter<CitaAdapter.ViewHolder> im
         TextView txtDia;
         TextView txtHora;
         TextView txtOperacion;
+        ImageButton imgCancelarCita;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             txtDia = itemView.findViewById(R.id.lblDiaCV);
             txtHora = itemView.findViewById(R.id.lblHoraCV);
             txtOperacion = itemView.findViewById(R.id.lblOperacionCV);
+            imgCancelarCita = itemView.findViewById(R.id.imgCancelarCita);
+
+
+
         }
     }
 }

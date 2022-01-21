@@ -6,7 +6,5 @@ import java.util.List;
 public class CitaStore {
 
     public static List<Cita> listCita = new ArrayList<>();
-
-    public static int PacienteSeleccionado;
-    public static boolean isEditing;
+    public static int iCitaSeleccionada;
 }
