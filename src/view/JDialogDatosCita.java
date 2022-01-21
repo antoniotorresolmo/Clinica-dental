@@ -10,6 +10,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.Toolkit;
 import javax.swing.JSpinner;
 import java.awt.Font;
+import javax.swing.JComboBox;
 
 public class JDialogDatosCita extends JDialog {
 
@@ -24,21 +25,6 @@ public class JDialogDatosCita extends JDialog {
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		
-		JSpinner spinnerNombre = new JSpinner();
-		spinnerNombre.setFont(new Font("Quicksand", Font.PLAIN, 11));
-		spinnerNombre.setBounds(40, 30, 354, 20);
-		contentPanel.add(spinnerNombre);
-		
-		JSpinner spinnerNombre_1 = new JSpinner();
-		spinnerNombre_1.setFont(new Font("Quicksand", Font.PLAIN, 11));
-		spinnerNombre_1.setBounds(40, 100, 354, 20);
-		contentPanel.add(spinnerNombre_1);
-		
-		JSpinner spinnerNombre_2 = new JSpinner();
-		spinnerNombre_2.setFont(new Font("Quicksand", Font.PLAIN, 11));
-		spinnerNombre_2.setBounds(40, 170, 354, 20);
-		contentPanel.add(spinnerNombre_2);
-		
 		JButton btnCancelar = new JButton("Cancelar");
 		btnCancelar.setFont(new Font("Quicksand", Font.PLAIN, 11));
 		btnCancelar.setBounds(305, 227, 89, 23);
@@ -50,6 +36,18 @@ public class JDialogDatosCita extends JDialog {
 		btnModificar.setBounds(206, 227, 89, 23);
 		btnModificar.setBackground(view.JDialogLogin.principal);
 		contentPanel.add(btnModificar);
+		
+		JComboBox cbNombre = new JComboBox();
+		cbNombre.setBounds(40, 25, 354, 22);
+		contentPanel.add(cbNombre);
+		
+		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1.setBounds(40, 98, 354, 22);
+		contentPanel.add(comboBox_1);
+		
+		JComboBox comboBox_2 = new JComboBox();
+		comboBox_2.setBounds(40, 175, 354, 22);
+		contentPanel.add(comboBox_2);
 		setVisible(true);
 	}
 }

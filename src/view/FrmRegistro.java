@@ -1,17 +1,20 @@
 package view;
 
-import javax.swing.JPanel;
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
+import javax.swing.JFrame;
+
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class PnlRegistro extends JPanel {
+public class FrmRegistro extends JFrame {
+	
 	private JTextField txtNombreRegistro;
 	private JTextField txtApellidosRegistro;
 	private JTextField txtUsuarioRegistro;
@@ -20,24 +23,25 @@ public class PnlRegistro extends JPanel {
 	private JTextField txtTelefonoRegistro;
 	private JPasswordField txtPasswordRegistro;
 
-	public PnlRegistro() {
-		setLayout(null);
+	public FrmRegistro() {
+		getContentPane().setLayout(null);
+		setBounds(100, 100, 480, 407);
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.WHITE);
 		panel.setBounds(0, 0, 130, 369);
-		add(panel);
+		getContentPane().add(panel);
 		panel.setLayout(null);
 		
 		JLabel lblIconoRegistro = new JLabel("");
-		lblIconoRegistro.setIcon(new ImageIcon("C:\\Users\\JuanLoreLeo\\Desktop\\Proyecto 2\u00BA Trimestre\\Clinica-dental\\src\\images\\perfil.png"));
-		lblIconoRegistro.setBounds(20, 122, 100, 100);
+		lblIconoRegistro.setIcon(new ImageIcon("images/perfil.png"));
+		lblIconoRegistro.setBounds(10, 122, 100, 100);
 		panel.add(lblIconoRegistro);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(129, 0, 337, 369);
 		panel_1.setBackground(view.JDialogLogin.principal);
-		add(panel_1);
+		getContentPane().add(panel_1);
 		panel_1.setLayout(null);
 		
 		JLabel lblNombreRegistro = new JLabel("Nombre:");
@@ -119,5 +123,7 @@ public class PnlRegistro extends JPanel {
 		btnAceptarRegistro.setBounds(70, 322, 89, 23);
 		panel_1.add(btnAceptarRegistro);
 
+		setVisible(true);
+		
 	}
 }

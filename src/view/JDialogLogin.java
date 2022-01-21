@@ -135,12 +135,19 @@ public class JDialogLogin extends JFrame {
 		lblNewLabel_2_1.setBounds(229, 148, 250, 14);
 		contentPanel.add(lblNewLabel_2_1);
 
-		JButton btnNewButton = new JButton("ENTRAR");
-		btnNewButton.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
-		btnNewButton.setBorderPainted(false);
-		btnNewButton.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
-		btnNewButton.setBounds(281, 249, 150, 28);
-		contentPanel.add(btnNewButton);
+		JButton btnEntrar = new JButton("ENTRAR");
+		btnEntrar.setSelected(true);
+		btnEntrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new PnlInicio();
+			}
+		});
+		btnEntrar.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
+		btnEntrar.setBackground(view.JDialogLogin.principal);
+		btnEntrar.setBorderPainted(false);
+		btnEntrar.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
+		btnEntrar.setBounds(229, 249, 99, 28);
+		contentPanel.add(btnEntrar);
 
 		JLabel lblNewLabel_3 = new JLabel("LOGIN");
 		lblNewLabel_3.setForeground(Color.WHITE);
@@ -162,6 +169,20 @@ public class JDialogLogin extends JFrame {
 		lblNewLabel_3_1.setBounds(469, 11, 21, 28);
 		contentPanel.add(lblNewLabel_3_1);
 		getContentPane().add(contentPanel);
+		
+		JButton btnRegistrarse = new JButton("REGISTRARSE");
+		btnRegistrarse.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new FrmRegistro();
+				dispose();
+			}
+		});
+		btnRegistrarse.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
+		btnRegistrarse.setBounds(380, 249, 99, 28);
+		btnRegistrarse.setBorderPainted(false);
+		btnRegistrarse.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
+		btnRegistrarse.setBackground(view.JDialogLogin.secundario);
+		contentPanel.add(btnRegistrarse);
 		
 		setVisible(true);
 	}
