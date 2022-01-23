@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -22,6 +24,8 @@ public class CitaAdapter extends RecyclerView.Adapter<CitaAdapter.ViewHolder> im
     LayoutInflater inflater;
     private View.OnClickListener listener;
     int iPosicion;
+    private int lastPosition = -1;
+
 
     public CitaAdapter(Context context) {
         inflater = LayoutInflater.from(context);
@@ -41,6 +45,13 @@ public class CitaAdapter extends RecyclerView.Adapter<CitaAdapter.ViewHolder> im
         return new ViewHolder(view);
     }
 
+    public void onViewDetachedFromWindow(@NonNull ViewHolder holder) {
+        super.onViewDetachedFromWindow(holder);
+        holder.itemView.clearAnimation();
+    }
+
+
+
     //Vamos a ir colocando cada uno de nuestros elementos de nuestra arrayList
     @Override
     public void onBindViewHolder(@NonNull CitaAdapter.ViewHolder holder, int position) {
@@ -52,11 +63,30 @@ public class CitaAdapter extends RecyclerView.Adapter<CitaAdapter.ViewHolder> im
         holder.txtHora.setText(strHora);
         holder.txtOperacion.setText(strOperacion);
 
+        Animation animation = AnimationUtils.loadAnimation(context,
+                (iPosicion > lastPosition) ? R.anim.up_from_bottom
+                        : R.anim.down_from_top);
+        holder.itemView.startAnimation(animation);
+        lastPosition = iPosicion;
+
+
         holder.imgCancelarCita.setOnClickListener(v -> {
 
         });
+        setAnimation(holder.itemView, position);
 
     }
+    private void setAnimation(View viewToAnimate, int position)
+    {
+        // If the bound view wasn't previously displayed on screen, it's animated
+        if (position > lastPosition)
+        {
+            Animation animation = AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left);
+            viewToAnimate.startAnimation(animation);
+            lastPosition = position;
+        }
+    }
+
 
     @Override
     public int getItemCount() {

@@ -47,7 +47,7 @@ public class FrInicio extends Fragment {
 
     public static void confirmarCancelacion(View view) {
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
         builder.setTitle("Confirmación");
         builder.setMessage("¿Desea cancelar esta cita?");
 

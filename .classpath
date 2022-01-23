@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Clinica-dental/app/build/generated/source/buildConfig/debug"/>
+	<classpathentry kind="lib" path="Clinica-dental/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar"/>
+	<classpathentry kind="lib" path="Clinica-dental/app/build/intermediates/merged_java_res/debug/base.jar"/>
+	<classpathentry kind="lib" path="Clinica-dental/app/build/intermediates/project_dex_archive/debug/out/226c2b769aa7e8b6ce4f02524300acbaaa8494427620a7c82fae4a291cd5466e_0.jar"/>
+	<classpathentry kind="lib" path="Clinica-dental/app/build/intermediates/project_dex_archive/debug/out/226c2b769aa7e8b6ce4f02524300acbaaa8494427620a7c82fae4a291cd5466e_1.jar"/>
+	<classpathentry kind="lib" path="Clinica-dental/app/build/intermediates/project_dex_archive/debug/out/226c2b769aa7e8b6ce4f02524300acbaaa8494427620a7c82fae4a291cd5466e_2.jar"/>
+	<classpathentry kind="lib" path="Clinica-dental/app/build/intermediates/project_dex_archive/debug/out/226c2b769aa7e8b6ce4f02524300acbaaa8494427620a7c82fae4a291cd5466e_3.jar"/>
+	<classpathentry kind="lib" path="Clinica-dental/app/build/intermediates/project_dex_archive/debug/out/226c2b769aa7e8b6ce4f02524300acbaaa8494427620a7c82fae4a291cd5466e_4.jar"/>
+	<classpathentry kind="lib" path="Clinica-dental/app/build/intermediates/project_dex_archive/debug/out/226c2b769aa7e8b6ce4f02524300acbaaa8494427620a7c82fae4a291cd5466e_5.jar"/>
+	<classpathentry kind="output" path="Clinica-dental/app/build/intermediates/javac/debug/classes"/>
+</classpath>
