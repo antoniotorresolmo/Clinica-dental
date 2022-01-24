@@ -1,5 +1,6 @@
 package com.example.clinicadental.controllers.recyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.util.Log;
@@ -12,6 +13,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.clinicadental.R;
+import com.example.clinicadental.controllers.BottomNav;
+import com.example.clinicadental.controllers.FrInicio;
+import com.example.clinicadental.logic.LogicCita;
 import com.example.clinicadental.models.*;
 
 import androidx.annotation.NonNull;
@@ -54,7 +58,7 @@ public class CitaAdapter extends RecyclerView.Adapter<CitaAdapter.ViewHolder> im
 
     //Vamos a ir colocando cada uno de nuestros elementos de nuestra arrayList
     @Override
-    public void onBindViewHolder(@NonNull CitaAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CitaAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         String strDia = CitaStore.listCita.get(position).getDia();
         String strHora = CitaStore.listCita.get(position).getHora();
         String strOperacion = CitaStore.listCita.get(position).getOperacion();
@@ -71,6 +75,19 @@ public class CitaAdapter extends RecyclerView.Adapter<CitaAdapter.ViewHolder> im
 
 
         holder.imgCancelarCita.setOnClickListener(v -> {
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+            builder.setTitle("Confirmación");
+            builder.setMessage("¿Desea cancelar la cita?");
+
+            builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    Log.d("juan", "cancelar cita " + position);
+                    LogicCita.listAndDelete(position, BottomNav.oPaciente.getID_Paciente(),context);
+                }
+            });
+            builder.setNegativeButton("Cancelar", null);
+            builder.show();
 
         });
         setAnimation(holder.itemView, position);

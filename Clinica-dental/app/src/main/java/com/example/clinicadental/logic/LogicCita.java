@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -14,7 +16,9 @@ import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.clinicadental.R;
+import com.example.clinicadental.controllers.BottomNav;
 import com.example.clinicadental.controllers.FrCogerCita;
+import com.example.clinicadental.controllers.FrInicio;
 import com.example.clinicadental.controllers.recyclerView.CitaAdapter;
 import com.example.clinicadental.controllers.recyclerView.RecetaAdapter;
 import com.example.clinicadental.models.Cita;
@@ -30,7 +34,7 @@ import java.util.List;
 
 public class LogicCita {
 
-    public static void listByCita(Paciente oPaciente, Context oContext, View view){
+    public static void listByPaciente(Paciente oPaciente, Context oContext, View view){
 
         String url = ILogic.hosting + "proyecto/Cita/lst_cita_by_idpaciente.php?iID_Paciente=" + oPaciente.getID_Paciente();
         Log.d("juan", url);
@@ -41,18 +45,22 @@ public class LogicCita {
                         Log.d("juan", s);
                         //Toast.makeText(oContext, "No se ha podido crear el usuario", Toast.LENGTH_SHORT).show();
                     } else {
-                        Log.d("juan", s);
+                        //Log.d("juan", s);
                         CitaStore.listCita = new Gson().fromJson(s, new TypeToken<List<Cita>>() {}.getType());
+
+                        RecyclerView recyclerView = view.findViewById(R.id.rvCitasInicio);
 
                         if(CitaStore.listCita.size() > 0){
                             view.findViewById(R.id.lblCitasInicio).setVisibility(View.INVISIBLE);
 
-                            RecyclerView recyclerView = view.findViewById(R.id.rvCitasInicio);
                             recyclerView.setLayoutManager(new LinearLayoutManager(oContext));
 
                             CitaAdapter oCitaAdapter = new CitaAdapter(oContext);
                             recyclerView.setAdapter(oCitaAdapter);
+                        }else{
+                            view.findViewById(R.id.lblCitasInicio).setVisibility(View.VISIBLE);
 
+                            recyclerView.setVisibility(View.INVISIBLE);
                         }
 
                     }
@@ -94,18 +102,49 @@ public class LogicCita {
 
     }
 
-    public static void borrar(int iID_Cita, Context oContext){
+    public static void listAndDelete(int iPosicionCita, int iID_Paciente, Context oContext){
 
-        String url = ILogic.hosting + "proyecto/Cita/del_cita.php?iID_Cita=" + iID_Cita;
+        // Obtener id de la cita
 
-        Volley.newRequestQueue(oContext).add(new StringRequest(Request.Method.GET, url,
+        String urlGet = ILogic.hosting + "proyecto/Cita/lst_cita_by_idpaciente.php?iID_Paciente=" + iID_Paciente;
+        Log.d("juan", urlGet);
+
+        Volley.newRequestQueue(oContext).add(new StringRequest(Request.Method.GET, urlGet,
                 s -> {
                     if (s.equals("null")) {
                         Log.d("juan", s);
                         //Toast.makeText(oContext, "No se ha podido crear el usuario", Toast.LENGTH_SHORT).show();
                     } else {
                         Log.d("juan", s);
+                        List<Cita> lCitas = new Gson().fromJson(s, new TypeToken<List<Cita>>() {}.getType());
 
+                        borrar(lCitas.get(iPosicionCita).getId_Cita(), oContext);
+
+                    }
+
+                }, volleyError -> {
+            Log.d("Volley Error", volleyError.toString());
+        }
+        ));
+
+    }
+
+    public static void borrar(int iID_Cita, Context oContext){
+
+        // Borrar cita
+
+        String url = ILogic.hosting + "proyecto/Cita/del_cita.php?iID_Cita=" + iID_Cita;
+        Log.d("urlBorrar", url);
+
+        Volley.newRequestQueue(oContext).add(new StringRequest(Request.Method.GET, url,
+                s -> {
+                    if (s.equals("null")) {
+                        Log.d("juan", s);
+                    } else {
+                        Log.d("juan", s);
+
+                        Toast.makeText(oContext, "Cita cancelada", Toast.LENGTH_SHORT).show();
+                        LogicCita.listByPaciente(BottomNav.oPaciente, oContext, FrInicio.oView);
                     }
 
                 }, volleyError -> {
