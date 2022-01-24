@@ -24,6 +24,7 @@ public class FrmRegistro extends JFrame {
 	private JPasswordField txtPasswordRegistro;
 
 	public FrmRegistro() {
+		setUndecorated(true);
 		getContentPane().setLayout(null);
 		setBounds(100, 100, 480, 407);
 		

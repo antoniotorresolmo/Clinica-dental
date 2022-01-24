@@ -11,6 +11,9 @@ public class Medico {
 	private String Direccion; //NN
 	private String Telefono; //NN
 	
+	public Medico () {
+		
+	}
 	public Medico(int ID_Medico) {
 		
 		this.ID_Medico = ID_Medico;

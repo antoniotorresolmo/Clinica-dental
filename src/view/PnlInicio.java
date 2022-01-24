@@ -23,36 +23,24 @@ public class PnlInicio extends JPanel {
 		scrollPane.setViewportView(pnlPrincipal);
 		pnlPrincipal.setLayout(null);
 
-		String fontName = "quicksand.ttf";
-		try {
-			// Se carga la fuente
-			InputStream is = getClass().getResourceAsStream(fontName);
-			font = Font.createFont(Font.TRUETYPE_FONT, is);
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		Font Quicksand = font.deriveFont(Font.BOLD, 25);
-		
-		setFont(Quicksand);
+
 
 		JLabel lblDia = new JLabel("1");
 		lblDia.setHorizontalAlignment(SwingConstants.CENTER);
 		lblDia.setBounds(50, 50, 50, 50);
-		lblDia.setFont(Quicksand);
+
 		pnlPrincipal.add(lblDia);
 
 		JLabel lblMes = new JLabel("Diciembre");
 		lblMes.setHorizontalAlignment(SwingConstants.CENTER);
 		lblMes.setBounds(298, 50, 150, 50);
-		lblMes.setFont(Quicksand);
+
 		pnlPrincipal.add(lblMes);
 
 		JLabel lblYear = new JLabel("2022");
 		lblYear.setHorizontalAlignment(SwingConstants.CENTER);
 		lblYear.setBounds(664, 50, 100, 50);
-		lblYear.setFont(Quicksand);
+
 		pnlPrincipal.add(lblYear);
 		
 		AbstractBorder bordeAgenda = new TextBubbleBorder(Color.BLACK,2,16,0, false);
