@@ -178,7 +178,7 @@ public class JDialogLogin extends JFrame {
 		JButton btnRegistrarse = new JButton("REGISTRARSE");
 		btnRegistrarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new FrmRegistro();
+				new JDialogRegistroPrueba();
 				dispose();
 			}
 		});

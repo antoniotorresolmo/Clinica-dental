@@ -167,10 +167,10 @@ public class JDialogRegistroPrueba extends JFrame {
 		contentPanel.add(lblNewLabel_3_1);
 		getContentPane().add(contentPanel);
 		
-		JButton btnRegistrarse = new JButton("CANCELAR");
-		btnRegistrarse.addActionListener(new ActionListener() {
+		JButton btnCancelar = new JButton("CANCELAR");
+		btnCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new FrmRegistro();
+				new JDialogLogin();
 				dispose();
 			}
 		});
@@ -187,12 +187,12 @@ public class JDialogRegistroPrueba extends JFrame {
 				}
 			}
 		});
-		btnRegistrarse.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
-		btnRegistrarse.setBounds(380, 479, 99, 28);
-		btnRegistrarse.setBorderPainted(false);
-		btnRegistrarse.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
-		btnRegistrarse.setBackground(view.JDialogRegistroPrueba.secundario);
-		contentPanel.add(btnRegistrarse);
+		btnCancelar.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
+		btnCancelar.setBounds(380, 479, 99, 28);
+		btnCancelar.setBorderPainted(false);
+		btnCancelar.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
+		btnCancelar.setBackground(view.JDialogRegistroPrueba.secundario);
+		contentPanel.add(btnCancelar);
 				
 				JPanel panel_1_1 = new JPanel();
 				panel_1_1.setLayout(null);
