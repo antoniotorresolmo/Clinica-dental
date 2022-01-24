@@ -27,7 +27,7 @@ import model.Medico;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class JDialogLogin extends JFrame {
+public class JDialogRegistroPrueba extends JFrame {
 
 	private JFrame frame;
 	private JTextField txtUsername;
@@ -39,9 +39,9 @@ public class JDialogLogin extends JFrame {
 	public static Color principal = new Color(137, 207, 240);
 	public static Color secundario = new Color(224, 147, 160);
 	
-	public JDialogLogin() {
+	public JDialogRegistroPrueba() {
 
-		setBounds(100, 100, 700, 400);
+		setBounds(100, 100, 793, 518);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setUndecorated(true);
 		setLocationRelativeTo(null);
@@ -49,7 +49,7 @@ public class JDialogLogin extends JFrame {
 		setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 
 		GradientPanel circlePanel = new GradientPanel(Color.decode("#2BA7B6"), Color.decode("#89CFF0"));
-		circlePanel.setBounds(0, 0, 400, 400);
+		circlePanel.setBounds(0, 60, 400, 400);
 		circlePanel.addMouseMotionListener(new MouseMotionAdapter() {
 			@Override
 			public void mouseDragged(MouseEvent e) {
@@ -96,7 +96,7 @@ public class JDialogLogin extends JFrame {
 
 		GradientPanel contentPanel = new GradientPanel(Color.decode("#e093a0"), Color.decode("#771d32"),
 				GradientPanel.DIAGONAL_DOWN);
-		contentPanel.setBounds(200, 50, 500, 300);
+		contentPanel.setBounds(200, 0, 593, 518);
 		contentPanel.setArc(10);
 		contentPanel.setBorderColor(Color.white);
 		contentPanel.setBorderWidth(2);
@@ -105,43 +105,35 @@ public class JDialogLogin extends JFrame {
 
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.WHITE);
-		panel.setBounds(229, 87, 250, 50);
+		panel.setBounds(229, 45, 250, 28);
 
 		panel.setLayout(null);
-
-		txtUsername = new JTextField();
-		txtUsername.setBackground(Color.WHITE);
-		txtUsername.setBounds(10, 11, 230, 28);
-
-		txtUsername.setColumns(10);
-		txtUsername.setBorder(null);
-		panel.add(txtUsername);
 		contentPanel.add(panel);
 
 		JPanel panel_1 = new JPanel();
 		panel_1.setLayout(null);
 		panel_1.setBackground(Color.WHITE);
-		panel_1.setBounds(229, 173, 250, 50);
+		panel_1.setBounds(229, 109, 250, 28);
 		contentPanel.add(panel_1);
-
-		txtPassword = new JPasswordField();
-		txtPassword.setBounds(10, 11, 230, 28);
-		panel_1.add(txtPassword);
-		txtPassword.setBorder(null);
+		
+				txtPassword = new JPasswordField();
+				txtPassword.setBounds(0, 0, 250, 28);
+				panel_1.add(txtPassword);
+				txtPassword.setBorder(null);
 
 		JLabel lblNewLabel_2 = new JLabel("Usuario");
 		lblNewLabel_2.setForeground(Color.WHITE);
 		lblNewLabel_2.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
-		lblNewLabel_2.setBounds(229, 62, 250, 14);
+		lblNewLabel_2.setBounds(229, 20, 250, 14);
 		contentPanel.add(lblNewLabel_2);
 
 		JLabel lblNewLabel_2_1 = new JLabel("Contrase\u00F1a");
 		lblNewLabel_2_1.setForeground(Color.WHITE);
 		lblNewLabel_2_1.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
-		lblNewLabel_2_1.setBounds(229, 148, 250, 14);
+		lblNewLabel_2_1.setBounds(229, 84, 250, 14);
 		contentPanel.add(lblNewLabel_2_1);
 
-		JButton btnEntrar = new JButton("ENTRAR");
+		JButton btnEntrar = new JButton("ACEPTAR");
 		btnEntrar.setSelected(true);
 		btnEntrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -149,16 +141,16 @@ public class JDialogLogin extends JFrame {
 			}
 		});
 		btnEntrar.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
-		btnEntrar.setBackground(view.JDialogLogin.principal);
+		btnEntrar.setBackground(view.JDialogRegistroPrueba.principal);
 		btnEntrar.setBorderPainted(false);
 		btnEntrar.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
-		btnEntrar.setBounds(229, 249, 99, 28);
+		btnEntrar.setBounds(229, 479, 99, 28);
 		contentPanel.add(btnEntrar);
 
-		JLabel lblNewLabel_3 = new JLabel("LOGIN");
+		JLabel lblNewLabel_3 = new JLabel("REGISTRO");
 		lblNewLabel_3.setForeground(Color.WHITE);
 		lblNewLabel_3.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 20));
-		lblNewLabel_3.setBounds(229, 25, 115, 25);
+		lblNewLabel_3.setBounds(71, 13, 115, 25);
 		contentPanel.add(lblNewLabel_3);
 
 		JLabel lblNewLabel_3_1 = new JLabel("X");
@@ -172,14 +164,14 @@ public class JDialogLogin extends JFrame {
 		lblNewLabel_3_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_3_1.setForeground(Color.WHITE);
 		lblNewLabel_3_1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblNewLabel_3_1.setBounds(469, 11, 21, 28);
+		lblNewLabel_3_1.setBounds(562, 11, 21, 28);
 		contentPanel.add(lblNewLabel_3_1);
 		getContentPane().add(contentPanel);
 		
-		JButton btnRegistrarse = new JButton("REGISTRARSE");
-		btnRegistrarse.addActionListener(new ActionListener() {
+		JButton btnCancelar = new JButton("CANCELAR");
+		btnCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new JDialogRegistroPrueba();
+				new JDialogLogin();
 				dispose();
 			}
 		});
@@ -196,12 +188,80 @@ public class JDialogLogin extends JFrame {
 				}
 			}
 		});
-		btnRegistrarse.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
-		btnRegistrarse.setBounds(380, 249, 99, 28);
-		btnRegistrarse.setBorderPainted(false);
-		btnRegistrarse.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
-		btnRegistrarse.setBackground(view.JDialogLogin.secundario);
-		contentPanel.add(btnRegistrarse);
+		btnCancelar.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
+		btnCancelar.setBounds(380, 479, 99, 28);
+		btnCancelar.setBorderPainted(false);
+		btnCancelar.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
+		btnCancelar.setBackground(view.JDialogRegistroPrueba.secundario);
+		contentPanel.add(btnCancelar);
+				
+				JPanel panel_1_1 = new JPanel();
+				panel_1_1.setLayout(null);
+				panel_1_1.setBackground(Color.WHITE);
+				panel_1_1.setBounds(229, 168, 250, 28);
+				contentPanel.add(panel_1_1);
+				
+				JPanel panel_1_2 = new JPanel();
+				panel_1_2.setLayout(null);
+				panel_1_2.setBackground(Color.WHITE);
+				panel_1_2.setBounds(229, 230, 250, 28);
+				contentPanel.add(panel_1_2);
+				
+				JPanel panel_1_3 = new JPanel();
+				panel_1_3.setLayout(null);
+				panel_1_3.setBackground(Color.WHITE);
+				panel_1_3.setBounds(229, 294, 250, 28);
+				contentPanel.add(panel_1_3);
+				
+				JPanel panel_1_4 = new JPanel();
+				panel_1_4.setLayout(null);
+				panel_1_4.setBackground(Color.WHITE);
+				panel_1_4.setBounds(229, 358, 250, 28);
+				contentPanel.add(panel_1_4);
+				
+						txtUsername = new JTextField();
+						txtUsername.setBounds(229, 45, 250, 28);
+						contentPanel.add(txtUsername);
+						txtUsername.setBackground(Color.WHITE);
+						
+								txtUsername.setColumns(10);
+								txtUsername.setBorder(null);
+								
+								JPanel panel_1_5 = new JPanel();
+								panel_1_5.setLayout(null);
+								panel_1_5.setBackground(Color.WHITE);
+								panel_1_5.setBounds(229, 417, 250, 28);
+								contentPanel.add(panel_1_5);
+								
+								JLabel lblNewLabel_2_1_1 = new JLabel("Contrase\u00F1a");
+								lblNewLabel_2_1_1.setForeground(Color.WHITE);
+								lblNewLabel_2_1_1.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
+								lblNewLabel_2_1_1.setBounds(229, 143, 250, 14);
+								contentPanel.add(lblNewLabel_2_1_1);
+								
+								JLabel lblNewLabel_2_1_2 = new JLabel("Contrase\u00F1a");
+								lblNewLabel_2_1_2.setForeground(Color.WHITE);
+								lblNewLabel_2_1_2.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
+								lblNewLabel_2_1_2.setBounds(229, 205, 250, 14);
+								contentPanel.add(lblNewLabel_2_1_2);
+								
+								JLabel lblNewLabel_2_1_3 = new JLabel("Contrase\u00F1a");
+								lblNewLabel_2_1_3.setForeground(Color.WHITE);
+								lblNewLabel_2_1_3.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
+								lblNewLabel_2_1_3.setBounds(229, 269, 250, 14);
+								contentPanel.add(lblNewLabel_2_1_3);
+								
+								JLabel lblNewLabel_2_1_4 = new JLabel("Contrase\u00F1a");
+								lblNewLabel_2_1_4.setForeground(Color.WHITE);
+								lblNewLabel_2_1_4.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
+								lblNewLabel_2_1_4.setBounds(229, 333, 250, 14);
+								contentPanel.add(lblNewLabel_2_1_4);
+								
+								JLabel lblNewLabel_2_1_5 = new JLabel("Contrase\u00F1a");
+								lblNewLabel_2_1_5.setForeground(Color.WHITE);
+								lblNewLabel_2_1_5.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
+								lblNewLabel_2_1_5.setBounds(229, 392, 250, 14);
+								contentPanel.add(lblNewLabel_2_1_5);
 		
 		setVisible(true);
 	}
