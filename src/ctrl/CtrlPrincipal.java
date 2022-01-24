@@ -5,6 +5,9 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import model.Medico;
+import view.JDialogLogin;
+
 public class CtrlPrincipal {
 		
 	public static void inicio() {
@@ -18,6 +21,55 @@ public class CtrlPrincipal {
 		System.exit(0);
 		
 	}
+	
+	public static void getPaciente(String usuario, String pass) throws Exception {
+
+		String url = logic.ILogic.URI + "get_medico_login.php?Usuario=" + usuario+"&Password="+pass;
+		String requestHttp = peticionHttp(url);
+		JDialogLogin.oMedico = stringToMedico(requestHttp);
+		
+	}
+
+	//Esto va en la capa logica
+	private static Medico stringToMedico(String requestHttp) throws Exception{
+		Medico m = new Medico();
+
+		JSONObject jsonObject = new JSONObject(requestHttp);
+		 m = objJson2Medico(jsonObject);
+
+		
+
+		return m;
+	}
+	
+	
+	private static Medico objJson2Medico(JSONObject jsonObj) {
+		//Extraer los values del objeto JSON
+
+		Integer ID_Medico = jsonObj.getInt("ID_Medico"); //PK
+		String Nombre = jsonObj.getString("Nombre"); //NN
+		String Apellidos= jsonObj.getString("Apellidos"); //NN
+		String Usuario= jsonObj.getString("Usuario"); //NN
+		String Password= jsonObj.getString("Password"); //NN
+		String Correo= jsonObj.getString("Correo"); //NN
+		String Direccion= jsonObj.getString("Direccion"); //NN
+		String Telefono= jsonObj.getString("Telefono"); //NN
+		
+		//Crear el objeto Coche con los values extraidos
+		Medico m = new Medico();
+		m.setId_Medico(ID_Medico);
+		m.setNombre(Nombre);
+		m.setApellidos(Apellidos);
+		m.setUsuario(Usuario);
+		m.setPassword(Password);
+		m.setCorreo(Correo);
+		m.setDireccion(Direccion);
+		m.setTelefono(Telefono);
+	
+		
+		return m;
+	}
+
 	
 	public static void camposEditables() {
 		

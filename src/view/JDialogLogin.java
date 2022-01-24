@@ -19,6 +19,10 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import javax.swing.border.MatteBorder;
 import javax.swing.border.TitledBorder;
+
+import ctrl.CtrlPrincipal;
+import model.Medico;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -27,6 +31,7 @@ public class JDialogLogin extends JFrame {
 	private JFrame frame;
 	private JTextField txtUsername;
 	private JPasswordField txtPassword;
+	public static Medico oMedico;
 
 	private int x, y;
 	
@@ -175,6 +180,19 @@ public class JDialogLogin extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				new FrmRegistro();
 				dispose();
+			}
+		});
+		
+		btnEntrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					CtrlPrincipal.getPaciente(txtUsername.getText(), txtPassword.getText());
+					
+					dispose();
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					JOptionPane.showMessageDialog(null, "Usuario no encontrado");
+				}
 			}
 		});
 		btnRegistrarse.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
