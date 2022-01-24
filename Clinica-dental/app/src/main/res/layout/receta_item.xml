@@ -2,6 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schema.android.com/apk/res-auto"
     xmlns:app2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardViewReceta"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -12,18 +13,32 @@
     app:cardCornerRadius="50dp"
     app:cardElevation="5dp">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:paddingTop="20dp"
         android:paddingBottom="20dp">
+
+        <ImageView
+            android:id="@+id/imgMedicamento"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            app2:layout_constraintBottom_toBottomOf="parent"
+            app2:layout_constraintStart_toStartOf="parent"
+            app2:layout_constraintTop_toTopOf="parent"
+            app2:srcCompat="@drawable/medicamento" />
 
         <TextView
             android:id="@+id/lblDescripcionRVRecetario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
             android:text="@string/lblDescripcionRVRecetario"
-            android:textAlignment="center" />
-    </LinearLayout>
+            android:textAlignment="center"
+            app2:layout_constraintBottom_toBottomOf="parent"
+            app2:layout_constraintStart_toEndOf="@+id/imgMedicamento"
+            app2:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

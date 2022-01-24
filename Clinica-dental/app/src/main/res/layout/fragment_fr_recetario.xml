@@ -48,9 +48,9 @@
         android:id="@+id/rvRecetario"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="150dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cvInicioRecetario" />
