@@ -37,6 +37,12 @@ public class JDialogRegistroPrueba extends JFrame {
 	
 	public static Color principal = new Color(137, 207, 240);
 	public static Color secundario = new Color(224, 147, 160);
+	private JTextField txtNombre;
+	private JTextField txtUsuario;
+	private JTextField txtApellidos;
+	private JTextField txtDireccion;
+	private JTextField txtTelefono;
+	private JTextField txtCorreo;
 	
 	public JDialogRegistroPrueba() {
 
@@ -72,7 +78,7 @@ public class JDialogRegistroPrueba extends JFrame {
 		circlePanel.setLayout(null);
 
 		JLabel lblLogo = new JLabel("");
-		lblLogo.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\src\\images\\dentista.png"));
+		lblLogo.setIcon(new ImageIcon(JDialogRegistroPrueba.class.getResource("/images/dentista.png")));
 		lblLogo.setHorizontalAlignment(SwingConstants.CENTER);
 		lblLogo.setBounds(78, 71, 234, 160);
 		circlePanel.add(lblLogo);
@@ -108,6 +114,11 @@ public class JDialogRegistroPrueba extends JFrame {
 
 		panel.setLayout(null);
 		contentPanel.add(panel);
+		
+		txtNombre = new JTextField();
+		txtNombre.setBounds(0, 0, 250, 28);
+		panel.add(txtNombre);
+		txtNombre.setColumns(10);
 
 		JPanel panel_1 = new JPanel();
 		panel_1.setLayout(null);
@@ -115,18 +126,18 @@ public class JDialogRegistroPrueba extends JFrame {
 		panel_1.setBounds(229, 109, 250, 28);
 		contentPanel.add(panel_1);
 		
-				txtPassword = new JPasswordField();
-				txtPassword.setBounds(0, 0, 250, 28);
-				panel_1.add(txtPassword);
-				txtPassword.setBorder(null);
+		txtApellidos = new JTextField();
+		txtApellidos.setBounds(0, 0, 250, 28);
+		panel_1.add(txtApellidos);
+		txtApellidos.setColumns(10);
 
-		JLabel lblNewLabel_2 = new JLabel("Usuario");
-		lblNewLabel_2.setForeground(Color.WHITE);
-		lblNewLabel_2.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
-		lblNewLabel_2.setBounds(229, 20, 250, 14);
-		contentPanel.add(lblNewLabel_2);
+		JLabel lblNombre = new JLabel("Nombre");
+		lblNombre.setForeground(Color.WHITE);
+		lblNombre.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
+		lblNombre.setBounds(229, 20, 250, 14);
+		contentPanel.add(lblNombre);
 
-		JLabel lblNewLabel_2_1 = new JLabel("Contrase\u00F1a");
+		JLabel lblNewLabel_2_1 = new JLabel("Apellidos");
 		lblNewLabel_2_1.setForeground(Color.WHITE);
 		lblNewLabel_2_1.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
 		lblNewLabel_2_1.setBounds(229, 84, 250, 14);
@@ -191,7 +202,7 @@ public class JDialogRegistroPrueba extends JFrame {
 		btnCancelar.setBounds(380, 479, 99, 28);
 		btnCancelar.setBorderPainted(false);
 		btnCancelar.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
-		btnCancelar.setBackground(view.JDialogRegistroPrueba.secundario);
+		btnCancelar.setBackground(Color.WHITE);
 		contentPanel.add(btnCancelar);
 				
 				JPanel panel_1_1 = new JPanel();
@@ -200,11 +211,21 @@ public class JDialogRegistroPrueba extends JFrame {
 				panel_1_1.setBounds(229, 168, 250, 28);
 				contentPanel.add(panel_1_1);
 				
+				txtUsuario = new JTextField();
+				txtUsuario.setBounds(0, 0, 250, 28);
+				panel_1_1.add(txtUsuario);
+				txtUsuario.setColumns(10);
+				
 				JPanel panel_1_2 = new JPanel();
 				panel_1_2.setLayout(null);
 				panel_1_2.setBackground(Color.WHITE);
 				panel_1_2.setBounds(229, 230, 250, 28);
 				contentPanel.add(panel_1_2);
+				
+						txtPassword = new JPasswordField();
+						txtPassword.setBounds(0, 0, 250, 28);
+						panel_1_2.add(txtPassword);
+						txtPassword.setBorder(null);
 				
 				JPanel panel_1_3 = new JPanel();
 				panel_1_3.setLayout(null);
@@ -212,11 +233,21 @@ public class JDialogRegistroPrueba extends JFrame {
 				panel_1_3.setBounds(229, 294, 250, 28);
 				contentPanel.add(panel_1_3);
 				
+				txtCorreo = new JTextField();
+				txtCorreo.setBounds(0, 0, 250, 28);
+				panel_1_3.add(txtCorreo);
+				txtCorreo.setColumns(10);
+				
 				JPanel panel_1_4 = new JPanel();
 				panel_1_4.setLayout(null);
 				panel_1_4.setBackground(Color.WHITE);
 				panel_1_4.setBounds(229, 358, 250, 28);
 				contentPanel.add(panel_1_4);
+				
+				txtDireccion = new JTextField();
+				txtDireccion.setBounds(0, 0, 250, 28);
+				panel_1_4.add(txtDireccion);
+				txtDireccion.setColumns(10);
 				
 						txtUsername = new JTextField();
 						txtUsername.setBounds(229, 45, 250, 28);
@@ -232,11 +263,16 @@ public class JDialogRegistroPrueba extends JFrame {
 								panel_1_5.setBounds(229, 417, 250, 28);
 								contentPanel.add(panel_1_5);
 								
-								JLabel lblNewLabel_2_1_1 = new JLabel("Contrase\u00F1a");
-								lblNewLabel_2_1_1.setForeground(Color.WHITE);
-								lblNewLabel_2_1_1.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
-								lblNewLabel_2_1_1.setBounds(229, 143, 250, 14);
-								contentPanel.add(lblNewLabel_2_1_1);
+								txtTelefono = new JTextField();
+								txtTelefono.setBounds(0, 0, 250, 28);
+								panel_1_5.add(txtTelefono);
+								txtTelefono.setColumns(10);
+								
+								JLabel lblUsuario = new JLabel("Usuario");
+								lblUsuario.setForeground(Color.WHITE);
+								lblUsuario.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
+								lblUsuario.setBounds(229, 143, 250, 14);
+								contentPanel.add(lblUsuario);
 								
 								JLabel lblNewLabel_2_1_2 = new JLabel("Contrase\u00F1a");
 								lblNewLabel_2_1_2.setForeground(Color.WHITE);
@@ -244,23 +280,23 @@ public class JDialogRegistroPrueba extends JFrame {
 								lblNewLabel_2_1_2.setBounds(229, 205, 250, 14);
 								contentPanel.add(lblNewLabel_2_1_2);
 								
-								JLabel lblNewLabel_2_1_3 = new JLabel("Contrase\u00F1a");
-								lblNewLabel_2_1_3.setForeground(Color.WHITE);
-								lblNewLabel_2_1_3.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
-								lblNewLabel_2_1_3.setBounds(229, 269, 250, 14);
-								contentPanel.add(lblNewLabel_2_1_3);
+								JLabel lblCorreo = new JLabel("Correo");
+								lblCorreo.setForeground(Color.WHITE);
+								lblCorreo.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
+								lblCorreo.setBounds(229, 269, 250, 14);
+								contentPanel.add(lblCorreo);
 								
-								JLabel lblNewLabel_2_1_4 = new JLabel("Contrase\u00F1a");
-								lblNewLabel_2_1_4.setForeground(Color.WHITE);
-								lblNewLabel_2_1_4.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
-								lblNewLabel_2_1_4.setBounds(229, 333, 250, 14);
-								contentPanel.add(lblNewLabel_2_1_4);
+								JLabel lblDireccion = new JLabel("Direcci\u00F3n");
+								lblDireccion.setForeground(Color.WHITE);
+								lblDireccion.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
+								lblDireccion.setBounds(229, 333, 250, 14);
+								contentPanel.add(lblDireccion);
 								
-								JLabel lblNewLabel_2_1_5 = new JLabel("Contrase\u00F1a");
-								lblNewLabel_2_1_5.setForeground(Color.WHITE);
-								lblNewLabel_2_1_5.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
-								lblNewLabel_2_1_5.setBounds(229, 392, 250, 14);
-								contentPanel.add(lblNewLabel_2_1_5);
+								JLabel lblTelefono = new JLabel("Tel\u00E9fono");
+								lblTelefono.setForeground(Color.WHITE);
+								lblTelefono.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
+								lblTelefono.setBounds(229, 392, 250, 14);
+								contentPanel.add(lblTelefono);
 		
 		setVisible(true);
 	}

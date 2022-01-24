@@ -25,6 +25,7 @@ import model.Medico;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Button;
 
 public class JDialogLogin extends JFrame {
 
@@ -72,7 +73,7 @@ public class JDialogLogin extends JFrame {
 		circlePanel.setLayout(null);
 
 		JLabel lblLogo = new JLabel("");
-		lblLogo.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\src\\images\\dentista.png"));
+		lblLogo.setIcon(new ImageIcon(JDialogLogin.class.getResource("/images/dentista.png")));
 		lblLogo.setHorizontalAlignment(SwingConstants.CENTER);
 		lblLogo.setBounds(78, 71, 234, 160);
 		circlePanel.add(lblLogo);

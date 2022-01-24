@@ -2,6 +2,7 @@ package view;
 
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.List;
@@ -21,11 +22,13 @@ public class PnlAgenda extends JPanel {
 
 	public PnlAgenda() {
 		setLayout(new BorderLayout(0, 0));
-		
+		//setUndecorated(true);
 		JScrollPane scrollPane = new JScrollPane();
 		add(scrollPane, BorderLayout.CENTER);
 		
 		JPanel panelCentral = new JPanel();
+	
+
 		scrollPane.setViewportView(panelCentral);
 		
 		calendar = new JCalendar();
