@@ -12,13 +12,12 @@ public class LogicPaciente {
 	
 	public static void listar() {
 		
-		
+		//String url = ILogic.URI + "proyecto/Cita/lst_cita_by_idpaciente.php?Dia=" + dia +"&Hora=" + hora + "&Operacion=" + operacion + "&Termianada=" + terminada + "&ID_Medico=" + id_Medico + "&Operacion=" + operacion;
 		
 	}
 	
 	private static Paciente objJson2Paciente(JSONObject jsonObj) {
 		//Extraer los values del objeto JSON
-		Integer ID_Paciente = jsonObj.getInt("ID_Paciente");
 		String Correo = jsonObj.getString("Correo");
 		String Nombre = jsonObj.getString("Nombre");
 		String Apellidos = jsonObj.getString("Apellidos");

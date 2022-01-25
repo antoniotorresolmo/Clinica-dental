@@ -10,9 +10,24 @@ public class Cita {
 	private int ID_Medico; //FK
 	private int ID_Paciente; //FK
 	
+	public Cita() {
+		
+		
+	}
+	
 	public Cita(int ID_Cita) {
 		
-		this.ID_Cita = ID_Cita;
+		setID_Cita(ID_Cita);
+	}
+
+	public Cita(String dia, String hora, String operacion, boolean terminada, int iD_Medico, int iD_Paciente) {
+		
+		setDia(Dia);
+		setHora(Hora);
+		setOperacion(Operacion);
+		setTerminada(Terminada);
+		setID_Medico(ID_Medico);
+		setID_Paciente(ID_Paciente);
 	}
 
 	public Cita(int ID_Cita, String Dia, String Hora, String Operacion, boolean Terminada, int ID_Medico,
