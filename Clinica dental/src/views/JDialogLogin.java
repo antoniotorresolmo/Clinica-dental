@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JDialog;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -28,14 +29,13 @@ import java.awt.Button;
 public class JDialogLogin extends JFrame {
 
 	private JFrame frame;
-	private JTextField txtUsername;
-	private JPasswordField txtPassword;
+	public static JTextField txtUsername;
+	public static JPasswordField txtPassword;
 	public static Medico oMedico;
-
 	private int x, y;
-	
 	public static Color principal = new Color(137, 207, 240);
 	public static Color secundario = new Color(224, 147, 160);
+	public static JCheckBox cbRecordar;
 	
 	public JDialogLogin() {
 
@@ -94,7 +94,7 @@ public class JDialogLogin extends JFrame {
 
 		GradientPanel contentPanel = new GradientPanel(Color.decode("#e093a0"), Color.decode("#771d32"),
 				GradientPanel.DIAGONAL_DOWN);
-		contentPanel.setBounds(200, 50, 500, 300);
+		contentPanel.setBounds(200, 50, 500, 331);
 		contentPanel.setArc(10);
 		contentPanel.setBorderColor(Color.white);
 		contentPanel.setBorderWidth(2);
@@ -141,16 +141,11 @@ public class JDialogLogin extends JFrame {
 
 		JButton btnEntrar = new JButton("ENTRAR");
 		btnEntrar.setSelected(true);
-		btnEntrar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				new PnlInicio();
-			}
-		});
 		btnEntrar.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
 		btnEntrar.setBackground(views.JDialogLogin.principal);
 		btnEntrar.setBorderPainted(false);
 		btnEntrar.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
-		btnEntrar.setBounds(229, 249, 99, 28);
+		btnEntrar.setBounds(229, 279, 99, 28);
 		contentPanel.add(btnEntrar);
 
 		JLabel lblNewLabel_3 = new JLabel("LOGIN");
@@ -159,46 +154,55 @@ public class JDialogLogin extends JFrame {
 		lblNewLabel_3.setBounds(229, 25, 115, 25);
 		contentPanel.add(lblNewLabel_3);
 
-		JLabel lblNewLabel_3_1 = new JLabel("X");
-		lblNewLabel_3_1.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				if (JOptionPane.showConfirmDialog(null, "¿Quieres cerrar la aplicación?") == 0)
-					System.exit(0);
-			}
-		});
-		lblNewLabel_3_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_3_1.setForeground(Color.WHITE);
-		lblNewLabel_3_1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblNewLabel_3_1.setBounds(469, 11, 21, 28);
-		contentPanel.add(lblNewLabel_3_1);
+		JLabel lblX = new JLabel("X");
+		lblX.setHorizontalAlignment(SwingConstants.CENTER);
+		lblX.setForeground(Color.WHITE);
+		lblX.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblX.setBounds(469, 11, 21, 28);
+		contentPanel.add(lblX);
 		getContentPane().add(contentPanel);
 		
 		JButton btnRegistrarse = new JButton("REGISTRARSE");
-		btnRegistrarse.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				new JDialogRegistro();
-				dispose();
-			}
-		});
-		
+		btnRegistrarse.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
+		btnRegistrarse.setBounds(380, 279, 99, 28);
+		btnRegistrarse.setBorderPainted(false);
+		btnRegistrarse.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
+		btnRegistrarse.setBackground(views.JDialogLogin.secundario);
+		contentPanel.add(btnRegistrarse);
+
+		cbRecordar = new JCheckBox("Recordar");
+		cbRecordar.setFont(new Font("Microsoft JhengHei UI", Font.PLAIN, 11));
+		cbRecordar.setBounds(231, 230, 97, 23);
+		cbRecordar.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
+		contentPanel.add(cbRecordar);
+
 		btnEntrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					CtrlPrincipal.getPaciente(txtUsername.getText(), txtPassword.getText());
-					
+					controllers.LoginController.getPaciente(txtUsername.getText(), txtPassword.getText());
+					// Abrir pantalla principal
 					dispose();
 				} catch (Exception e1) {
 					JOptionPane.showMessageDialog(null, "Usuario no encontrado");
 				}
 			}
 		});
-		btnRegistrarse.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
-		btnRegistrarse.setBounds(380, 249, 99, 28);
-		btnRegistrarse.setBorderPainted(false);
-		btnRegistrarse.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
-		btnRegistrarse.setBackground(views.JDialogLogin.secundario);
-		contentPanel.add(btnRegistrarse);
+
+		btnRegistrarse.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new JDialogRegistro();
+				dispose();
+			}
+		});
+
+		lblX.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				if (JOptionPane.showConfirmDialog(null, "¿Quieres cerrar la aplicación?") == 0)
+					System.exit(0);
+			}
+		});
+
+		controllers.LoginController.cargarDatos();
 		
 		setVisible(true);
 	}

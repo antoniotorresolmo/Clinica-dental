@@ -1,6 +1,8 @@
 package models;
 
-public class Paciente {
+import java.io.Serializable;
+
+public class Paciente implements Serializable{
 	
 	private int ID_Paciente; //PK
 	private String Usuario; //NN
@@ -11,6 +13,8 @@ public class Paciente {
 	private String Telefono; //NN
 	private String Direccion; //NN
 	private String DNI; //NN
+
+	public Paciente(){}
 	
 	public Paciente(int ID_Paciente) {
 		
@@ -29,6 +33,11 @@ public class Paciente {
 		setTelefono(Telefono);
 		setDireccion(Direccion);
 		setDNI(DNI);
+	}
+
+	public Paciente(String Usuario, String Password){
+		this.setUsuario(Usuario);
+		this.setPassword(Password);
 	}
 
 	public int getID_Paciente() {
