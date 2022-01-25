@@ -26,6 +26,7 @@ import model.Medico;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Button;
+import javax.swing.JCheckBox;
 
 public class JDialogLogin extends JFrame {
 
@@ -96,7 +97,7 @@ public class JDialogLogin extends JFrame {
 
 		GradientPanel contentPanel = new GradientPanel(Color.decode("#e093a0"), Color.decode("#771d32"),
 				GradientPanel.DIAGONAL_DOWN);
-		contentPanel.setBounds(200, 50, 500, 300);
+		contentPanel.setBounds(200, 32, 500, 331);
 		contentPanel.setArc(10);
 		contentPanel.setBorderColor(Color.white);
 		contentPanel.setBorderWidth(2);
@@ -152,7 +153,7 @@ public class JDialogLogin extends JFrame {
 		btnEntrar.setBackground(view.JDialogLogin.principal);
 		btnEntrar.setBorderPainted(false);
 		btnEntrar.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
-		btnEntrar.setBounds(229, 249, 99, 28);
+		btnEntrar.setBounds(229, 279, 99, 28);
 		contentPanel.add(btnEntrar);
 
 		JLabel lblNewLabel_3 = new JLabel("LOGIN");
@@ -197,11 +198,17 @@ public class JDialogLogin extends JFrame {
 			}
 		});
 		btnRegistrarse.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
-		btnRegistrarse.setBounds(380, 249, 99, 28);
+		btnRegistrarse.setBounds(380, 279, 99, 28);
 		btnRegistrarse.setBorderPainted(false);
 		btnRegistrarse.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
 		btnRegistrarse.setBackground(view.JDialogLogin.secundario);
 		contentPanel.add(btnRegistrarse);
+		
+		JCheckBox chckbxNewCheckBox = new JCheckBox("Recordar");
+		chckbxNewCheckBox.setFont(new Font("Microsoft JhengHei UI", Font.PLAIN, 11));
+		chckbxNewCheckBox.setBounds(231, 230, 97, 23);
+		chckbxNewCheckBox.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
+		contentPanel.add(chckbxNewCheckBox);
 		
 		setVisible(true);
 	}

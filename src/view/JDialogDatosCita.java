@@ -21,7 +21,7 @@ public class JDialogDatosCita extends JDialog {
 
 	public JDialogDatosCita() {
 		setUndecorated(true);
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\JuanLoreLeo\\Desktop\\Proyecto 2\u00BA Trimestre\\Clinica Dental Escritorio\\images\\logotipoEditorDeTexto.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("images\\logotipoEditorDeTexto.png"));
 		setTitle("Datos cita");
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
