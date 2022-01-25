@@ -12,9 +12,23 @@ public class Paciente {
 	private String Direccion; //NN
 	private String DNI; //NN
 	
+	public Paciente() {
+		
+	}
+
 	public Paciente(int ID_Paciente) {
 		
-		this.ID_Paciente = ID_Paciente;
+		setID_Paciente(ID_Paciente);
+	}
+
+	public Paciente(String correo, String nombre, String apellidos, String telefono, String direccion, String dNI) {
+		
+		setCorreo(Correo);
+		setNombre(Nombre);
+		setApellidos(Apellidos);
+		setTelefono(Telefono);
+		setDireccion(Direccion);
+		setDNI(DNI);
 	}
 
 	public Paciente(int ID_Paciente, String Usuario, String Password, String Correo, String Nombre, String Apellidos,

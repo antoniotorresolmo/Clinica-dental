@@ -4,9 +4,13 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.swing.JOptionPane;
 import org.json.JSONArray;
 import org.json.JSONObject;
+
 import models.Paciente;
 import views.JDialogLogin;
 import models.Medico;
@@ -93,8 +97,6 @@ public class CtrlPrincipal {
 		return resultado.toString();
 	}
 	
-	
-	
 	public static void camposEditables() {
 		
 		views.PnlPerfil.txtNombreMedico.setEditable(true);
@@ -106,6 +108,8 @@ public class CtrlPrincipal {
 		views.PnlPerfil.txtTelefonoMedico.setEditable(true);
 		
 	}
+	
+	
 	
 
 }
