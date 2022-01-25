@@ -19,8 +19,9 @@ public class PnlInicio extends JPanel {
 		setBackground(Color.WHITE);
 		setLayout(new BorderLayout(0, 0));
 
-		//JPanel pnlPrincipal = new JPanel();
-		GradientPanel pnlPrincipal = new GradientPanel(Color.decode("#e093a0"), Color.decode("#771d32"),GradientPanel.DIAGONAL_DOWN);
+		//JPanel pnlPrincipal = new JPanel();#023E73
+		//GradientPanel pnlPrincipal = new GradientPanel(Color.decode("#e093a0"), Color.decode("#771d32"),GradientPanel.DIAGONAL_DOWN);
+		GradientPanel pnlPrincipal = new GradientPanel(Color.decode("#AEDFF2"), Color.decode("#04C4D9"),GradientPanel.DIAGONAL_DOWN);
 		pnlPrincipal.setBackground(Color.WHITE);
 
 		JScrollPane scrollPane = new JScrollPane();
@@ -37,6 +38,8 @@ public class PnlInicio extends JPanel {
 		pnlAgenda.setBounds(46, 150, 718, 347);
 		pnlPrincipal.add(pnlAgenda);
 		pnlAgenda.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
+		//#D98E32
+		//pnlAgenda.setBackground(Color.decode("#D98E32"));
 		pnlAgenda.setLayout(new BorderLayout());
 		
 		JPanel pnlHoras = new JPanel();
@@ -101,17 +104,19 @@ public class PnlInicio extends JPanel {
 		pnlHoras.add(lbl17);
 		
 		JPanel pnlCitas = new JPanel();
-		pnlCitas.setBackground(new Color(255, 255, 255));
+		//pnlCitas.setBackground(new Color(255, 255, 255));
+		pnlCitas.setBackground(Color.WHITE);
 		pnlCitas.setLayout(new GridLayout(8, 1, 0, 0));
 		pnlAgenda.add(pnlCitas, BorderLayout.CENTER);
 		
-		LineBorder border = new LineBorder(Color.BLACK, 2, true);
-		
+		LineBorder border = new LineBorder(Color.BLACK, 2, true); ///////////////////////////////
+		Font font = new Font("Microsoft JhengHei UI", Font.BOLD, 15);
 		JButton btnCita10 = new JButton();
+		btnCita10.setForeground(Color.BLACK);
 		btnCita10.setContentAreaFilled(false);
 		btnCita10.setOpaque(false);
 		btnCita10.setBorder(border);
-		btnCita10.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
+		btnCita10.setFont(font);
 		btnCita10.setText("JOSE LUIS PEREZ - MUTILACION DE LENGUA");
 		
 		btnCita10.addActionListener(new ActionListener() {
@@ -124,9 +129,10 @@ public class PnlInicio extends JPanel {
 		
 		
 		JButton btnCita11 = new JButton();
+		btnCita11.setForeground(Color.BLACK);
 		btnCita11.setContentAreaFilled(false);
 		btnCita11.setBorder(border);
-		btnCita11.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
+		btnCita11.setFont(font);
 		btnCita11.setText("ANTONIO - MONGOLO");
 		
 		btnCita11.addActionListener(new ActionListener() {
@@ -137,9 +143,10 @@ public class PnlInicio extends JPanel {
 		pnlCitas.add(btnCita11);
 		
 		JButton btnCita12 = new JButton();
+		btnCita12.setForeground(Color.BLACK);
 		btnCita12.setContentAreaFilled(false);
 		btnCita12.setBorder(border);
-		btnCita12.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
+		btnCita12.setFont(font);
 		btnCita12.setText("ANTONIO - MONGOLO");
 		
 		btnCita12.addActionListener(new ActionListener() {
@@ -150,9 +157,10 @@ public class PnlInicio extends JPanel {
 		pnlCitas.add(btnCita12);
 		
 		JButton btnCita13 = new JButton();
+		btnCita13.setForeground(Color.BLACK);
 		btnCita13.setContentAreaFilled(false);
 		btnCita13.setBorder(border);
-		btnCita13.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
+		btnCita13.setFont(font);
 		btnCita13.setText("ANTONIO - MONGOLO");
 		
 		btnCita13.addActionListener(new ActionListener() {
@@ -165,10 +173,11 @@ public class PnlInicio extends JPanel {
 		
 		
 		JButton btnCita14 = new JButton("New button");
+		btnCita14.setForeground(Color.BLACK);
 
 		btnCita14.setContentAreaFilled(false);
 		btnCita14.setBorder(border);
-		btnCita14.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
+		btnCita14.setFont(font);
 		btnCita14.setText("ANTONIO - MONGOLO");
 		
 		btnCita14.addActionListener(new ActionListener() {
@@ -180,9 +189,10 @@ public class PnlInicio extends JPanel {
 		
 		
 		JButton btnCita15 = new JButton();
+		btnCita15.setForeground(Color.BLACK);
 		btnCita15.setContentAreaFilled(false);
 		btnCita15.setBorder(border);
-		btnCita15.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
+		btnCita15.setFont(font);
 		btnCita15.setText("ANTONIO - MONGOLO");
 		
 		btnCita15.addActionListener(new ActionListener() {
@@ -193,9 +203,10 @@ public class PnlInicio extends JPanel {
 		pnlCitas.add(btnCita15);
 		
 		JButton btnCita16 = new JButton();
+		btnCita16.setForeground(Color.BLACK);
 		btnCita16.setContentAreaFilled(false);
 		btnCita16.setBorder(border);
-		btnCita16.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
+		btnCita16.setFont(font);
 		btnCita16.setText("ANTONIO - MONGOLO");
 		
 		btnCita16.addActionListener(new ActionListener() {
@@ -206,9 +217,10 @@ public class PnlInicio extends JPanel {
 		pnlCitas.add(btnCita16);
 		
 		JButton btnCita17 = new JButton();
+		btnCita17.setForeground(Color.BLACK);
 		btnCita17.setContentAreaFilled(false);
 		btnCita17.setBorder(border);
-		btnCita17.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
+		btnCita17.setFont(font);
 		btnCita17.setText("ANTONIO - MONGOLO");
 		
 		btnCita17.addActionListener(new ActionListener() {
@@ -219,7 +231,7 @@ public class PnlInicio extends JPanel {
 		pnlCitas.add(btnCita17);
 		
 	
-		AbstractBorder bordeFecha = new TextBubbleBorder(Color.BLACK,2,16,0, false);
+
 		
 		JButton btnDerecha = new JButton("");
 		btnDerecha.addActionListener(new ActionListener() {
