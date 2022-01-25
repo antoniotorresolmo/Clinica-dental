@@ -46,13 +46,14 @@ public class LogicCita {
 		return lstCitas;
 	}
 	
-	private static List<Cita> getCita() throws Exception {
+	public static void listaCitas() throws Exception {
 		
-		String url = ILogic.URI + "lst-cita.php";
+		String url = ILogic.URI + "proyecto/Cita/lst_cita_by_medico.php";
 		String requestHttp = controllers.CtrlPrincipal.peticionHttp(url);
 		List<Cita> lstCitas = stringToListCitas(requestHttp);
 		
-		return lstCitas;
 	}
+	
+
 
 }
