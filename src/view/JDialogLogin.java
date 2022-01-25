@@ -205,7 +205,7 @@ public class JDialogLogin extends JFrame {
 		contentPanel.add(btnRegistrarse);
 		
 		JCheckBox chckbxNewCheckBox = new JCheckBox("Recordar");
-		chckbxNewCheckBox.setFont(new Font("Microsoft JhengHei UI", Font.PLAIN, 11));
+		chckbxNewCheckBox.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 11));
 		chckbxNewCheckBox.setBounds(231, 230, 97, 23);
 		chckbxNewCheckBox.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		contentPanel.add(chckbxNewCheckBox);

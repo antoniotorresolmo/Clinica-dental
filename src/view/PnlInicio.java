@@ -6,6 +6,8 @@ import java.awt.*;
 import java.io.InputStream;
 import java.awt.image.*;
 import java.awt.geom.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class PnlInicio extends JPanel {
 
@@ -13,154 +15,249 @@ public class PnlInicio extends JPanel {
 	private static Color AZULITO = new Color(137, 207, 240);
 
 	public PnlInicio() {
+		
 		setBackground(Color.WHITE);
 		setLayout(new BorderLayout(0, 0));
 
-		JPanel pnlPrincipal = new JPanel();
+		//JPanel pnlPrincipal = new JPanel();
+		GradientPanel pnlPrincipal = new GradientPanel(Color.decode("#e093a0"), Color.decode("#771d32"),GradientPanel.DIAGONAL_DOWN);
 		pnlPrincipal.setBackground(Color.WHITE);
 
 		JScrollPane scrollPane = new JScrollPane();
+		
+		scrollPane.setBounds(100, 100, 793, 518);
 		scrollPane.setViewportView(pnlPrincipal);
 		pnlPrincipal.setLayout(null);
-
-
-
-		JLabel lblDia = new JLabel("1");
-		lblDia.setHorizontalAlignment(SwingConstants.CENTER);
-		lblDia.setBounds(50, 50, 50, 50);
-
-		pnlPrincipal.add(lblDia);
-
-		JLabel lblMes = new JLabel("Diciembre");
-		lblMes.setHorizontalAlignment(SwingConstants.CENTER);
-		lblMes.setBounds(298, 50, 150, 50);
-
-		pnlPrincipal.add(lblMes);
-
-		JLabel lblYear = new JLabel("2022");
-		lblYear.setHorizontalAlignment(SwingConstants.CENTER);
-		lblYear.setBounds(664, 50, 100, 50);
-
-		pnlPrincipal.add(lblYear);
 		
 		AbstractBorder bordeAgenda = new TextBubbleBorder(Color.BLACK,2,16,0, false);
 		
 		JPanel pnlAgenda = new JPanel();
+
+		
 		pnlAgenda.setBounds(46, 150, 718, 347);
 		pnlPrincipal.add(pnlAgenda);
+		pnlAgenda.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlAgenda.setLayout(new BorderLayout());
 		
 		JPanel pnlHoras = new JPanel();
 		pnlAgenda.add(pnlHoras, BorderLayout.WEST);
+		pnlHoras.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlHoras.setLayout(new GridLayout(8, 1, 0, 0));
 		
-		JLabel lbl10 = new JLabel("10:00");
+		JLabel lbl10 = new JLabel("");
 		lbl10.setOpaque(true);
+		lbl10.setIcon(new ImageIcon(PnlInicio.class.getResource("/images/diez.png")));
 		lbl10.setHorizontalAlignment(SwingConstants.CENTER);
-		lbl10.setBackground(AZULITO);
+		lbl10.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlHoras.add(lbl10);
 		
-		JLabel lbl11 = new JLabel("11:00");
-		lbl11.setBackground(Color.WHITE);
+		JLabel lbl11 = new JLabel("");
+		lbl11.setIcon(new ImageIcon(PnlInicio.class.getResource("/images/once.png")));
+		lbl11.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		lbl11.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl11.setOpaque(true);
 		pnlHoras.add(lbl11);
 		
-		JLabel lbl12 = new JLabel("12:00");
+		JLabel lbl12 = new JLabel("");
+		lbl12.setIcon(new ImageIcon(PnlInicio.class.getResource("/images/doce.png")));
 		lbl12.setOpaque(true);
 		lbl12.setHorizontalAlignment(SwingConstants.CENTER);
-		lbl12.setBackground(AZULITO);
+		lbl12.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlHoras.add(lbl12);
 		
-		JLabel lbl13 = new JLabel("13:00");
-		lbl13.setBackground(Color.WHITE);
+		JLabel lbl13 = new JLabel("");
+		lbl13.setIcon(new ImageIcon(PnlInicio.class.getResource("/images/una.png")));
+		lbl13.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		lbl13.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl13.setOpaque(true);
 		pnlHoras.add(lbl13);
 		
-		JLabel lbl14 = new JLabel("14:00");
+		JLabel lbl14 = new JLabel("");
+		lbl14.setIcon(new ImageIcon(PnlInicio.class.getResource("/images/dos.png")));
 		lbl14.setOpaque(true);
 		lbl14.setHorizontalAlignment(SwingConstants.CENTER);
-		lbl14.setBackground(AZULITO);
+		lbl14.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlHoras.add(lbl14);
 		
-		JLabel lbl15 = new JLabel("15:00");
-		lbl15.setBackground(Color.WHITE);
+		JLabel lbl15 = new JLabel("");
+		lbl15.setIcon(new ImageIcon(PnlInicio.class.getResource("/images/tres.png")));
+		lbl15.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		lbl15.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl15.setOpaque(true);
 		pnlHoras.add(lbl15);
 		
-		JLabel lbl16 = new JLabel("16:00");
+		JLabel lbl16 = new JLabel("");
+		lbl16.setIcon(new ImageIcon(PnlInicio.class.getResource("/images/cuatro.png")));
 		lbl16.setOpaque(true);
 		lbl16.setHorizontalAlignment(SwingConstants.CENTER);
-		lbl16.setBackground(AZULITO);
+		lbl16.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlHoras.add(lbl16);
 		
-		JLabel lbl17 = new JLabel("  17:00  ");
+		JLabel lbl17 = new JLabel("");
+		lbl17.setIcon(new ImageIcon(PnlInicio.class.getResource("/images/cinco.png")));
 		lbl17.setHorizontalAlignment(SwingConstants.CENTER);
-		lbl17.setBackground(Color.WHITE);
+		lbl17.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		lbl17.setOpaque(true);
 		pnlHoras.add(lbl17);
 		
 		JPanel pnlCitas = new JPanel();
+		pnlCitas.setBackground(new Color(255, 255, 255));
 		pnlCitas.setLayout(new GridLayout(8, 1, 0, 0));
 		pnlAgenda.add(pnlCitas, BorderLayout.CENTER);
 		
-		JLabel lblCita10 = new JLabel("Paciente 1 - Operaci\u00F3n");
-		lblCita10.setOpaque(true);
-		lblCita10.setHorizontalAlignment(SwingConstants.CENTER);
-		lblCita10.setBackground(AZULITO);
-		pnlCitas.add(lblCita10);
+		LineBorder border = new LineBorder(Color.BLACK, 2, true);
 		
-		JLabel lblCita11 = new JLabel("Paciente 2 - Operaci\u00F3n");
-		lblCita11.setBackground(Color.WHITE);
-		lblCita11.setHorizontalAlignment(SwingConstants.CENTER);
-		lblCita11.setOpaque(true);
-		pnlCitas.add(lblCita11);
+		JButton btnCita10 = new JButton();
+		btnCita10.setContentAreaFilled(false);
+		btnCita10.setOpaque(false);
+		btnCita10.setBorder(border);
+		btnCita10.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
+		btnCita10.setText("JOSE LUIS PEREZ - MUTILACION DE LENGUA");
 		
-		JLabel lblCita12 = new JLabel("Paciente 3 - Operaci\u00F3n");
-		lblCita12.setOpaque(true);
-		lblCita12.setHorizontalAlignment(SwingConstants.CENTER);
-		lblCita12.setBackground(AZULITO);
-		pnlCitas.add(lblCita12);
+		btnCita10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnCita10.setBackground(Color.YELLOW);
+		pnlCitas.add(btnCita10);
 		
-		JLabel lblCita13 = new JLabel("Paciente 4 - Operaci\u00F3n");
-		lblCita13.setBackground(Color.WHITE);
-		lblCita13.setHorizontalAlignment(SwingConstants.CENTER);
-		lblCita13.setOpaque(true);
-		pnlCitas.add(lblCita13);
 		
-		JLabel lblCita14 = new JLabel("Paciente 5 - Operaci\u00F3n");
-		lblCita14.setOpaque(true);
-		lblCita14.setHorizontalAlignment(SwingConstants.CENTER);
-		lblCita14.setBackground(AZULITO);
-		pnlCitas.add(lblCita14);
 		
-		JLabel lblCita15 = new JLabel("Paciente 6 - Operaci\u00F3n");
-		lblCita15.setHorizontalAlignment(SwingConstants.CENTER);
-		lblCita15.setBackground(Color.WHITE);
-		lblCita15.setOpaque(true);
-		pnlCitas.add(lblCita15);
+		JButton btnCita11 = new JButton();
+		btnCita11.setContentAreaFilled(false);
+		btnCita11.setBorder(border);
+		btnCita11.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
+		btnCita11.setText("ANTONIO - MONGOLO");
 		
-		JLabel lblCita16 = new JLabel("Paciente 7 - Operaci\u00F3n");
-		lblCita16.setOpaque(true);
-		lblCita16.setHorizontalAlignment(SwingConstants.CENTER);
-		lblCita16.setBackground(AZULITO);
-		pnlCitas.add(lblCita16);
+		btnCita11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnCita11.setBackground(Color.BLACK);
+		pnlCitas.add(btnCita11);
 		
-		JLabel lblCita17 = new JLabel("Paciente 8 - Operaci\u00F3n");
-		lblCita17.setHorizontalAlignment(SwingConstants.CENTER);
-		lblCita17.setBackground(Color.WHITE);
-		lblCita17.setOpaque(true);
-		pnlCitas.add(lblCita17);
+		JButton btnCita12 = new JButton();
+		btnCita12.setContentAreaFilled(false);
+		btnCita12.setBorder(border);
+		btnCita12.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
+		btnCita12.setText("ANTONIO - MONGOLO");
 		
+		btnCita12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnCita12.setBackground(Color.PINK);
+		pnlCitas.add(btnCita12);
+		
+		JButton btnCita13 = new JButton();
+		btnCita13.setContentAreaFilled(false);
+		btnCita13.setBorder(border);
+		btnCita13.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
+		btnCita13.setText("ANTONIO - MONGOLO");
+		
+		btnCita13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnCita13.setBackground(Color.PINK);
+		pnlCitas.add(btnCita13);
+		
+		
+		
+		JButton btnCita14 = new JButton("New button");
+
+		btnCita14.setContentAreaFilled(false);
+		btnCita14.setBorder(border);
+		btnCita14.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
+		btnCita14.setText("ANTONIO - MONGOLO");
+		
+		btnCita14.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnCita14.setBackground(Color.PINK);
+		pnlCitas.add(btnCita14);
+		
+		
+		JButton btnCita15 = new JButton();
+		btnCita15.setContentAreaFilled(false);
+		btnCita15.setBorder(border);
+		btnCita15.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
+		btnCita15.setText("ANTONIO - MONGOLO");
+		
+		btnCita15.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnCita15.setBackground(Color.PINK);
+		pnlCitas.add(btnCita15);
+		
+		JButton btnCita16 = new JButton();
+		btnCita16.setContentAreaFilled(false);
+		btnCita16.setBorder(border);
+		btnCita16.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
+		btnCita16.setText("ANTONIO - MONGOLO");
+		
+		btnCita16.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnCita16.setBackground(Color.PINK);
+		pnlCitas.add(btnCita16);
+		
+		JButton btnCita17 = new JButton();
+		btnCita17.setContentAreaFilled(false);
+		btnCita17.setBorder(border);
+		btnCita17.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
+		btnCita17.setText("ANTONIO - MONGOLO");
+		
+		btnCita17.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnCita17.setBackground(Color.PINK);
+		pnlCitas.add(btnCita17);
+		
+	
 		AbstractBorder bordeFecha = new TextBubbleBorder(Color.BLACK,2,16,0, false);
 		
-		JPanel panel = new JPanel();
-		panel.setBorder(bordeFecha);
-		panel.setBounds(50, 50, 714, 50);
-		panel.setBackground(AZULITO);
-		pnlPrincipal.add(panel);
+		JButton btnDerecha = new JButton("");
+		btnDerecha.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnDerecha.setContentAreaFilled(false);
+		btnDerecha.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
+		btnDerecha.setIcon(new ImageIcon(PnlInicio.class.getResource("/images/derecha2.png")));
+		btnDerecha.setBounds(651, 79, 40, 42);
+		btnDerecha.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
+		pnlPrincipal.add(btnDerecha);
+		
+		JButton btnIzq = new JButton();
+		btnIzq.setContentAreaFilled(false);
+		btnIzq.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
+		btnIzq.setIcon(new ImageIcon(PnlInicio.class.getResource("/images/izq2.png")));
+		btnIzq.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
+		btnIzq.setBounds(127, 79, 40, 42);
+		pnlPrincipal.add(btnIzq);
+		
+		JButton btnHome = new JButton();
+		btnHome.setBorderPainted(false);
+		btnHome.setContentAreaFilled(false);
+		btnHome.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
+		btnHome.setIcon(new ImageIcon(PnlInicio.class.getResource("/images/hoy2.png")));
+		btnHome.setBounds(386, 27,40,40);
+		btnHome.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
+		pnlPrincipal.add(btnHome);
+		
+		JLabel lblNewLabel = new JLabel("1 ENERO 2022");
+		lblNewLabel.setOpaque(true);
+		lblNewLabel.setBackground(new Color(255, 255, 255));
+		lblNewLabel.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
+		lblNewLabel.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 25));
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBounds(163, 79, 491, 42);
+		pnlPrincipal.add(lblNewLabel);
 		
 		setVisible(false);
 
