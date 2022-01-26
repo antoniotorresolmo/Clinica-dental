@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JOptionPane;
 
@@ -34,7 +36,6 @@ public class CtrlPrincipal {
 		
 	}
 
-	//Esto va en la capa logica
 	private static Medico stringToMedico(String requestHttp) throws Exception{
 		Medico m = new Medico();
 
@@ -106,6 +107,6 @@ public class CtrlPrincipal {
 		view.PnlPerfil.txtTelefonoMedico.setEditable(true);
 		
 	}
-	
+
 
 }

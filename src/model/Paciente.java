@@ -12,6 +12,9 @@ public class Paciente {
 	private String Direccion; //NN
 	private String DNI; //NN
 	
+	public Paciente() {
+		
+	}
 	public Paciente(int ID_Paciente) {
 		
 		this.ID_Paciente = ID_Paciente;

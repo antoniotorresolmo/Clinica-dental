@@ -5,7 +5,7 @@ public class LogicMedico implements ILogic{
 	public static void insertar() throws Exception {
 		
 		String nombre, apellidos, usuario, password, correo, direccion, telefono;
-		
+		/*
 		nombre = view.FrmRegistro.txtNombreRegistro.getText();
 		apellidos = view.FrmRegistro.txtApellidosRegistro.getText();
 		usuario = view.FrmRegistro.txtUsuarioRegistro.getText();
@@ -17,7 +17,7 @@ public class LogicMedico implements ILogic{
 		String url = URI + "proyecto/Medico/ins_medico.php?sNombre=" + nombre +"&sApellidos=" + apellidos + "&sUsuario=" + usuario + "&sPassword=" + password + "&sCorreo=" + correo + "&sDireccion=" + direccion + "&sTelefono=" + telefono;
 		
 		ctrl.CtrlPrincipal.peticionHttp(url);
-		
+		*/
 	}
 
 }

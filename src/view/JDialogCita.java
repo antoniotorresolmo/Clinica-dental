@@ -66,11 +66,11 @@ public class JDialogCita extends JDialog {
 		lblReceta.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 19));
 		lblReceta.setBackground(new Color(255, 255, 255));
 		lblReceta.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
-		lblReceta.setBounds(556, 124, 166, 40);
+		lblReceta.setBounds(545, 124, 166, 40);
 		contentPanel.add(lblReceta);
 		
 		JTextArea txtReceta = new JTextArea();
-		txtReceta.setBounds(499, 203, 278, 154);
+		txtReceta.setBounds(466, 203, 311, 154);
 		contentPanel.add(txtReceta);
 		
 		JTextArea txtHistorial = new JTextArea();

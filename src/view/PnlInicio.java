@@ -2,8 +2,17 @@ package view;
 
 import javax.swing.*;
 import javax.swing.border.*;
+
+import ctrl.CtrlCitas;
+import ctrl.CtrlPacientes;
+import model.Cita;
+
 import java.awt.*;
 import java.io.InputStream;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
 import java.awt.image.*;
 import java.awt.geom.*;
 import java.awt.event.ActionListener;
@@ -13,6 +22,21 @@ public class PnlInicio extends JPanel {
 
 	private static Font font;
 	private static Color AZULITO = new Color(137, 207, 240);
+	private static CtrlCitas ctrlCitas = new CtrlCitas();
+	private static List<Cita> lstCitas = new ArrayList<>();
+	private JButton btnCita10;
+	private JButton btnCita11;
+	private JButton btnCita12;
+	private JButton btnCita13;
+	private JButton btnCita14;
+	private JButton btnCita15;
+	private JButton btnCita16;
+	private JButton btnCita17;
+	
+	
+	
+	
+	
 
 	public PnlInicio() {
 		
@@ -30,7 +54,7 @@ public class PnlInicio extends JPanel {
 		scrollPane.setViewportView(pnlPrincipal);
 		pnlPrincipal.setLayout(null);
 		
-		AbstractBorder bordeAgenda = new TextBubbleBorder(Color.BLACK,2,16,0, false);
+	
 		
 		JPanel pnlAgenda = new JPanel();
 
@@ -111,7 +135,7 @@ public class PnlInicio extends JPanel {
 		
 		LineBorder border = new LineBorder(Color.BLACK, 2, true); ///////////////////////////////
 		Font font = new Font("Microsoft JhengHei UI", Font.BOLD, 15);
-		JButton btnCita10 = new JButton();
+		btnCita10 = new JButton();
 		btnCita10.setForeground(Color.BLACK);
 		btnCita10.setContentAreaFilled(false);
 		btnCita10.setOpaque(false);
@@ -128,7 +152,7 @@ public class PnlInicio extends JPanel {
 		
 		
 		
-		JButton btnCita11 = new JButton();
+		btnCita11 = new JButton();
 		btnCita11.setForeground(Color.BLACK);
 		btnCita11.setContentAreaFilled(false);
 		btnCita11.setBorder(border);
@@ -142,7 +166,7 @@ public class PnlInicio extends JPanel {
 		btnCita11.setBackground(Color.BLACK);
 		pnlCitas.add(btnCita11);
 		
-		JButton btnCita12 = new JButton();
+		btnCita12 = new JButton();
 		btnCita12.setForeground(Color.BLACK);
 		btnCita12.setContentAreaFilled(false);
 		btnCita12.setBorder(border);
@@ -156,7 +180,7 @@ public class PnlInicio extends JPanel {
 		btnCita12.setBackground(Color.PINK);
 		pnlCitas.add(btnCita12);
 		
-		JButton btnCita13 = new JButton();
+		btnCita13 = new JButton();
 		btnCita13.setForeground(Color.BLACK);
 		btnCita13.setContentAreaFilled(false);
 		btnCita13.setBorder(border);
@@ -172,7 +196,7 @@ public class PnlInicio extends JPanel {
 		
 		
 		
-		JButton btnCita14 = new JButton("New button");
+		btnCita14 = new JButton("New button");
 		btnCita14.setForeground(Color.BLACK);
 
 		btnCita14.setContentAreaFilled(false);
@@ -188,7 +212,7 @@ public class PnlInicio extends JPanel {
 		pnlCitas.add(btnCita14);
 		
 		
-		JButton btnCita15 = new JButton();
+		btnCita15 = new JButton();
 		btnCita15.setForeground(Color.BLACK);
 		btnCita15.setContentAreaFilled(false);
 		btnCita15.setBorder(border);
@@ -202,7 +226,7 @@ public class PnlInicio extends JPanel {
 		btnCita15.setBackground(Color.PINK);
 		pnlCitas.add(btnCita15);
 		
-		JButton btnCita16 = new JButton();
+		btnCita16 = new JButton();
 		btnCita16.setForeground(Color.BLACK);
 		btnCita16.setContentAreaFilled(false);
 		btnCita16.setBorder(border);
@@ -216,7 +240,7 @@ public class PnlInicio extends JPanel {
 		btnCita16.setBackground(Color.PINK);
 		pnlCitas.add(btnCita16);
 		
-		JButton btnCita17 = new JButton();
+		btnCita17 = new JButton();
 		btnCita17.setForeground(Color.BLACK);
 		btnCita17.setContentAreaFilled(false);
 		btnCita17.setBorder(border);
@@ -254,6 +278,21 @@ public class PnlInicio extends JPanel {
 		pnlPrincipal.add(btnIzq);
 		
 		JButton btnHome = new JButton();
+		btnHome.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				try {
+					lstCitas=ctrlCitas.getCitas(new SimpleDateFormat("dd/MM/yyyy").format(Calendar.getInstance().getTime()));
+					rellenarBotones();
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+			}
+
+			
+		});
 		btnHome.setBorderPainted(false);
 		btnHome.setContentAreaFilled(false);
 		btnHome.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
@@ -274,131 +313,42 @@ public class PnlInicio extends JPanel {
 		setVisible(false);
 
 	}
+	
+	private void rellenarBotones() throws Exception {
+		for (int i=0; i<lstCitas.size();i++) {
+			
+			switch (lstCitas.get(i).getHora()) {
+			case "10:00": 
+				btnCita10.setText(lstCitas.get(i).getOperacion() +" -- "+CtrlPacientes.getNombrePaciente(lstCitas.get(i).getID_Paciente()));
+				break;
+			case "11:00": 
+				btnCita10.setText(lstCitas.get(i).getOperacion());
+				break;
+			case "12:00": 
+				btnCita10.setText(lstCitas.get(i).getOperacion());
+				break;
+			case "13:00": 
+				btnCita10.setText(lstCitas.get(i).getOperacion());
+				break;
+			case "14:00": 
+				btnCita10.setText(lstCitas.get(i).getOperacion());
+				break;
+			case "15:00": 
+				btnCita10.setText(lstCitas.get(i).getOperacion());
+				break;
+			case "16:00": 
+				btnCita10.setText(lstCitas.get(i).getOperacion());
+				break;
+			case "17:00": 
+				btnCita10.setText(lstCitas.get(i).getOperacion());
+				break;
+			}
+			
+			
+		}
+		
+
+	
+}
 }
 
-class TextBubbleBorder extends AbstractBorder {
-
-    private Color color;
-    private int thickness = 4;
-    private int radii = 8;
-    private int pointerSize = 7;
-    private Insets insets = null;
-    private BasicStroke stroke = null;
-    private int strokePad;
-    private int pointerPad = 4;
-    private boolean left = true;
-    RenderingHints hints;
-
-    TextBubbleBorder(
-            Color color) {
-        this(color, 4, 8, 7);
-    }
-
-    TextBubbleBorder(
-            Color color, int thickness, int radii, int pointerSize) {
-        this.thickness = thickness;
-        this.radii = radii;
-        this.pointerSize = pointerSize;
-        this.color = color;
-
-        stroke = new BasicStroke(thickness);
-        strokePad = thickness / 2;
-
-        hints = new RenderingHints(
-                RenderingHints.KEY_ANTIALIASING,
-                RenderingHints.VALUE_ANTIALIAS_ON);
-
-        int pad = radii + strokePad;
-        int bottomPad = pad + pointerSize + strokePad;
-        insets = new Insets(pad, pad, bottomPad, pad);
-    }
-
-    TextBubbleBorder(
-            Color color, int thickness, int radii, int pointerSize, boolean left) {
-        this(color, thickness, radii, pointerSize);
-        this.left = left;
-    }
-
-    @Override
-    public Insets getBorderInsets(Component c) {
-        return insets;
-    }
-
-    @Override
-    public Insets getBorderInsets(Component c, Insets insets) {
-        return getBorderInsets(c);
-    }
-
-    @Override
-    public void paintBorder(
-            Component c,
-            Graphics g,
-            int x, int y,
-            int width, int height) {
-
-        Graphics2D g2 = (Graphics2D) g;
-
-        int bottomLineY = height - thickness - pointerSize;
-
-        RoundRectangle2D.Double bubble = new RoundRectangle2D.Double(
-                0 + strokePad,
-                0 + strokePad,
-                width - thickness,
-                bottomLineY,
-                radii,
-                radii);
-
-        Polygon pointer = new Polygon();
-
-        if (left) {
-            // left point
-            pointer.addPoint(
-                    strokePad + radii + pointerPad,
-                    bottomLineY);
-            // right point
-            pointer.addPoint(
-                    strokePad + radii + pointerPad + pointerSize,
-                    bottomLineY);
-            // bottom point
-            pointer.addPoint(
-                    strokePad + radii + pointerPad + (pointerSize / 2),
-                    height - strokePad);
-        } else {
-            // left point
-            pointer.addPoint(
-                    width - (strokePad + radii + pointerPad),
-                    bottomLineY);
-            // right point
-            pointer.addPoint(
-                    width - (strokePad + radii + pointerPad + pointerSize),
-                    bottomLineY);
-            // bottom point
-            pointer.addPoint(
-                    width - (strokePad + radii + pointerPad + (pointerSize / 2)),
-                    height - strokePad);
-        }
-
-        Area area = new Area(bubble);
-        area.add(new Area(pointer));
-
-        g2.setRenderingHints(hints);
-
-        // Paint the BG color of the parent, everywhere outside the clip
-        // of the text bubble.
-        Component parent  = c.getParent();
-        if (parent!=null) {
-            Color bg = parent.getBackground();
-            Rectangle rect = new Rectangle(0,0,width, height);
-            Area borderRegion = new Area(rect);
-            borderRegion.subtract(area);
-            g2.setClip(borderRegion);
-            g2.setColor(bg);
-            g2.fillRect(0, 0, width, height);
-            g2.setClip(null);
-        }
-
-        g2.setColor(color);
-        g2.setStroke(stroke);
-        g2.draw(area);
-    }
-}
