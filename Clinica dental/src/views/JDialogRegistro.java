@@ -20,6 +20,7 @@ import java.awt.event.MouseMotionAdapter;
 import javax.swing.border.MatteBorder;
 import javax.swing.border.TitledBorder;
 import controllers.CtrlPrincipal;
+import controllers.LoginController;
 import models.Medico;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -143,15 +144,6 @@ public class JDialogRegistro extends JFrame {
 
 		JButton btnEntrar = new JButton("ACEPTAR");
 		btnEntrar.setSelected(true);
-		btnEntrar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				try {
-					logic.LogicMedico.insertar();
-				} catch (Exception e1) {
-					e1.printStackTrace();
-				}
-			}
-		});
 		btnEntrar.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
 		btnEntrar.setBackground(views.JDialogRegistro.principal);
 		btnEntrar.setBorderPainted(false);
@@ -165,28 +157,15 @@ public class JDialogRegistro extends JFrame {
 		lblNewLabel_3.setBounds(71, 13, 115, 25);
 		contentPanel.add(lblNewLabel_3);
 
-		JLabel lblNewLabel_3_1 = new JLabel("X");
-		lblNewLabel_3_1.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				if (JOptionPane.showConfirmDialog(null, "¿Quieres cerrar la aplicación?") == 0)
-					System.exit(0);
-			}
-		});
-		lblNewLabel_3_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_3_1.setForeground(Color.WHITE);
-		lblNewLabel_3_1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblNewLabel_3_1.setBounds(562, 11, 21, 28);
-		contentPanel.add(lblNewLabel_3_1);
+		JLabel lblX = new JLabel("X");
+		lblX.setHorizontalAlignment(SwingConstants.CENTER);
+		lblX.setForeground(Color.WHITE);
+		lblX.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblX.setBounds(562, 11, 21, 28);
+		contentPanel.add(lblX);
 		getContentPane().add(contentPanel);
 
 		JButton btnCancelar = new JButton("CANCELAR");
-		btnCancelar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				new JDialogLogin();
-				dispose();
-			}
-		});
 		btnCancelar.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
 		btnCancelar.setBounds(380, 479, 99, 28);
 		btnCancelar.setBorderPainted(false);
@@ -286,6 +265,43 @@ public class JDialogRegistro extends JFrame {
 		lblTelefono.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
 		lblTelefono.setBounds(229, 392, 250, 14);
 		contentPanel.add(lblTelefono);
+
+		// Eventos
+
+		btnEntrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String sResultado = controllers.RegistroController.registrarse();
+				System.out.println(sResultado);
+				if (sResultado.equals("Correcto")) {
+					try {
+						controllers.LoginController.getPaciente(txtUsuario.getText(), txtPassword.getText());
+						new FrmPrincipal();
+						dispose();
+					} catch (Exception e1) {
+						e1.printStackTrace();
+					}
+
+				} else {
+					JOptionPane.showMessageDialog(null, "No se ha podido registrar", "Error",
+							JOptionPane.ERROR_MESSAGE);
+				}
+
+			}
+		});
+
+		btnCancelar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new JDialogLogin();
+				dispose();
+			}
+		});
+
+		lblX.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				if (JOptionPane.showConfirmDialog(null, "¿Quieres cerrar la aplicación?") == 0)
+					System.exit(0);
+			}
+		});
 
 		setVisible(true);
 	}

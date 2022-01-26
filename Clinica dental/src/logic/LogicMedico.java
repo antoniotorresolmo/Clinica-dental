@@ -5,7 +5,7 @@ import models.Medico;
 
 public class LogicMedico implements ILogic{
 	
-	public static void insertar() throws Exception {
+	public static String insertar() throws Exception {
 		
 		String nombre, apellidos, usuario, password, correo, direccion, telefono;
 		
@@ -19,7 +19,7 @@ public class LogicMedico implements ILogic{
 		
 		String url = URI + "proyecto/Medico/ins_medico.php?sNombre=" + nombre +"&sApellidos=" + apellidos + "&sUsuario=" + usuario + "&sPassword=" + password + "&sCorreo=" + correo + "&sDireccion=" + direccion + "&sTelefono=" + telefono;
 		
-		controllers.CtrlPrincipal.peticionHttp(url);
+		return controllers.CtrlPrincipal.peticionHttp(url);
 		
 	}
 

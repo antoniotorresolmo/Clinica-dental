@@ -54,7 +54,6 @@ public class CtrlPrincipal {
 		views.PnlPerfil.txtDireccionMedico.setEditable(true);
 		views.PnlPerfil.txtTelefonoMedico.setEditable(true);
 		
-	}
-	
+	}	
 
 }

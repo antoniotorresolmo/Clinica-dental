@@ -2,7 +2,9 @@ package controllers;
 
 import java.io.*;
 
+import models.Medico;
 import models.Paciente;
+import views.FrmPrincipal;
 
 public class LoginController implements IController {
 
@@ -10,7 +12,7 @@ public class LoginController implements IController {
 
 		String url = URI + "get_medico_login.php?Usuario=" + usuario+"&Password="+pass;
 		String requestHttp = CtrlPrincipal.peticionHttp(url);
-		views.JDialogLogin.oMedico = logic.LogicMedico.stringToMedico(requestHttp);
+		FrmPrincipal.oMedico = logic.LogicMedico.stringToMedico(requestHttp);
 
         if(views.JDialogLogin.cbRecordar.isSelected()){
             guardarDatos();

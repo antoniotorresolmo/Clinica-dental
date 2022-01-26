@@ -31,7 +31,6 @@ public class JDialogLogin extends JFrame {
 	private JFrame frame;
 	public static JTextField txtUsername;
 	public static JPasswordField txtPassword;
-	public static Medico oMedico;
 	private int x, y;
 	public static Color principal = new Color(137, 207, 240);
 	public static Color secundario = new Color(224, 147, 160);
@@ -179,11 +178,20 @@ public class JDialogLogin extends JFrame {
 		btnEntrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					controllers.LoginController.getPaciente(txtUsername.getText(), txtPassword.getText());
-					// Abrir pantalla principal
-					dispose();
+					String sUsuario = txtUsername.getText();
+					String sPassword = txtPassword.getText();
+
+					if(!sPassword.isEmpty() && !sUsuario.isEmpty()){
+						controllers.LoginController.getPaciente(sUsuario, sPassword);
+						//System.out.println("E");
+						new FrmPrincipal();
+						dispose();
+					}else{
+						JOptionPane.showMessageDialog(null, "Por favor, introduce los datos", "Error", JOptionPane.ERROR_MESSAGE);
+					}					
 				} catch (Exception e1) {
-					JOptionPane.showMessageDialog(null, "Usuario no encontrado");
+					e1.printStackTrace();
+					JOptionPane.showMessageDialog(null, "Usuario no encontrado", "Error", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
