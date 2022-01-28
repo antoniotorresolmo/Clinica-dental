@@ -19,9 +19,8 @@ public class FrmPrincipal extends JFrame implements IColores{
 	public FrmPrincipal() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setExtendedState(MAXIMIZED_BOTH);
-		
+		//setBounds(100, 100, 691, 395);
 		contentPane = new JPanel();
-		contentPane.setBounds(100, 100, 691, 395);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));

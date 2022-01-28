@@ -20,52 +20,47 @@ public class PnlSlidingMenu extends JPanel implements IColores {
 		JPanel pnlPrincipal = new JPanel();
 		pnlPrincipal.setBackground(CLR_PRIMARIO);
 
-		setPreferredSize(new Dimension(164, 1061));
+		setPreferredSize(new Dimension(200, 1500));
 
 		scrollPane.setViewportView(pnlPrincipal);
 		pnlPrincipal.setLayout(new GridLayout(6, 1, 10, 10));
 
 		JPanel pnlInicio = new JPanel();
-		pnlInicio.setBackground(CLR_PRIMARIO);
+		pnlInicio.setBackground(CLR_SECUNDARIO);
 		pnlPrincipal.add(pnlInicio);
 		pnlInicio.setLayout(new BorderLayout(0, 0));
 
-		JLabel lblInicio = new JLabel("");
-		lblInicio.setIcon(new ImageIcon(PnlSlidingMenu.class.getResource("/images/homedos.png")));
-		lblInicio.setBackground(CLR_PRIMARIO);
+		JLabel lblInicio = new JLabel("INICIO");
 		lblInicio.setHorizontalAlignment(SwingConstants.CENTER);
 		lblInicio.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 		pnlInicio.add(lblInicio, BorderLayout.CENTER);
 
 		JPanel pnlAgenda = new JPanel();
-		pnlAgenda.setBackground(CLR_PRIMARIO);
+		pnlAgenda.setBackground(CLR_SECUNDARIO);
 		pnlPrincipal.add(pnlAgenda);
 		pnlAgenda.setLayout(new BorderLayout(0, 0));
 
-		JLabel lblAgenda = new JLabel("");
-		lblAgenda.setIcon(new ImageIcon(PnlSlidingMenu.class.getResource("/images/agenda.png")));
+		JLabel lblAgenda = new JLabel("AGENDA");
 		lblAgenda.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAgenda.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 		pnlAgenda.add(lblAgenda, BorderLayout.CENTER);
 
 		JPanel pnlPaciente = new JPanel();
-		pnlPaciente.setBackground(CLR_PRIMARIO);
+		pnlPaciente.setBackground(new Color(224, 147, 160));
 		pnlPrincipal.add(pnlPaciente);
 		pnlPaciente.setLayout(new BorderLayout(0, 0));
 
-		JLabel lblPaciente = new JLabel("");
-		lblPaciente.setIcon(new ImageIcon(PnlSlidingMenu.class.getResource("/images/pacientes.png")));
+		JLabel lblPaciente = new JLabel("PACIENTE");
 		lblPaciente.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPaciente.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 		pnlPaciente.add(lblPaciente, BorderLayout.CENTER);
 
 		JPanel pnlPaciente_1 = new JPanel();
-		pnlPaciente_1.setBackground(CLR_PRIMARIO);
+		pnlPaciente_1.setBackground(new Color(224, 147, 160));
 		pnlPrincipal.add(pnlPaciente_1);
 		pnlPaciente_1.setLayout(new BorderLayout(0, 0));
 
-		JLabel lblAnalisis = new JLabel("");
-		lblAnalisis.setIcon(new ImageIcon(PnlSlidingMenu.class.getResource("/images/estadistica.png")));
+		JLabel lblAnalisis = new JLabel("AN\u00C1LISIS");
 		lblAnalisis.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAnalisis.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 		pnlPaciente_1.add(lblAnalisis, BorderLayout.CENTER);
