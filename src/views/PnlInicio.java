@@ -41,7 +41,8 @@ public class PnlInicio extends JPanel {
 		setBackground(Color.WHITE);
 		setLayout(new BorderLayout(0, 0));
 
-		GradientPanel pnlPrincipal = new GradientPanel(Color.decode("#AEDFF2"), Color.decode("#04C4D9"),GradientPanel.DIAGONAL_DOWN);
+		//GradientPanel pnlPrincipal = new GradientPanel(Color.decode("#AEDFF2"), Color.decode("#04C4D9"),GradientPanel.DIAGONAL_DOWN);
+		GradientPanel pnlPrincipal = new GradientPanel(Color.decode("#3CE6DB"), Color.decode("#4FFFA5"));
 		pnlPrincipal.setBackground(Color.WHITE);
 
 		JScrollPane scrollPane = new JScrollPane();

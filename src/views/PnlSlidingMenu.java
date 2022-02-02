@@ -3,6 +3,7 @@ package views;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import javax.swing.border.LineBorder;
 
 public class PnlSlidingMenu extends JPanel implements IColores {
 
@@ -11,15 +12,18 @@ public class PnlSlidingMenu extends JPanel implements IColores {
 	PnlPacientes pnlPacientes1 = new PnlPacientes();
 	PnlAnalisis pnlAnalisis1 = new PnlAnalisis();
 	Color azu = new Color(40,153,192);
+	Color transparente = new Color(1.0f, 1.0f, 1.0f, 0.0f);
 
 	public PnlSlidingMenu() {
 		setLayout(new BorderLayout(0, 0));
-
+		
 		JScrollPane scrollPane = new JScrollPane();
 		add(scrollPane, BorderLayout.CENTER);
 
-		JPanel pnlPrincipal = new JPanel();
-		pnlPrincipal.setBackground(azu);
+		//JPanel pnlPrincipal = new JPanel();
+		GradientPanel pnlPrincipal = new GradientPanel(Color.decode("#4BE392"), Color.decode("#AFFF4E"));
+	
+		//pnlPrincipal.setBackground(azu);
 
 		setPreferredSize(new Dimension(164, 1061));
 
@@ -27,20 +31,24 @@ public class PnlSlidingMenu extends JPanel implements IColores {
 		pnlPrincipal.setLayout(new GridLayout(4, 1, 10, 60));
 
 		JPanel pnlInicio = new JPanel();
-		pnlInicio.setBackground(azu);
+		pnlInicio.setBackground(transparente);
 		pnlPrincipal.add(pnlInicio);
 		pnlInicio.setLayout(new BorderLayout(0, 0));
 
+		
+
+		
+		
 		JLabel lblInicio = new JLabel("");
 	
 		lblInicio.setIcon(new ImageIcon(PnlSlidingMenu.class.getResource("/images/homedos.png")));
-		lblInicio.setBackground(azu);
+		lblInicio.setBackground(transparente);
 		lblInicio.setHorizontalAlignment(SwingConstants.CENTER);
 		lblInicio.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 		pnlInicio.add(lblInicio, BorderLayout.CENTER);
 
 		JPanel pnlAgenda = new JPanel();
-		pnlAgenda.setBackground(azu);
+		pnlAgenda.setBackground(transparente);
 		pnlPrincipal.add(pnlAgenda);
 		pnlAgenda.setLayout(new BorderLayout(0, 0));
 
@@ -51,7 +59,7 @@ public class PnlSlidingMenu extends JPanel implements IColores {
 		pnlAgenda.add(lblAgenda, BorderLayout.CENTER);
 
 		JPanel pnlPaciente = new JPanel();
-		pnlPaciente.setBackground(azu);
+		pnlPaciente.setBackground(transparente);
 		pnlPrincipal.add(pnlPaciente);
 		pnlPaciente.setLayout(new BorderLayout(0, 0));
 
@@ -62,7 +70,7 @@ public class PnlSlidingMenu extends JPanel implements IColores {
 		pnlPaciente.add(lblPaciente, BorderLayout.CENTER);
 
 		JPanel pnlPaciente_1 = new JPanel();
-		pnlPaciente_1.setBackground(azu);
+		pnlPaciente_1.setBackground(transparente);
 		pnlPrincipal.add(pnlPaciente_1);
 		pnlPaciente_1.setLayout(new BorderLayout(0, 0));
 
