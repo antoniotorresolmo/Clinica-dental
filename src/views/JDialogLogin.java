@@ -78,14 +78,14 @@ public class JDialogLogin extends JFrame {
 		JLabel lblNewLabel = new JLabel("Clinica Los Chavales");
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 20));
+		lblNewLabel.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 20));
 		lblNewLabel.setBounds(78, 242, 234, 36);
 		circlePanel.add(lblNewLabel);
 
 		JLabel lblNewLabel_1 = new JLabel("M\u00E9dico");
 		lblNewLabel_1.setForeground(Color.WHITE);
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 20));
+		lblNewLabel_1.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 20));
 		lblNewLabel_1.setBounds(78, 290, 234, 36);
 		circlePanel.add(lblNewLabel_1);
 
@@ -107,6 +107,7 @@ public class JDialogLogin extends JFrame {
 		panel.setLayout(null);
 
 		txtUsername = new JTextField();
+		txtUsername.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 11));
 		txtUsername.setBackground(Color.WHITE);
 		txtUsername.setBounds(10, 11, 230, 28);
 
@@ -122,25 +123,26 @@ public class JDialogLogin extends JFrame {
 		contentPanel.add(panel_1);
 
 		txtPassword = new JPasswordField();
+		txtPassword.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 11));
 		txtPassword.setBounds(10, 11, 230, 28);
 		panel_1.add(txtPassword);
 		txtPassword.setBorder(null);
 
 		JLabel lblNewLabel_2 = new JLabel("Usuario");
 		lblNewLabel_2.setForeground(Color.WHITE);
-		lblNewLabel_2.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
+		lblNewLabel_2.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 16));
 		lblNewLabel_2.setBounds(229, 62, 250, 14);
 		contentPanel.add(lblNewLabel_2);
 
 		JLabel lblNewLabel_2_1 = new JLabel("Contrase\u00F1a");
 		lblNewLabel_2_1.setForeground(Color.WHITE);
-		lblNewLabel_2_1.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
+		lblNewLabel_2_1.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 16));
 		lblNewLabel_2_1.setBounds(229, 148, 250, 14);
 		contentPanel.add(lblNewLabel_2_1);
 
 		JButton btnEntrar = new JButton("ENTRAR");
 		btnEntrar.setSelected(true);
-		btnEntrar.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
+		btnEntrar.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 12));
 		btnEntrar.setBackground(views.JDialogLogin.principal);
 		btnEntrar.setBorderPainted(false);
 		btnEntrar.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
@@ -149,7 +151,7 @@ public class JDialogLogin extends JFrame {
 
 		JLabel lblNewLabel_3 = new JLabel("LOGIN");
 		lblNewLabel_3.setForeground(Color.WHITE);
-		lblNewLabel_3.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 20));
+		lblNewLabel_3.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 20));
 		lblNewLabel_3.setBounds(229, 25, 115, 25);
 		contentPanel.add(lblNewLabel_3);
 
@@ -157,13 +159,13 @@ public class JDialogLogin extends JFrame {
 		lblX.setIcon(new ImageIcon(JDialogLogin.class.getResource("/images/crossdos.png")));
 		lblX.setHorizontalAlignment(SwingConstants.CENTER);
 		lblX.setForeground(Color.WHITE);
-		lblX.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblX.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 20));
 		lblX.setBounds(469, 11, 21, 28);
 		contentPanel.add(lblX);
 		getContentPane().add(contentPanel);
 		
 		JButton btnRegistrarse = new JButton("REGISTRARSE");
-		btnRegistrarse.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
+		btnRegistrarse.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 12));
 		btnRegistrarse.setBounds(380, 279, 99, 28);
 		btnRegistrarse.setBorderPainted(false);
 		btnRegistrarse.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
@@ -171,7 +173,7 @@ public class JDialogLogin extends JFrame {
 		contentPanel.add(btnRegistrarse);
 
 		cbRecordar = new JCheckBox("Recordar");
-		cbRecordar.setFont(new Font("Microsoft JhengHei UI", Font.PLAIN, 11));
+		cbRecordar.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 11));
 		cbRecordar.setBounds(231, 230, 97, 23);
 		cbRecordar.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		contentPanel.add(cbRecordar);

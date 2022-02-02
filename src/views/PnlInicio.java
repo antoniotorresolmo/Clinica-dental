@@ -134,7 +134,7 @@ public class PnlInicio extends JPanel {
 		btnCita10.setContentAreaFilled(false);
 		btnCita10.setOpaque(false);
 		btnCita10.setBorder(border);
-		btnCita10.setFont(font);
+		btnCita10.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
 		btnCita10.setText("-");
 		
 		btnCita10.addActionListener(new ActionListener() {
@@ -150,7 +150,7 @@ public class PnlInicio extends JPanel {
 		btnCita11.setForeground(Color.BLACK);
 		btnCita11.setContentAreaFilled(false);
 		btnCita11.setBorder(border);
-		btnCita11.setFont(font);
+		btnCita11.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
 		btnCita11.setText("-");
 		
 		btnCita11.addActionListener(new ActionListener() {
@@ -164,7 +164,7 @@ public class PnlInicio extends JPanel {
 		btnCita12.setForeground(Color.BLACK);
 		btnCita12.setContentAreaFilled(false);
 		btnCita12.setBorder(border);
-		btnCita12.setFont(font);
+		btnCita12.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
 		btnCita12.setText("-");
 		
 		btnCita12.addActionListener(new ActionListener() {
@@ -178,7 +178,7 @@ public class PnlInicio extends JPanel {
 		btnCita13.setForeground(Color.BLACK);
 		btnCita13.setContentAreaFilled(false);
 		btnCita13.setBorder(border);
-		btnCita13.setFont(font);
+		btnCita13.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
 		btnCita13.setText("-");
 		
 		btnCita13.addActionListener(new ActionListener() {
@@ -195,7 +195,7 @@ public class PnlInicio extends JPanel {
 
 		btnCita14.setContentAreaFilled(false);
 		btnCita14.setBorder(border);
-		btnCita14.setFont(font);
+		btnCita14.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
 		btnCita14.setText("-");
 		
 		btnCita14.addActionListener(new ActionListener() {
@@ -210,7 +210,7 @@ public class PnlInicio extends JPanel {
 		btnCita15.setForeground(Color.BLACK);
 		btnCita15.setContentAreaFilled(false);
 		btnCita15.setBorder(border);
-		btnCita15.setFont(font);
+		btnCita15.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
 		btnCita15.setText("-");
 		
 		btnCita15.addActionListener(new ActionListener() {
@@ -224,7 +224,7 @@ public class PnlInicio extends JPanel {
 		btnCita16.setForeground(Color.BLACK);
 		btnCita16.setContentAreaFilled(false);
 		btnCita16.setBorder(border);
-		btnCita16.setFont(font);
+		btnCita16.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
 		btnCita16.setText("-");
 		
 		btnCita16.addActionListener(new ActionListener() {
@@ -238,7 +238,7 @@ public class PnlInicio extends JPanel {
 		btnCita17.setForeground(Color.BLACK);
 		btnCita17.setContentAreaFilled(false);
 		btnCita17.setBorder(border);
-		btnCita17.setFont(font);
+		btnCita17.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 15));
 		btnCita17.setText("-");
 		
 		btnCita17.addActionListener(new ActionListener() {
@@ -274,7 +274,7 @@ public class PnlInicio extends JPanel {
 		lblFecha.setOpaque(true);
 		lblFecha.setBackground(new Color(255, 255, 255));
 		lblFecha.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
-		lblFecha.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 25));
+		lblFecha.setFont(new Font("Yu Gothic UI", Font.BOLD, 25));
 		lblFecha.setHorizontalAlignment(SwingConstants.CENTER);
 		
 		JButton btnDerecha = new JButton("");

@@ -85,14 +85,14 @@ public class JDialogRegistro extends JFrame {
 		JLabel lblNewLabel = new JLabel("Clinica Los Chavales");
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 20));
+		lblNewLabel.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 20));
 		lblNewLabel.setBounds(78, 242, 234, 36);
 		circlePanel.add(lblNewLabel);
 
 		JLabel lblNewLabel_1 = new JLabel("M\u00E9dico");
 		lblNewLabel_1.setForeground(Color.WHITE);
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 20));
+		lblNewLabel_1.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 20));
 		lblNewLabel_1.setBounds(78, 290, 234, 36);
 		circlePanel.add(lblNewLabel_1);
 
@@ -115,6 +115,7 @@ public class JDialogRegistro extends JFrame {
 		contentPanel.add(panel);
 
 		txtNombre = new JTextField();
+		txtNombre.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 11));
 		txtNombre.setBounds(0, 0, 250, 28);
 		panel.add(txtNombre);
 		txtNombre.setColumns(10);
@@ -126,25 +127,26 @@ public class JDialogRegistro extends JFrame {
 		contentPanel.add(panel_1);
 
 		txtApellidos = new JTextField();
+		txtApellidos.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 11));
 		txtApellidos.setBounds(0, 0, 250, 28);
 		panel_1.add(txtApellidos);
 		txtApellidos.setColumns(10);
 
 		JLabel lblNombre = new JLabel("Nombre");
 		lblNombre.setForeground(Color.WHITE);
-		lblNombre.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
+		lblNombre.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 16));
 		lblNombre.setBounds(229, 20, 250, 14);
 		contentPanel.add(lblNombre);
 
 		JLabel lblNewLabel_2_1 = new JLabel("Apellidos");
 		lblNewLabel_2_1.setForeground(Color.WHITE);
-		lblNewLabel_2_1.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
+		lblNewLabel_2_1.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 16));
 		lblNewLabel_2_1.setBounds(229, 84, 250, 14);
 		contentPanel.add(lblNewLabel_2_1);
 
 		JButton btnEntrar = new JButton("ACEPTAR");
 		btnEntrar.setSelected(true);
-		btnEntrar.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
+		btnEntrar.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 12));
 		btnEntrar.setBackground(views.JDialogRegistro.principal);
 		btnEntrar.setBorderPainted(false);
 		btnEntrar.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
@@ -153,7 +155,7 @@ public class JDialogRegistro extends JFrame {
 
 		JLabel lblNewLabel_3 = new JLabel("REGISTRO");
 		lblNewLabel_3.setForeground(Color.WHITE);
-		lblNewLabel_3.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 20));
+		lblNewLabel_3.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 20));
 		lblNewLabel_3.setBounds(71, 13, 115, 25);
 		contentPanel.add(lblNewLabel_3);
 
@@ -166,7 +168,7 @@ public class JDialogRegistro extends JFrame {
 		getContentPane().add(contentPanel);
 
 		JButton btnCancelar = new JButton("CANCELAR");
-		btnCancelar.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
+		btnCancelar.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 12));
 		btnCancelar.setBounds(380, 479, 99, 28);
 		btnCancelar.setBorderPainted(false);
 		btnCancelar.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
@@ -180,6 +182,7 @@ public class JDialogRegistro extends JFrame {
 		contentPanel.add(panel_1_1);
 
 		txtUsuario = new JTextField();
+		txtUsuario.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 11));
 		txtUsuario.setBounds(0, 0, 250, 28);
 		panel_1_1.add(txtUsuario);
 		txtUsuario.setColumns(10);
@@ -191,6 +194,7 @@ public class JDialogRegistro extends JFrame {
 		contentPanel.add(panel_1_2);
 
 		txtPassword = new JPasswordField();
+		txtPassword.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 11));
 		txtPassword.setBounds(0, 0, 250, 28);
 		panel_1_2.add(txtPassword);
 		txtPassword.setBorder(null);
@@ -202,6 +206,7 @@ public class JDialogRegistro extends JFrame {
 		contentPanel.add(panel_1_3);
 
 		txtCorreo = new JTextField();
+		txtCorreo.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 11));
 		txtCorreo.setBounds(0, 0, 250, 28);
 		panel_1_3.add(txtCorreo);
 		txtCorreo.setColumns(10);
@@ -213,6 +218,7 @@ public class JDialogRegistro extends JFrame {
 		contentPanel.add(panel_1_4);
 
 		txtDireccion = new JTextField();
+		txtDireccion.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 11));
 		txtDireccion.setBounds(0, 0, 250, 28);
 		panel_1_4.add(txtDireccion);
 		txtDireccion.setColumns(10);
@@ -232,37 +238,38 @@ public class JDialogRegistro extends JFrame {
 		contentPanel.add(panel_1_5);
 
 		txtTelefono = new JTextField();
+		txtTelefono.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 11));
 		txtTelefono.setBounds(0, 0, 250, 28);
 		panel_1_5.add(txtTelefono);
 		txtTelefono.setColumns(10);
 
 		JLabel lblUsuario = new JLabel("Usuario");
 		lblUsuario.setForeground(Color.WHITE);
-		lblUsuario.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
+		lblUsuario.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 16));
 		lblUsuario.setBounds(229, 143, 250, 14);
 		contentPanel.add(lblUsuario);
 
 		JLabel lblNewLabel_2_1_2 = new JLabel("Contrase\u00F1a");
 		lblNewLabel_2_1_2.setForeground(Color.WHITE);
-		lblNewLabel_2_1_2.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
+		lblNewLabel_2_1_2.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 16));
 		lblNewLabel_2_1_2.setBounds(229, 205, 250, 14);
 		contentPanel.add(lblNewLabel_2_1_2);
 
 		JLabel lblCorreo = new JLabel("Correo");
 		lblCorreo.setForeground(Color.WHITE);
-		lblCorreo.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
+		lblCorreo.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 16));
 		lblCorreo.setBounds(229, 269, 250, 14);
 		contentPanel.add(lblCorreo);
 
 		JLabel lblDireccion = new JLabel("Direcci\u00F3n");
 		lblDireccion.setForeground(Color.WHITE);
-		lblDireccion.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
+		lblDireccion.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 16));
 		lblDireccion.setBounds(229, 333, 250, 14);
 		contentPanel.add(lblDireccion);
 
 		JLabel lblTelefono = new JLabel("Tel\u00E9fono");
 		lblTelefono.setForeground(Color.WHITE);
-		lblTelefono.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
+		lblTelefono.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 16));
 		lblTelefono.setBounds(229, 392, 250, 14);
 		contentPanel.add(lblTelefono);
 

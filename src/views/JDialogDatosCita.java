@@ -30,20 +30,23 @@ public class JDialogDatosCita extends JDialog {
 		contentPanel.setLayout(null);
 		
 		JComboBox cbNombre = new JComboBox();
+		cbNombre.setFont(new Font("Yu Gothic Light", Font.PLAIN, 11));
 		cbNombre.setBounds(30, 67, 390, 22);
 		contentPanel.add(cbNombre);
 		
 		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1.setFont(new Font("Yu Gothic Light", Font.PLAIN, 11));
 		comboBox_1.setBounds(30, 130, 390, 22);
 		contentPanel.add(comboBox_1);
 		
 		JComboBox comboBox_2 = new JComboBox();
+		comboBox_2.setFont(new Font("Yu Gothic Light", Font.PLAIN, 11));
 		comboBox_2.setBounds(30, 191, 390, 22);
 		contentPanel.add(comboBox_2);
 		
 		JButton btnModificar = new JButton("Modificar");
 		btnModificar.setSelected(true);
-		btnModificar.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
+		btnModificar.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 12));
 		btnModificar.setBorderPainted(false);
 		btnModificar.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
 		btnModificar.setBackground(new Color(137, 207, 240));
@@ -52,7 +55,7 @@ public class JDialogDatosCita extends JDialog {
 		
 		JButton btnCancelar = new JButton("Cancelar");
 		btnCancelar.setSelected(true);
-		btnCancelar.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
+		btnCancelar.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 12));
 		btnCancelar.setBorderPainted(false);
 		btnCancelar.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
 		btnCancelar.setBackground(new Color(137, 207, 240));
