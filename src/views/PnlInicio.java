@@ -360,28 +360,28 @@ public class PnlInicio extends JPanel {
 			switch (lstCitas.get(i).getHora()) {
 			case "10:00":
 			
-				btnCita10.setText(CtrlPacientes.getNombrePaciente(lstCitas.get(i).getID_Paciente()) + " - " + lstCitas.get(i).getOperacion());
+				btnCita10.setText(CtrlPacientes.getNombreApellidosPaciente(lstCitas.get(i).getID_Paciente()) + " - " + lstCitas.get(i).getOperacion());
 				break;
 			case "11:00": 
-				btnCita11.setText(CtrlPacientes.getNombrePaciente(lstCitas.get(i).getID_Paciente()) + " - " + lstCitas.get(i).getOperacion());
+				btnCita11.setText(CtrlPacientes.getNombreApellidosPaciente(lstCitas.get(i).getID_Paciente()) + " - " + lstCitas.get(i).getOperacion());
 				break;
 			case "12:00": 
-				btnCita12.setText(CtrlPacientes.getNombrePaciente(lstCitas.get(i).getID_Paciente()) + " - " + lstCitas.get(i).getOperacion());
+				btnCita12.setText(CtrlPacientes.getNombreApellidosPaciente(lstCitas.get(i).getID_Paciente()) + " - " + lstCitas.get(i).getOperacion());
 				break;
 			case "13:00": 
-				btnCita13.setText(CtrlPacientes.getNombrePaciente(lstCitas.get(i).getID_Paciente()) + " - " + lstCitas.get(i).getOperacion());
+				btnCita13.setText(CtrlPacientes.getNombreApellidosPaciente(lstCitas.get(i).getID_Paciente()) + " - " + lstCitas.get(i).getOperacion());
 				break;
 			case "14:00": 
-				btnCita14.setText(CtrlPacientes.getNombrePaciente(lstCitas.get(i).getID_Paciente()) + " - " + lstCitas.get(i).getOperacion());
+				btnCita14.setText(CtrlPacientes.getNombreApellidosPaciente(lstCitas.get(i).getID_Paciente()) + " - " + lstCitas.get(i).getOperacion());
 				break;
 			case "15:00": 
-				btnCita15.setText(CtrlPacientes.getNombrePaciente(lstCitas.get(i).getID_Paciente()) + " - " + lstCitas.get(i).getOperacion());
+				btnCita15.setText(CtrlPacientes.getNombreApellidosPaciente(lstCitas.get(i).getID_Paciente()) + " - " + lstCitas.get(i).getOperacion());
 				break;
 			case "16:00": 
-				btnCita16.setText(CtrlPacientes.getNombrePaciente(lstCitas.get(i).getID_Paciente()) + " - " + lstCitas.get(i).getOperacion());
+				btnCita16.setText(CtrlPacientes.getNombreApellidosPaciente(lstCitas.get(i).getID_Paciente()) + " - " + lstCitas.get(i).getOperacion());
 				break;
 			case "17:00": 
-				btnCita17.setText(CtrlPacientes.getNombrePaciente(lstCitas.get(i).getID_Paciente()) + " - " + lstCitas.get(i).getOperacion());
+				btnCita17.setText(CtrlPacientes.getNombreApellidosPaciente(lstCitas.get(i).getID_Paciente()) + " - " + lstCitas.get(i).getOperacion());
 				break;
 			}
 			

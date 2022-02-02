@@ -10,7 +10,7 @@ public class PnlSlidingMenu extends JPanel implements IColores {
 	PnlInicio pnlInicio1 = new PnlInicio();
 	PnlAgenda pnlAgenda1 = new PnlAgenda();
 	PnlPacientes pnlPacientes1 = new PnlPacientes();
-	PnlAnalisis pnlAnalisis1 = new PnlAnalisis();
+	PnlPerfil pnlPerfil1 = new PnlPerfil();
 	Color azu = new Color(40,153,192);
 	Color transparente = new Color(1.0f, 1.0f, 1.0f, 0.0f);
 
@@ -34,10 +34,6 @@ public class PnlSlidingMenu extends JPanel implements IColores {
 		pnlInicio.setBackground(transparente);
 		pnlPrincipal.add(pnlInicio);
 		pnlInicio.setLayout(new BorderLayout(0, 0));
-
-		
-
-		
 		
 		JLabel lblInicio = new JLabel("");
 	
@@ -69,16 +65,16 @@ public class PnlSlidingMenu extends JPanel implements IColores {
 		lblPaciente.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 		pnlPaciente.add(lblPaciente, BorderLayout.CENTER);
 
-		JPanel pnlPaciente_1 = new JPanel();
-		pnlPaciente_1.setBackground(transparente);
-		pnlPrincipal.add(pnlPaciente_1);
-		pnlPaciente_1.setLayout(new BorderLayout(0, 0));
+		JPanel pnlPerfil = new JPanel();
+		pnlPerfil.setBackground(transparente);
+		pnlPrincipal.add(pnlPerfil);
+		pnlPerfil.setLayout(new BorderLayout(0, 0));
 
-		JLabel lblAnalisis = new JLabel("");
-		lblAnalisis.setIcon(new ImageIcon(PnlSlidingMenu.class.getResource("/images/estadistica.png")));
-		lblAnalisis.setHorizontalAlignment(SwingConstants.CENTER);
-		lblAnalisis.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-		pnlPaciente_1.add(lblAnalisis, BorderLayout.CENTER);
+		JLabel lblPerfil = new JLabel("");
+		lblPerfil.setIcon(new ImageIcon(PnlSlidingMenu.class.getResource("/images/profile.png")));
+		lblPerfil.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPerfil.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
+		pnlPerfil.add(lblPerfil, BorderLayout.CENTER);
 
 		pnlInicio.addMouseListener(new MouseAdapter() {
 			@Override
@@ -113,13 +109,13 @@ public class PnlSlidingMenu extends JPanel implements IColores {
 			}
 		});
 
-		lblAnalisis.addMouseListener(new MouseAdapter() {
+		lblPerfil.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 
 				ocultarPaneles();
-				pnlAnalisis1.setVisible(true);
-				FrmPrincipal.pnlCentro.add(pnlAnalisis1, BorderLayout.CENTER);
+				pnlPerfil1.setVisible(true);
+				FrmPrincipal.pnlCentro.add(pnlPerfil1, BorderLayout.CENTER);
 
 			}
 		});

@@ -7,6 +7,8 @@ public class Historial {
 	private String Observacines; //NN
 	private int ID_Paciente; //FK
 	
+	public Historial() {}
+	
 	public Historial(int ID_Consulta) {
 		
 		this.ID_Consulta = ID_Consulta;

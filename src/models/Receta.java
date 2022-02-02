@@ -7,6 +7,8 @@ public class Receta {
 	private int ID_Medico; //FK
 	private int ID_Paciente; //FK
 	
+	public Receta() {}
+	
 	public Receta(int ID_Receta) {
 		
 		this.ID_Receta = ID_Receta;

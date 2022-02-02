@@ -14,46 +14,46 @@ import models.Medico;
 public class CtrlPrincipal {
 
 	public static void inicio() {
-		
+
 		new views.JDialogLogin();
-		
+
 	}
-	
+
 	public static void finalizar() {
-		
+
 		System.exit(0);
-		
-	}		
+
+	}
 
 	public static String peticionHttp(String urlWebService) throws Exception {
 
 		StringBuilder resultado = new StringBuilder();
-		
-		//Realizar la peticion PHP
+
+		// Realizar la peticion PHP
 		URL url = new URL(urlWebService);
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setRequestMethod("GET");
-		
-		//Recoger los datos de respuesta
+
+		// Recoger los datos de respuesta
 		BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 		String linea;
-		while((linea = rd.readLine()) != null) {
+		while ((linea = rd.readLine()) != null) {
 			resultado.append(linea);
 		}
-		
+
 		return resultado.toString();
-	}	
-	
+	}
+
 	public static void camposEditables() {
-		
-		views.PnlPerfil.txtNombreMedico.setEditable(true);
-		views.PnlPerfil.txtApellidosMedico.setEditable(true);
-		views.PnlPerfil.txtUsuarioMedico.setEditable(true);
-		views.PnlPerfil.txtPasswordMedico.setEditable(true);
-		views.PnlPerfil.txtCorreoMedico.setEditable(true);
-		views.PnlPerfil.txtDireccionMedico.setEditable(true);
-		views.PnlPerfil.txtTelefonoMedico.setEditable(true);
-		
-	}	
+
+		views.PnlPerfil.txtNombre.setEditable(true);
+		views.PnlPerfil.txtApellidos.setEditable(true);
+		views.PnlPerfil.txtUsuario.setEditable(true);
+		views.PnlPerfil.txtPassword.setEditable(true);
+		views.PnlPerfil.txtCorreo.setEditable(true);
+		views.PnlPerfil.txtDireccion.setEditable(true);
+		views.PnlPerfil.txtTelefono.setEditable(true);
+
+	}
 
 }

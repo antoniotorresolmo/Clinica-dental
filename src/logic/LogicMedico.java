@@ -1,5 +1,7 @@
 package logic;
 
+import javax.swing.JOptionPane;
+
 import org.json.JSONObject;
 import models.Medico;
 
@@ -20,6 +22,40 @@ public class LogicMedico implements ILogic{
 		String url = URI + "proyecto/Medico/ins_medico.php?sNombre=" + nombre +"&sApellidos=" + apellidos + "&sUsuario=" + usuario + "&sPassword=" + password + "&sCorreo=" + correo + "&sDireccion=" + direccion + "&sTelefono=" + telefono;
 		
 		return controllers.CtrlPrincipal.peticionHttp(url);
+		
+	}
+	
+	public static void actualizar() throws Exception {
+
+		String nombre, apellidos, usuario, password, correo, direccion, telefono;
+
+		nombre = views.PnlPerfil.txtNombre.getText();
+		apellidos = views.PnlPerfil.txtApellidos.getText();
+		usuario = views.PnlPerfil.txtUsuario.getText();
+		password = views.PnlPerfil.txtPassword.getText();
+		correo = views.PnlPerfil.txtCorreo.getText();
+		direccion = views.PnlPerfil.txtDireccion.getText();
+		telefono = views.PnlPerfil.txtTelefono.getText();
+
+		String url = URI + "proyecto/Medico/upd_medico.php?iID_Medico=" + views.FrmPrincipal.oMedico.getId_Medico() +"&sNombre=" + nombre + "&sApellidos=" + apellidos
+				+ "&sUsuario=" + usuario + "&sPassword=" + password + "&sCorreo=" + correo + "&sDireccion=" + direccion
+				+ "&sTelefono=" + telefono;
+		
+		System.out.println(url);
+
+		if (controllers.CtrlPrincipal.peticionHttp(url).equals("Correcto")) {
+			
+			views.FrmPrincipal.oMedico.setNombre(nombre);
+			views.FrmPrincipal.oMedico.setApellidos(apellidos);
+			views.FrmPrincipal.oMedico.setUsuario(usuario);
+			views.FrmPrincipal.oMedico.setPassword(password);
+			views.FrmPrincipal.oMedico.setCorreo(correo);
+			views.FrmPrincipal.oMedico.setDireccion(direccion);
+			views.FrmPrincipal.oMedico.setTelefono(telefono);
+			
+		} else {
+			JOptionPane.showMessageDialog(null, "No se ha podido actualizar", "Error", JOptionPane.ERROR_MESSAGE);
+		}
 		
 	}
 

@@ -1,172 +1,287 @@
 package views;
 
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
-import java.awt.Font;
-import javax.swing.JButton;
-import javax.swing.JDialog;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import java.awt.Color;
-import javax.swing.JLabel;
-import java.awt.Toolkit;
+
+import java.awt.BorderLayout;
+import java.awt.image.BufferedImage;
+
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JProgressBar;
 import javax.swing.JTextField;
+
+import java.awt.Color;
+import java.awt.ComponentOrientation;
+import javax.swing.JTree;
+import javax.swing.border.MatteBorder;
+
+import java.awt.Dimension;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import java.awt.FlowLayout;
 import javax.swing.JPasswordField;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.border.LineBorder;
+import java.awt.Component;
+import javax.swing.border.TitledBorder;
+import javax.swing.border.EtchedBorder;
+import javax.swing.border.CompoundBorder;
+import javax.swing.UIManager;
+import javax.swing.border.BevelBorder;
+import java.awt.GridLayout;
 
 public class PnlPerfil extends JPanel {
-
-	private final JPanel contentPanel = new JPanel();
-	public static JTextField txtUsuarioMedico;
-	public static JTextField txtCorreoMedico;
-	public static JTextField txtDireccionMedico;
-	public static JTextField txtTelefonoMedico;
-	public static JPasswordField txtPasswordMedico;
-	public static JTextField txtNombreMedico;
-	public static JTextField txtApellidosMedico;
+	
+	public static JTextField txtNombre;
+	public static JTextField txtApellidos;
+	public static JTextField txtUsuario;
+	public static JPasswordField txtPassword;
+	public static JTextField txtCorreo;
+	public static JTextField txtDireccion;
+	public static JTextField txtTelefono;
+	Color transparente = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+	int iXLbl1 = 270;
+	int iXPnl1 = 400;
 
 	public PnlPerfil() {
-		contentPanel.setBackground(views.JDialogLogin.principal);
-		setBounds(100, 100, 450, 342);
-		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPanel.setLayout(null);
+		setLayout(new BorderLayout(0, 0));
 		
-		JPanel panel = new JPanel();
-		panel.setBackground(Color.white);
-		panel.setBounds(0, 0, 130, 418);
-		contentPanel.add(panel);
-		panel.setLayout(null);
+		GradientPanel pnlPrincipal = new GradientPanel(Color.decode("#3CE6DB"), Color.decode("#4FFFA5"));
+		pnlPrincipal.setLayout(new BorderLayout(0, 0));
+
+		// PnlSur
 		
-		JLabel lblIcono = new JLabel("");
-		lblIcono.setIcon(new ImageIcon("C:\\Users\\JuanLoreLeo\\Desktop\\Proyecto 2\u00BA Trimestre\\Clinica-dental\\src\\images\\perfil.png"));
-		lblIcono.setBounds(10, 158, 100, 100);
-		panel.add(lblIcono);
+		JPanel pnlSur = new JPanel();
+		pnlSur.setOpaque(false);
+		FlowLayout fl_pnlSur = (FlowLayout) pnlSur.getLayout();
+		fl_pnlSur.setVgap(20);
+		fl_pnlSur.setAlignment(FlowLayout.RIGHT);
+
+		JButton btnModificar = new JButton("  MODIFICAR  ");
+		//btnModificar.setContentAreaFilled(false);
+		btnModificar.setBorder(new LineBorder(new Color(0, 0, 0), 2, true));
+		btnModificar.setBackground(Color.WHITE);
+
+		btnModificar.setSelected(true);
+		btnModificar.setFont(new Font("Yu Gothic UI", Font.BOLD, 13));
+
+
+		pnlSur.add(btnModificar);
+
+		JButton btnGuardar = new JButton("  GUARDAR  ");
+		btnGuardar.setVisible(false);
 		
-		JLabel lblUsuarioMedico = new JLabel("Usuario:");
-		lblUsuarioMedico.setBounds(140, 113, 46, 14);
-		lblUsuarioMedico.setFont(new Font("Quicksand", Font.PLAIN, 11));
-		contentPanel.add(lblUsuarioMedico);
+		btnGuardar.setBorder(new LineBorder(new Color(0, 0, 0), 2, true));
+		btnGuardar.setBackground(Color.WHITE);
+		btnGuardar.setSelected(true);
+		btnGuardar.setFont(new Font("Yu Gothic UI", Font.BOLD, 13));
+		pnlSur.add(btnGuardar);
+
+		JButton btnCancelar = new JButton("  CANCELAR  ");
+		btnCancelar.setForeground(new Color(255, 255, 255));
+		btnCancelar.setVisible(false);
 		
-		txtUsuarioMedico = new JTextField();
-		txtUsuarioMedico.setEditable(false);
-		txtUsuarioMedico.setFont(new Font("Quicksand", Font.PLAIN, 11));
-		txtUsuarioMedico.setBounds(196, 110, 228, 20);
-		contentPanel.add(txtUsuarioMedico);
-		txtUsuarioMedico.setColumns(10);
+		btnCancelar.setBorder(new LineBorder(new Color(0, 0, 0), 2, true));
+		btnCancelar.setBackground(new Color(139, 0, 0));
+		btnCancelar.setSelected(true);
+		btnCancelar.setFont(new Font("Yu Gothic UI", Font.BOLD, 13));
+		pnlSur.add(btnCancelar);
 		
-		JLabel lblPasswordMedico = new JLabel("Password:");
-		lblPasswordMedico.setFont(new Font("Quicksand", Font.PLAIN, 11));
-		lblPasswordMedico.setBounds(137, 153, 69, 14);
-		contentPanel.add(lblPasswordMedico);
+		pnlPrincipal.add(pnlSur, BorderLayout.SOUTH);
 		
-		JLabel lblCorreoMedico = new JLabel("Correo:");
-		lblCorreoMedico.setFont(new Font("Quicksand", Font.PLAIN, 11));
-		lblCorreoMedico.setBounds(136, 193, 46, 14);
-		contentPanel.add(lblCorreoMedico);
+		// PnlCentro
+
+		JPanel pnlCentro = new JPanel();
+		pnlCentro.setBorder(new LineBorder(new Color(0, 0, 0), 0, true));
+		pnlCentro.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
+		pnlPrincipal.add(pnlCentro, BorderLayout.CENTER);
+		pnlCentro.setLayout(new GridLayout(0, 2, 40, 80));
 		
-		txtCorreoMedico = new JTextField();
-		txtCorreoMedico.setEditable(false);
-		txtCorreoMedico.setFont(new Font("Quicksand", Font.PLAIN, 11));
-		txtCorreoMedico.setBounds(196, 190, 228, 20);
-		contentPanel.add(txtCorreoMedico);
-		txtCorreoMedico.setColumns(10);
+		JPanel pnlNombre = new JPanel();
+		pnlNombre.setOpaque(false);
+		pnlNombre.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "NOMBRE", TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, null));
+		pnlNombre.setBackground(Color.WHITE);
+		pnlCentro.add(pnlNombre);
+		pnlNombre.setLayout(new BorderLayout(0, 0));
 		
-		JLabel lblDireccion = new JLabel("Direccion:");
-		lblDireccion.setFont(new Font("Quicksand", Font.PLAIN, 11));
-		lblDireccion.setBounds(140, 233, 56, 14);
-		contentPanel.add(lblDireccion);
+		txtNombre = new JTextField();
+		txtNombre.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		pnlNombre.add(txtNombre);
+		txtNombre.setBorder(null);
+		txtNombre.setEditable(false);
+		txtNombre.setBackground(Color.WHITE);
 		
-		txtDireccionMedico = new JTextField();
-		txtDireccionMedico.setEditable(false);
-		txtDireccionMedico.setFont(new Font("Quicksand", Font.PLAIN, 11));
-		txtDireccionMedico.setBounds(196, 230, 228, 20);
-		contentPanel.add(txtDireccionMedico);
-		txtDireccionMedico.setColumns(10);
+		JPanel pnlCorreo = new JPanel();
+		pnlCorreo.setOpaque(false);
+		pnlCorreo.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "CORREO", TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, null));
+		pnlCorreo.setBackground(Color.WHITE);
+		pnlCentro.add(pnlCorreo);
+		pnlCorreo.setLayout(new BorderLayout(0, 0));
 		
-		JLabel lblTelefono = new JLabel("Telefono:");
-		lblTelefono.setFont(new Font("Quicksand", Font.PLAIN, 11));
-		lblTelefono.setBounds(140, 273, 56, 14);
-		contentPanel.add(lblTelefono);
+		txtCorreo = new JTextField();
+		txtCorreo.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		txtCorreo.setEditable(false);
+		txtCorreo.setBorder(null);
+		txtCorreo.setBackground(Color.WHITE);
+		pnlCorreo.add(txtCorreo);
 		
-		txtTelefonoMedico = new JTextField();
-		txtTelefonoMedico.setEditable(false);
-		txtTelefonoMedico.setFont(new Font("Quicksand", Font.PLAIN, 11));
-		txtTelefonoMedico.setBounds(196, 270, 228, 20);
-		contentPanel.add(txtTelefonoMedico);
-		txtTelefonoMedico.setColumns(10);
+		JPanel pnlApellidos = new JPanel();
+		pnlApellidos.setOpaque(false);
+		pnlApellidos.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "APELLIDOS", TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, new Color(0, 0, 0)));
+		pnlApellidos.setBackground(Color.WHITE);
+		pnlCentro.add(pnlApellidos);
+		pnlApellidos.setLayout(new BorderLayout(0, 0));
 		
-		JButton btnCerrarSesion = new JButton("Cerrar Sesion");
-		btnCerrarSesion.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				new views.JDialogLogin();
-			}
+		txtApellidos = new JTextField();
+		txtApellidos.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		txtApellidos.setEditable(false);
+		txtApellidos.setBorder(null);
+		txtApellidos.setBackground(Color.WHITE);
+		pnlApellidos.add(txtApellidos);
+		
+		JPanel pnlDireccion = new JPanel();
+		pnlDireccion.setOpaque(false);
+		pnlDireccion.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "DIRECCI\u00D3N", TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, new Color(0, 0, 0)));
+		pnlDireccion.setBackground(Color.WHITE);
+		pnlCentro.add(pnlDireccion);
+		pnlDireccion.setLayout(new BorderLayout(0, 0));
+		
+		txtDireccion = new JTextField();
+		txtDireccion.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		txtDireccion.setEditable(false);
+		txtDireccion.setBorder(null);
+		txtDireccion.setBackground(Color.WHITE);
+		pnlDireccion.add(txtDireccion);
+		
+		JPanel pnlUsuario = new JPanel();
+		pnlUsuario.setOpaque(false);
+		pnlUsuario.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "USUARIO", TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, null));
+		pnlUsuario.setBackground(Color.WHITE);
+		pnlCentro.add(pnlUsuario);
+		pnlUsuario.setLayout(new BorderLayout(0, 0));
+		
+		txtUsuario = new JTextField();
+		txtUsuario.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		txtUsuario.setEditable(false);
+		txtUsuario.setBorder(null);
+		txtUsuario.setBackground(Color.WHITE);
+		pnlUsuario.add(txtUsuario);
+		
+		JPanel pnlPassword = new JPanel();
+		pnlPassword.setOpaque(false);
+		pnlPassword.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "CONTRASE\u00D1A", TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, new Color(0, 0, 0)));
+		pnlPassword.setBackground(new Color(255, 255, 255));
+		pnlCentro.add(pnlPassword);
+		pnlPassword.setLayout(new BorderLayout(0, 0));
+		
+		txtPassword = new JPasswordField();
+		txtPassword.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		txtPassword.setEditable(false);
+		txtPassword.setBorder(null);
+		txtPassword.setBackground(Color.WHITE);
+		pnlPassword.add(txtPassword);
+		
+		JPanel pnlTelefono = new JPanel();
+		pnlTelefono.setOpaque(false);
+		pnlTelefono.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "TEL\u00C9FONO", TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, null));
+		pnlTelefono.setBackground(Color.WHITE);
+		pnlCentro.add(pnlTelefono);
+		pnlTelefono.setLayout(new BorderLayout(0, 0));
+		
+		txtTelefono = new JTextField();
+		txtTelefono.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		txtTelefono.setEditable(false);
+		txtTelefono.setBorder(null);
+		txtTelefono.setBackground(Color.WHITE);
+		pnlTelefono.add(txtTelefono);
+		
+		// Eventos
+		
+		btnModificar.addActionListener(v -> {
+			
+			btnGuardar.setVisible(true);
+			btnCancelar.setVisible(true);
+			btnModificar.setVisible(false);
+			
+			ponerEditables();
+			
 		});
-		btnCerrarSesion.setFont(new Font("Quicksand", Font.PLAIN, 11));
-		btnCerrarSesion.setBounds(247, 369, 124, 23);
-		btnCerrarSesion.setBackground(views.JDialogLogin.secundario);
-		contentPanel.add(btnCerrarSesion);
-		
-		JButton btnAceptarMedico = new JButton("Aceptar");
-		btnAceptarMedico.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+	
+		btnGuardar.addActionListener(v -> {
+			
+			btnGuardar.setVisible(false);
+			btnCancelar.setVisible(false);
+			btnModificar.setVisible(true);
+			
+			String sResultado;
+			try {
 				
-				setVisible(false);
+				logic.LogicMedico.actualizar();
+				
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null, "No se ha podido actualizar", "Error", JOptionPane.ERROR_MESSAGE);
+				e.printStackTrace();
 			}
+			
+			
 		});
-		btnAceptarMedico.setFont(new Font("Quicksand", Font.PLAIN, 11));
-		btnAceptarMedico.setBounds(196, 335, 89, 23);
-		btnAceptarMedico.setBackground(Color.BLUE);
-		contentPanel.add(btnAceptarMedico);
 		
-		txtPasswordMedico = new JPasswordField();
-		txtPasswordMedico.setEditable(false);
-		txtPasswordMedico.setBounds(196, 150, 228, 20);
-		contentPanel.add(txtPasswordMedico);
-		
-		JLabel lblNombreMedico = new JLabel("Nombre:");
-		lblNombreMedico.setBounds(140, 33, 46, 14);
-		contentPanel.add(lblNombreMedico);
-		
-		txtNombreMedico = new JTextField();
-		txtNombreMedico.setFont(new Font("Quicksand", Font.PLAIN, 11));
-		txtNombreMedico.setBounds(196, 30, 228, 20);
-		contentPanel.add(txtNombreMedico);
-		txtNombreMedico.setColumns(10);
-		
-		JLabel lblApellidosMedico = new JLabel("Apellidos:");
-		lblApellidosMedico.setBounds(140, 73, 46, 14);
-		contentPanel.add(lblApellidosMedico);
-		
-		txtApellidosMedico = new JTextField();
-		txtApellidosMedico.setEditable(false);
-		txtApellidosMedico.setBounds(196, 70, 228, 20);
-		contentPanel.add(txtApellidosMedico);
-		txtApellidosMedico.setColumns(10);
-		
-		JButton btnModificar = new JButton("Modificar");
-		btnModificar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				controllers.CtrlPrincipal.camposEditables();
-			}
+		btnCancelar.addActionListener(v -> {
+			
+			btnGuardar.setVisible(false);
+			btnCancelar.setVisible(false);
+			btnModificar.setVisible(true);
+			
+			controllers.PerfilController.cargarDatos();
+			
 		});
-		btnModificar.setBackground(new Color(0, 0, 255));
-		btnModificar.setFont(new Font("Quicksand", Font.PLAIN, 11));
-		btnModificar.setBounds(265, 301, 89, 23);
-		contentPanel.add(btnModificar);
 		
-		JButton btnCancelarMedico = new JButton("Cancelar");
-		btnCancelarMedico.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				setVisible(false);
-			};
-		});
-		btnCancelarMedico.setFont(new Font("Quicksand", Font.PLAIN, 11));
-		btnCancelarMedico.setBounds(335, 335, 89, 23);
-		btnCancelarMedico.setBackground(views.JDialogLogin.secundario);
-		contentPanel.add(btnCancelarMedico);
+		controllers.PerfilController.cargarDatos();
 		
-		setVisible(true);
+		add(pnlPrincipal, BorderLayout.CENTER);
+		
+		JPanel pnlFoto = new JPanel();
+		pnlFoto.setOpaque(false);
+		pnlPrincipal.add(pnlFoto, BorderLayout.NORTH);
+		pnlFoto.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 30));
+		
+		JLabel lblAvatar = new JLabel("");
+		lblAvatar.setIcon(new ImageIcon(PnlPerfil.class.getResource("/images/avatar.png")));
+		pnlFoto.add(lblAvatar);
+		
+		JLabel espacio = new JLabel("                                                          ");
+		pnlPrincipal.add(espacio, BorderLayout.WEST);
+		
+		JLabel espacio2 = new JLabel("                                                          ");
+		pnlPrincipal.add(espacio2, BorderLayout.EAST);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(PnlPerfil.class.getResource("/images/avatar.png")));
+
+	}
+	
+	private void ponerEditables() {
+		
+		txtNombre.setEditable(true);
+		txtPassword.setEditable(true);
+		txtUsuario.setEditable(true);
+		txtApellidos.setEditable(true);
+		txtCorreo.setEditable(true);
+		txtDireccion.setEditable(true);
+		txtTelefono.setEditable(true);
+		
+	}
+	
+	private void quitarEditables() {
+		
+		txtNombre.setEditable(false);
+		txtPassword.setEditable(false);
+		txtUsuario.setEditable(false);
+		txtApellidos.setEditable(false);
+		txtCorreo.setEditable(false);
+		txtDireccion.setEditable(false);
+		txtTelefono.setEditable(false);
+		
 	}
 }
