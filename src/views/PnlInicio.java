@@ -42,23 +42,49 @@ public class PnlInicio extends JPanel {
 		setLayout(new BorderLayout(0, 0));
 
 		//GradientPanel pnlPrincipal = new GradientPanel(Color.decode("#AEDFF2"), Color.decode("#04C4D9"),GradientPanel.DIAGONAL_DOWN);
-		GradientPanel pnlPrincipal = new GradientPanel(Color.decode("#3CE6DB"), Color.decode("#4FFFA5"));
-		pnlPrincipal.setBackground(Color.WHITE);
 
-		JScrollPane scrollPane = new JScrollPane();
+		JPanel pnlPrincipal = new JPanel();
+		pnlPrincipal.setOpaque(false);
+		GradientPanel panel_1 = new GradientPanel(Color.decode("#3CE6DB"), Color.decode("#4FFFA5"));
+		pnlPrincipal.setBackground(Color.WHITE);
+		pnlPrincipal.setLayout(new BorderLayout(100, 50));
 		
-		scrollPane.setBounds(100, 100, 793, 518);
-		scrollPane.setViewportView(pnlPrincipal);
-		pnlPrincipal.setLayout(null);
+		JButton btnHome = new JButton();
+		btnHome.setBorderPainted(false);
+		btnHome.setContentAreaFilled(false);
+		btnHome.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
+		btnHome.setIcon(new ImageIcon(PnlInicio.class.getResource("/images/hoy2.png")));
+		btnHome.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
+		pnlPrincipal.add(btnHome, BorderLayout.NORTH);
+		
+				// Eventos
+		
+				btnHome.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						
+						try {
+							sFecha = new SimpleDateFormat("dd/MM/yyyy").format(Calendar.getInstance().getTime());
+							lstCitas=ctrlCitas.getCitas(sFecha);
+							lblFecha.setText("   "+new SimpleDateFormat("dd/MM/yyyy").format(Calendar.getInstance().getTime())+"   ");
+							cargarTodo();
+						} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						
+					}
+		
+					
+				});
 		
 		JPanel pnlAgenda = new JPanel();
-		
-		pnlAgenda.setBounds(300, 150, 718, 347);
 		pnlPrincipal.add(pnlAgenda);
 		pnlAgenda.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		//#D98E32
 		//pnlAgenda.setBackground(Color.decode("#D98E32"));
-		pnlAgenda.setLayout(new BorderLayout());
+		BorderLayout bl_pnlAgenda = new BorderLayout();
+		bl_pnlAgenda.setVgap(100);
+		pnlAgenda.setLayout(bl_pnlAgenda);
 		
 		JPanel pnlHoras = new JPanel();
 		pnlAgenda.add(pnlHoras, BorderLayout.WEST);
@@ -248,19 +274,14 @@ public class PnlInicio extends JPanel {
 		btnCita17.setBackground(Color.PINK);
 		pnlCitas.add(btnCita17);
 		
-		JButton btnHome = new JButton();
-		btnHome.setBorderPainted(false);
-		btnHome.setContentAreaFilled(false);
-		btnHome.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
-		btnHome.setIcon(new ImageIcon(PnlInicio.class.getResource("/images/hoy2.png")));
-		btnHome.setBounds(650, 28,40,40);
-		btnHome.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
-		pnlPrincipal.add(btnHome);
+		JLabel lblNewLabel_2 = new JLabel(" ");
+		pnlAgenda.add(lblNewLabel_2, BorderLayout.SOUTH);
 		
 		JPanel panel = new JPanel();
 		panel.setOpaque(false);
 		panel.setBounds(470, 96, 400, 50);
-		pnlPrincipal.add(panel);
+		panel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		
 		
 		JButton btnIzq = new JButton();
 		panel.add(btnIzq);
@@ -314,28 +335,19 @@ public class PnlInicio extends JPanel {
 		btnDerecha.setBackground(new Color(255, 255, 255, 0));
 		panel.add(btnDerecha);
 
-		add(scrollPane, BorderLayout.CENTER);
-
-		// Eventos
-
-		btnHome.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				try {
-					sFecha = new SimpleDateFormat("dd/MM/yyyy").format(Calendar.getInstance().getTime());
-					lstCitas=ctrlCitas.getCitas(sFecha);
-					lblFecha.setText("   "+new SimpleDateFormat("dd/MM/yyyy").format(Calendar.getInstance().getTime())+"   ");
-					cargarTodo();
-				} catch (Exception e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-			}
-
-			
-		});
-	
+		
+		
+		add(panel_1, BorderLayout.CENTER);
+		panel_1.setLayout(new BorderLayout(0, 0));
+		panel_1.add(pnlPrincipal, BorderLayout.CENTER);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+		pnlPrincipal.add(lblNewLabel, BorderLayout.WEST);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		pnlPrincipal.add(lblNewLabel_1, BorderLayout.EAST);
+		panel_1.add(panel, BorderLayout.NORTH);
 		cargarTodo();
 		setVisible(true);
 		
