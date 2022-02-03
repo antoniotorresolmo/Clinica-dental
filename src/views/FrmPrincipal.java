@@ -17,6 +17,7 @@ public class FrmPrincipal extends JFrame implements IColores{
     PnlInicio pnlInicio = new PnlInicio();
 
 	public FrmPrincipal() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmPrincipal.class.getResource("/images/dentista.png")));
 		setUndecorated(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setExtendedState(MAXIMIZED_BOTH);
@@ -61,14 +62,23 @@ public class FrmPrincipal extends JFrame implements IColores{
 			public void mouseClicked(MouseEvent e) {
 				if (JOptionPane.showConfirmDialog(null, "¿Quieres cerrar la aplicacion?") == 0)
 					System.exit(0);
+				
 			}
 		});
 		lblExit.setHorizontalAlignment(SwingConstants.TRAILING);
 		lblExit.setIcon(new ImageIcon(FrmPrincipal.class.getResource("/images/crossdos.png")));
 		pnlNorte.add(lblExit, BorderLayout.EAST);
 		
-		JLabel lblNewLabel = new JLabel("");
-		pnlNorte.add(lblNewLabel, BorderLayout.CENTER);
+		JLabel lblMin = new JLabel("  ");
+		lblMin.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				setState(Frame.ICONIFIED);
+			}
+		});
+		lblMin.setHorizontalAlignment(SwingConstants.TRAILING);
+		lblMin.setIcon(new ImageIcon(FrmPrincipal.class.getResource("/images/min.png")));
+		pnlNorte.add(lblMin, BorderLayout.CENTER);
 		
 		pnlCentro = new JPanel();
         pnlCentro.setLayout(new BorderLayout());

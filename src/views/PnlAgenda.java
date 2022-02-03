@@ -27,6 +27,7 @@ import java.util.*;
 import java.awt.event.*;
 import javax.swing.ImageIcon;
 import java.awt.Component;
+import javax.swing.border.TitledBorder;
 
 
 public class PnlAgenda extends JPanel {
@@ -64,7 +65,7 @@ public class PnlAgenda extends JPanel {
 		panelLista.setOpaque(false);
 		panelLista.setBackground(transparente);
 		panel_1.add(panelLista, BorderLayout.WEST);
-		panelLista.setBorder(new EmptyBorder(5,5,30,5));
+		panelLista.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "CITAS", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		panelLista.setLayout(new BorderLayout(0, 0));
 		
 		List lista = new List();
@@ -117,6 +118,9 @@ public class PnlAgenda extends JPanel {
 
 	   
 	    JTable table = new JTable(model);
+	    table.getTableHeader().setBackground(Color.WHITE);
+	    table.setSelectionBackground(Color.PINK);
+	    table.setGridColor(Color.BLACK);
 	    table.setBorder(null);
 	    table.setBackground(Color.WHITE);
 	    
@@ -171,7 +175,7 @@ public class PnlAgenda extends JPanel {
 	    
 	    
 	    JScrollPane pane = new JScrollPane();
-	    pane.setBorder(null);
+	    pane.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 	    pane.setOpaque(false);
 	    	
 	    pane.setBackground(transparente);

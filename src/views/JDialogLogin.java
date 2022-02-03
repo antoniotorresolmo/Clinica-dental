@@ -25,6 +25,9 @@ import models.Medico;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Button;
+import javax.swing.border.LineBorder;
+import java.awt.BorderLayout;
+import java.awt.Toolkit;
 
 public class JDialogLogin extends JFrame {
 
@@ -37,6 +40,7 @@ public class JDialogLogin extends JFrame {
 	public static JCheckBox cbRecordar;
 	
 	public JDialogLogin() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(JDialogLogin.class.getResource("/images/dentista.png")));
 
 		setBounds(100, 100, 700, 400);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -101,14 +105,14 @@ public class JDialogLogin extends JFrame {
 		contentPanel.setLayout(null);
 
 		JPanel panel = new JPanel();
+		panel.setOpaque(false);
+		panel.setBorder(new TitledBorder(new LineBorder(new Color(255, 255, 255), 2, true), "USUARIO", TitledBorder.LEADING, TitledBorder.ABOVE_TOP, null, new Color(255, 255, 255)));
 		panel.setBackground(Color.WHITE);
-		panel.setBounds(229, 87, 250, 50);
-
-		panel.setLayout(null);
+		panel.setBounds(229, 89, 250, 50);
+		panel.setLayout(new BorderLayout(0, 0));
 
 		txtUsername = new JTextField();
 		txtUsername.setBackground(Color.WHITE);
-		txtUsername.setBounds(10, 11, 230, 28);
 
 		txtUsername.setColumns(10);
 		txtUsername.setBorder(null);
@@ -116,41 +120,31 @@ public class JDialogLogin extends JFrame {
 		contentPanel.add(panel);
 
 		JPanel panel_1 = new JPanel();
-		panel_1.setLayout(null);
+		panel_1.setOpaque(false);
+		panel_1.setBorder(new TitledBorder(new LineBorder(new Color(255, 255, 255), 2, true), "CONTRASE\u00D1A", TitledBorder.LEADING, TitledBorder.ABOVE_TOP, null, new Color(255, 255, 255)));
 		panel_1.setBackground(Color.WHITE);
-		panel_1.setBounds(229, 173, 250, 50);
+		panel_1.setBounds(229, 161, 250, 50);
 		contentPanel.add(panel_1);
+		panel_1.setLayout(new BorderLayout(0, 0));
 
 		txtPassword = new JPasswordField();
-		txtPassword.setBounds(10, 11, 230, 28);
 		panel_1.add(txtPassword);
 		txtPassword.setBorder(null);
 
-		JLabel lblNewLabel_2 = new JLabel("Usuario");
-		lblNewLabel_2.setForeground(Color.WHITE);
-		lblNewLabel_2.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
-		lblNewLabel_2.setBounds(229, 62, 250, 14);
-		contentPanel.add(lblNewLabel_2);
-
-		JLabel lblNewLabel_2_1 = new JLabel("Contrase\u00F1a");
-		lblNewLabel_2_1.setForeground(Color.WHITE);
-		lblNewLabel_2_1.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 16));
-		lblNewLabel_2_1.setBounds(229, 148, 250, 14);
-		contentPanel.add(lblNewLabel_2_1);
-
 		JButton btnEntrar = new JButton("ENTRAR");
+		btnEntrar.setForeground(Color.BLACK);
 		btnEntrar.setSelected(true);
-		btnEntrar.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
+		btnEntrar.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 13));
 		btnEntrar.setBackground(views.JDialogLogin.principal);
-		btnEntrar.setBorderPainted(false);
-		btnEntrar.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
+		btnEntrar.setBorder(new LineBorder(Color.WHITE, 2, true));
 		btnEntrar.setBounds(229, 279, 99, 28);
 		contentPanel.add(btnEntrar);
 
 		JLabel lblNewLabel_3 = new JLabel("LOGIN");
+		lblNewLabel_3.setBorder(new LineBorder(Color.WHITE, 2, true));
 		lblNewLabel_3.setForeground(Color.WHITE);
 		lblNewLabel_3.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 20));
-		lblNewLabel_3.setBounds(229, 25, 115, 25);
+		lblNewLabel_3.setBounds(229, 24, 115, 25);
 		contentPanel.add(lblNewLabel_3);
 
 		JLabel lblX = new JLabel("");
@@ -163,16 +157,17 @@ public class JDialogLogin extends JFrame {
 		getContentPane().add(contentPanel);
 		
 		JButton btnRegistrarse = new JButton("REGISTRARSE");
-		btnRegistrarse.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
+		btnRegistrarse.setForeground(Color.BLACK);
+		btnRegistrarse.setFont(new Font("Microsoft JhengHei", Font.BOLD, 13));
 		btnRegistrarse.setBounds(380, 279, 99, 28);
-		btnRegistrarse.setBorderPainted(false);
-		btnRegistrarse.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
+		btnRegistrarse.setBorder(new LineBorder(Color.WHITE, 2, true));
 		btnRegistrarse.setBackground(views.JDialogLogin.secundario);
 		contentPanel.add(btnRegistrarse);
 
 		cbRecordar = new JCheckBox("Recordar");
+		cbRecordar.setForeground(Color.WHITE);
 		cbRecordar.setFont(new Font("Microsoft JhengHei UI", Font.PLAIN, 11));
-		cbRecordar.setBounds(231, 230, 97, 23);
+		cbRecordar.setBounds(229, 218, 97, 23);
 		cbRecordar.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		contentPanel.add(cbRecordar);
 

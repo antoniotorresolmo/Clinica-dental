@@ -32,13 +32,8 @@ public class PnlPacientes extends JPanel {
 		//pnlPrincipal.setBackground(Color.WHITE);
 		pnlPrincipal.setLayout(new BorderLayout(0, 0));
 		
-		JLabel lblDatosPaciente = new JLabel("Pacientes");
-		lblDatosPaciente.setHorizontalAlignment(SwingConstants.CENTER);
-		lblDatosPaciente.setFont(new Font("Yu Gothic UI", Font.PLAIN, 25));
-		lblDatosPaciente.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
-		pnlPrincipal.add(lblDatosPaciente, BorderLayout.NORTH);
-		
 		JPanel pnlOeste = new JPanel();
+		pnlOeste.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "LISTA PACIENTES", TitledBorder.CENTER, TitledBorder.TOP, null, null));
 		pnlOeste.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlOeste.setLayout(new BorderLayout());
 		listPacientes = new List();
