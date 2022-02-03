@@ -47,7 +47,7 @@ public class PnlInicio extends JPanel {
 		pnlPrincipal.setOpaque(false);
 		GradientPanel panel_1 = new GradientPanel(Color.decode("#3CE6DB"), Color.decode("#4FFFA5"));
 		pnlPrincipal.setBackground(Color.WHITE);
-		pnlPrincipal.setLayout(new BorderLayout(100, 50));
+		pnlPrincipal.setLayout(new BorderLayout(220, 50));
 		
 		JButton btnHome = new JButton();
 		btnHome.setBorderPainted(false);

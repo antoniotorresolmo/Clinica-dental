@@ -43,10 +43,10 @@ public class PnlPacientesController {
 
         views.PnlPacientes.txtNombre.setText(oPaciente.getNombre());
         views.PnlPacientes.txtApellidos.setText(oPaciente.getApellidos());
-        views.PnlPacientes.txtDireccion.setText(oPaciente.getDireccion());
+        views.PnlPacientes.txtDirección.setText(oPaciente.getDireccion());
         views.PnlPacientes.txtCorreo.setText(oPaciente.getCorreo());
-        views.PnlPacientes.txtTelefono.setText(oPaciente.getTelefono());
-        views.PnlPacientes.txtDni.setText(oPaciente.getDNI());
+        views.PnlPacientes.txtTeléfono.setText(oPaciente.getTelefono());
+        views.PnlPacientes.txtDNI.setText(oPaciente.getDNI());
 
         // Cargar historial
 

@@ -10,20 +10,20 @@ import models.Paciente;
 import models.Paciente_Medico;
 import javax.swing.JTextPane;
 import javax.swing.SwingConstants;
+import javax.swing.border.TitledBorder;
+import javax.swing.border.LineBorder;
 
 public class PnlPacientes extends JPanel {
-
-	public static JLabel txtNombre;
-	public static JLabel lblApellidos;
-	public static JLabel txtApellidos;
-	public static JLabel txtCorreo;
-	public static JLabel txtDireccion;
-	public static JLabel txtTelefono;
-	public static JLabel txtDni;
 	public static List listPacientes;
 	public static java.util.List<Paciente> lPacientes;
 	public static JTextPane textPaneHistorial;
 	public static JTextPane textPaneRecetario;
+	public static JTextField txtApellidos;
+	public static JTextField txtNombre;
+	public static JTextField txtCorreo;
+	public static JTextField txtDNI;
+	public static JTextField txtTeléfono;
+	public static JTextField txtDirección;
 
 	public PnlPacientes() {
 		setLayout(new BorderLayout(0, 0));
@@ -34,7 +34,7 @@ public class PnlPacientes extends JPanel {
 		
 		JLabel lblDatosPaciente = new JLabel("Pacientes");
 		lblDatosPaciente.setHorizontalAlignment(SwingConstants.CENTER);
-		lblDatosPaciente.setFont(new Font("Yu Gothic", Font.PLAIN, 25));
+		lblDatosPaciente.setFont(new Font("Yu Gothic UI", Font.PLAIN, 25));
 		lblDatosPaciente.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlPrincipal.add(lblDatosPaciente, BorderLayout.NORTH);
 		
@@ -50,108 +50,121 @@ public class PnlPacientes extends JPanel {
 		GradientPanel pnlCentro = new GradientPanel(Color.decode("#3CE6DB"), Color.decode("#4FFFA5"));
 		pnlCentro.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlPrincipal.add(pnlCentro, BorderLayout.CENTER);
-		pnlCentro.setLayout(null);
+		pnlCentro.setLayout(new GridLayout(0, 1, 50, 50));
 		
-		JLabel lblNombre = new JLabel("Nombre:");
-		lblNombre.setFont(new Font("Yu Gothic Light", Font.PLAIN, 15));
-		// lblNombre.addMouseListener(new MouseAdapter() {
-		// 	public void mouseClicked(MouseEvent e) {
-				
-				
-				
-		// 	}
-		// });
-		lblNombre.setBounds(10, 12, 80, 29);
-		lblNombre.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
-		pnlCentro.add(lblNombre);
+		JPanel panel_1 = new JPanel();
+		panel_1.setOpaque(false);
+		pnlCentro.add(panel_1);
+		panel_1.setLayout(new GridLayout(0, 2, 50, 70));
 		
-		txtNombre = new JLabel();
-		txtNombre.setFont(new Font("Yu Gothic Light", Font.PLAIN, 15));
-		txtNombre.setBounds(100, 9, 266, 32);
-		txtNombre.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
-		pnlCentro.add(txtNombre);
+		JPanel pnlNombre = new JPanel();
+		panel_1.add(pnlNombre);
+		pnlNombre.setOpaque(false);
+		pnlNombre.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "NOMBRE", TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, null));
+		pnlNombre.setBackground(Color.WHITE);
+		pnlNombre.setLayout(new BorderLayout(0, 0));
 		
-		lblApellidos = new JLabel("Apellidos:");
-		lblApellidos.setFont(new Font("Yu Gothic Light", Font.PLAIN, 15));
-		lblApellidos.setBounds(10, 52, 62, 29);
-		lblApellidos.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
-		pnlCentro.add(lblApellidos);
+		txtNombre = new JTextField();
+		txtNombre.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		txtNombre.setEditable(false);
+		txtNombre.setBorder(null);
+		txtNombre.setBackground(Color.WHITE);
+		pnlNombre.add(txtNombre, BorderLayout.CENTER);
 		
-		txtApellidos = new JLabel();
-		txtApellidos.setFont(new Font("Yu Gothic Light", Font.PLAIN, 15));
-		txtApellidos.setBounds(100, 49, 266, 32);
-		txtApellidos.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
-		pnlCentro.add(txtApellidos);
+		JPanel pnlDirección = new JPanel();
+		panel_1.add(pnlDirección);
+		pnlDirección.setOpaque(false);
+		pnlDirección.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "DIRECCI\u00D3N", TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, new Color(0, 0, 0)));
+		pnlDirección.setBackground(Color.WHITE);
+		pnlDirección.setLayout(new BorderLayout(0, 0));
 		
-		JLabel lblCorreo = new JLabel("Correo:");
-		lblCorreo.setFont(new Font("Yu Gothic Light", Font.PLAIN, 15));
-		lblCorreo.setBounds(10, 132, 62, 29);
-		lblCorreo.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
-		pnlCentro.add(lblCorreo);
+		txtDirección = new JTextField();
+		txtDirección.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		txtDirección.setEditable(false);
+		txtDirección.setBorder(null);
+		txtDirección.setBackground(Color.WHITE);
+		pnlDirección.add(txtDirección, BorderLayout.CENTER);
 		
-		txtCorreo = new JLabel();
-		txtCorreo.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
-		txtCorreo.setBounds(100, 129, 266, 32);
-		txtCorreo.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
-		pnlCentro.add(txtCorreo);
+		JPanel pnlApellidos = new JPanel();
+		panel_1.add(pnlApellidos);
+		pnlApellidos.setOpaque(false);
+		pnlApellidos.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "APELLIDOS", TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, new Color(0, 0, 0)));
+		pnlApellidos.setBackground(Color.WHITE);
+		pnlApellidos.setLayout(new BorderLayout(0, 0));
 		
-		JLabel lblDireccion = new JLabel("Direcci\u00F3n:");
-		lblDireccion.setFont(new Font("Yu Gothic Light", Font.PLAIN, 15));
-		lblDireccion.setBounds(10, 92, 80, 29);
-		lblDireccion.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
-		pnlCentro.add(lblDireccion);
+		txtApellidos = new JTextField();
+		txtApellidos.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		txtApellidos.setEditable(false);
+		txtApellidos.setBorder(null);
+		txtApellidos.setBackground(Color.WHITE);
+		pnlApellidos.add(txtApellidos, BorderLayout.CENTER);
 		
-		txtDireccion = new JLabel();
-		txtDireccion.setFont(new Font("Yu Gothic Light", Font.PLAIN, 15));
-		txtDireccion.setBounds(100, 89, 266, 29);
-		txtDireccion.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
-		pnlCentro.add(txtDireccion);
+		JPanel pnlTeléfono = new JPanel();
+		panel_1.add(pnlTeléfono);
+		pnlTeléfono.setOpaque(false);
+		pnlTeléfono.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "TEL\u00C9FONO", TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, new Color(0, 0, 0)));
+		pnlTeléfono.setBackground(Color.WHITE);
+		pnlTeléfono.setLayout(new BorderLayout(0, 0));
 		
-		JLabel lblTelefono = new JLabel("Telefono:");
-		lblTelefono.setFont(new Font("Yu Gothic Light", Font.PLAIN, 15));
-		lblTelefono.setBounds(10, 172, 80, 29);
-		lblTelefono.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
-		pnlCentro.add(lblTelefono);
+		txtTeléfono = new JTextField();
+		txtTeléfono.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		txtTeléfono.setEditable(false);
+		txtTeléfono.setBorder(null);
+		txtTeléfono.setBackground(Color.WHITE);
+		pnlTeléfono.add(txtTeléfono, BorderLayout.CENTER);
 		
-		txtTelefono = new JLabel();
-		txtTelefono.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
-		txtTelefono.setBounds(100, 169, 266, 32);
-		txtTelefono.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
-		pnlCentro.add(txtTelefono);
+		JPanel pnlCorreo = new JPanel();
+		panel_1.add(pnlCorreo);
+		pnlCorreo.setOpaque(false);
+		pnlCorreo.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "CORREO", TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, new Color(0, 0, 0)));
+		pnlCorreo.setBackground(Color.WHITE);
+		pnlCorreo.setLayout(new BorderLayout(0, 0));
 		
-		JLabel lblDni = new JLabel("DNI:");
-		lblDni.setFont(new Font("Yu Gothic Light", Font.PLAIN, 15));
-		lblDni.setBounds(10, 212, 46, 34);
-		lblDni.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
-		pnlCentro.add(lblDni);
+		txtCorreo = new JTextField();
+		txtCorreo.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		txtCorreo.setEditable(false);
+		txtCorreo.setBorder(null);
+		txtCorreo.setBackground(Color.WHITE);
+		pnlCorreo.add(txtCorreo, BorderLayout.CENTER);
 		
-		txtDni = new JLabel();
-		txtDni.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
-		txtDni.setBounds(100, 209, 266, 37);
-		txtDni.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
-		pnlCentro.add(txtDni);
+		JPanel pnlDNI = new JPanel();
+		panel_1.add(pnlDNI);
+		pnlDNI.setOpaque(false);
+		pnlDNI.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "DNI", TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, new Color(0, 0, 0)));
+		pnlDNI.setBackground(Color.WHITE);
+		pnlDNI.setLayout(new BorderLayout(0, 0));
 		
-		JLabel lblHistorial = new JLabel("Historial");
-		lblHistorial.setFont(new Font("Yu Gothic", Font.BOLD, 20));
-		lblHistorial.setBounds(10, 257, 100, 27);
-		lblHistorial.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
-		pnlCentro.add(lblHistorial);
+		txtDNI = new JTextField();
+		txtDNI.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		txtDNI.setEditable(false);
+		txtDNI.setBorder(null);
+		txtDNI.setBackground(Color.WHITE);
+		pnlDNI.add(txtDNI, BorderLayout.CENTER);
 		
-		JLabel lblRecetario = new JLabel("Recetario");
-		lblRecetario.setFont(new Font("Yu Gothic", Font.BOLD, 20));
-		lblRecetario.setBounds(400, 257, 107, 27);
-		lblRecetario.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
-		pnlCentro.add(lblRecetario);
+		JPanel panel = new JPanel();
+		panel.setOpaque(false);
+		pnlCentro.add(panel);
+		panel.setLayout(new GridLayout(0, 2, 40, 40));
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "HISTORIAL", TitledBorder.CENTER, TitledBorder.TOP, null, null));
+		panel_2.setOpaque(false);
+		panel.add(panel_2);
+		panel_2.setLayout(new BorderLayout(0, 0));
 		
 		textPaneHistorial = new JTextPane();
-		textPaneHistorial.setBounds(10, 289, 315, 201);
-		pnlCentro.add(textPaneHistorial);
+		panel_2.add(textPaneHistorial);
+		
+				textPaneHistorial.setEditable(false);
+		
+		JPanel panel_3 = new JPanel();
+		panel_3.setOpaque(false);
+		panel_3.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "RECETARIO", TitledBorder.CENTER, TitledBorder.TOP, null, null));
+		panel.add(panel_3);
+		panel_3.setLayout(new BorderLayout(0, 0));
 		
 		textPaneRecetario = new JTextPane();
-		textPaneRecetario.setBounds(400, 289, 315, 201);
-		pnlCentro.add(textPaneRecetario);
-
-		textPaneHistorial.setEditable(false);
+		panel_3.add(textPaneRecetario);
 		textPaneRecetario.setEditable(false);
 		
 		add(pnlPrincipal);

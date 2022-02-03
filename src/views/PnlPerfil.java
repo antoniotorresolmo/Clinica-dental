@@ -96,7 +96,7 @@ public class PnlPerfil extends JPanel {
 		pnlCentro.setBorder(new LineBorder(new Color(0, 0, 0), 0, true));
 		pnlCentro.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlPrincipal.add(pnlCentro, BorderLayout.CENTER);
-		pnlCentro.setLayout(new GridLayout(0, 2, 40, 130));
+		pnlCentro.setLayout(new GridLayout(0, 2, 40, 50));
 		
 		JPanel pnlNombre = new JPanel();
 		pnlNombre.setOpaque(false);
