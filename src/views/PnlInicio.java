@@ -56,8 +56,7 @@ public class PnlInicio extends JPanel {
 		pnlAgenda.setBounds(300, 150, 718, 347);
 		pnlPrincipal.add(pnlAgenda);
 		pnlAgenda.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
-		// #D98E32
-		// pnlAgenda.setBackground(Color.decode("#D98E32"));
+
 		pnlAgenda.setLayout(new BorderLayout());
 
 		JPanel pnlHoras = new JPanel();
@@ -393,8 +392,9 @@ public class PnlInicio extends JPanel {
 			}
 		});
 
-		controllers.PnlInicioController.cargarTodo();
+		
 
+        controllers.PnlInicioController.cargarTodo();
 		setVisible(true);
 
 	}

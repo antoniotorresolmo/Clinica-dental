@@ -185,7 +185,9 @@ public class JDialogLogin extends JFrame {
 					if(!sPassword.isEmpty() && !sUsuario.isEmpty()){
 						controllers.LoginController.getPaciente(sUsuario, sPassword);
 						//System.out.println("E");
-						new FrmPrincipal();
+						FrmPrincipal frmP = new FrmPrincipal();
+						
+						
 						dispose();
 					}else{
 						JOptionPane.showMessageDialog(null, "Por favor, introduce los datos", "Error", JOptionPane.ERROR_MESSAGE);

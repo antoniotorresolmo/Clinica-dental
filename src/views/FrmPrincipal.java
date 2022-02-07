@@ -15,8 +15,12 @@ public class FrmPrincipal extends JFrame implements IColores{
     public static JPanel pnlCentro;
     Color azu = new Color(40,153,192);
     PnlInicio pnlInicio = new PnlInicio();
+    
+   
+    
 
 	public FrmPrincipal() {
+		 
 		setUndecorated(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setExtendedState(MAXIMIZED_BOTH);
@@ -73,8 +77,11 @@ public class FrmPrincipal extends JFrame implements IColores{
 		pnlCentro = new JPanel();
         pnlCentro.setLayout(new BorderLayout());
 		contentPane.add(pnlCentro, BorderLayout.CENTER);
-        pnlCentro.add(pnlInicio, BorderLayout.CENTER);
+
 		
+		
+        controllers.PnlInicioController.cargarTodo();
+        //pnlCentro.add(pnlInicio, BorderLayout.CENTER);
 		setVisible(true);
     }
 }

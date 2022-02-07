@@ -82,7 +82,9 @@ public class PnlSlidingMenu extends JPanel implements IColores {
 
 				ocultarPaneles();
 				pnlInicio1.setVisible(true);
+				
 				FrmPrincipal.pnlCentro.add(pnlInicio1, BorderLayout.CENTER);
+				
 
 			}
 		});
