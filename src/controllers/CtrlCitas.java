@@ -16,10 +16,10 @@ import models.Paciente;
 public class CtrlCitas {
 
 	//LISTA----------------
-	public List<Cita> getCitas(String Date) throws Exception {
+	public static List<Cita> getCitas(String Date) throws Exception {
 		
 		
-		String url ="http://loschavalesdental.atwebpages.com/proyecto/Cita/lst_cita_dia.php?ID_Medico="+1+"&Dia="+Date;
+		String url ="http://loschavalesdental.atwebpages.com/proyecto/Cita/lst_cita_dia.php?ID_Medico="+views.FrmPrincipal.oMedico.getId_Medico()+"&Dia="+Date;
 	System.out.println(url);
 		String requestHttp = peticionHttp(url);
 		List<Cita> lstCitas = stringToListCitas(requestHttp);
@@ -28,7 +28,7 @@ public class CtrlCitas {
 	}
 
 	//LISTA----------------
-	private static List<Cita> stringToListCitas(String requestHttp) {
+	public static List<Cita> stringToListCitas(String requestHttp) {
 
 		List<Cita> lstCitas = new ArrayList<>();
 	
@@ -45,7 +45,7 @@ public class CtrlCitas {
 		return lstCitas;
 	}
 	
-	private static Cita objJson2Citas(JSONObject jsonObj) {
+	public static Cita objJson2Citas(JSONObject jsonObj) {
 		//Extraer los values del objeto JSON
 		//System.out.println(jsonObj);
 		Integer ID_Cita = jsonObj.getInt("ID_Cita"); //PK

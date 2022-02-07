@@ -9,7 +9,7 @@ public class PnlSlidingMenu extends JPanel implements IColores {
 
 	PnlInicio pnlInicio1 = new PnlInicio();
 	PnlAgenda pnlAgenda1 = new PnlAgenda();
-	PnlPacientes pnlPacientes1 = new PnlPacientes();
+	public static PnlPacientes pnlPacientes1 = new PnlPacientes();
 	PnlPerfil pnlPerfil1 = new PnlPerfil();
 	Color azu = new Color(40,153,192);
 	Color transparente = new Color(1.0f, 1.0f, 1.0f, 0.0f);
@@ -122,7 +122,7 @@ public class PnlSlidingMenu extends JPanel implements IColores {
 
 	}
 
-	private void ocultarPaneles() {
+	public static void ocultarPaneles() {
 		Component[] c = FrmPrincipal.pnlCentro.getComponents();
 		for (Component o : c) {
 			o.setVisible(false);

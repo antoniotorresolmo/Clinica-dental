@@ -12,8 +12,6 @@ public class LogicRecetario implements ILogic{
     public static List<Receta> getByIdPaciente(int iID_Paciente) throws Exception{
 
         String url = URI + "proyecto/Receta/lst_receta_by_idpaciente.php?iID_Paciente=" + iID_Paciente;
-
-        System.out.println(url);
         
         return stringToListReceta(controllers.CtrlPrincipal.peticionHttp(url));
 
@@ -52,5 +50,17 @@ public class LogicRecetario implements ILogic{
 	
 		return oReceta;
     }
+
+	public static void insertar(Receta oReceta) throws Exception {
+
+		String sUrl = URI + "proyecto/Receta/ins_receta.php?sDescripcion=" + oReceta.getDescripcion()
+		+ "&iID_Medico=" + oReceta.getID_Medico()
+		+ "&iID_Paciente=" + oReceta.getID_Paciente();
+		
+		System.out.println(sUrl);
+		
+		controllers.CtrlPrincipal.peticionHttp(sUrl);
+		
+	}
     
 }

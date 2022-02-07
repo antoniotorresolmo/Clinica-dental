@@ -51,7 +51,7 @@ public class PnlPerfil extends JPanel {
 		JButton btnModificar = new JButton("MODIFICAR");
 		btnModificar.setContentAreaFilled(false);
 		btnModificar.setSelected(true);
-		btnModificar.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 12));
+		btnModificar.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
 		btnModificar.setBackground(views.JDialogLogin.principal);
 		btnModificar.setBorderPainted(false);
 		btnModificar.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
@@ -61,7 +61,7 @@ public class PnlPerfil extends JPanel {
 		btnGuardar.setVisible(false);
 		btnGuardar.setContentAreaFilled(false);
 		btnGuardar.setSelected(true);
-		btnGuardar.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 12));
+		btnGuardar.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
 		btnGuardar.setBorderPainted(false);
 		btnGuardar.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
 		btnGuardar.setBackground(new Color(137, 207, 240));
@@ -71,7 +71,7 @@ public class PnlPerfil extends JPanel {
 		btnCancelar.setVisible(false);
 		btnCancelar.setContentAreaFilled(false);
 		btnCancelar.setSelected(true);
-		btnCancelar.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 12));
+		btnCancelar.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
 		btnCancelar.setBorderPainted(false);
 		btnCancelar.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
 		btnCancelar.setBackground(views.JDialogLogin.secundario);
@@ -87,37 +87,37 @@ public class PnlPerfil extends JPanel {
 		pnlCentro.setLayout(null);
 
 		JLabel lblNombre = new JLabel("Nombre:");
-		lblNombre.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 18));
+		lblNombre.setFont(new Font("Yu Gothic UI", Font.PLAIN, 18));
 		lblNombre.setBounds(269, 140, 115, 41);
 		pnlCentro.add(lblNombre);
 
 		JLabel lblApellidos = new JLabel("Apellidos:");
-		lblApellidos.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 18));
+		lblApellidos.setFont(new Font("Yu Gothic UI", Font.PLAIN, 18));
 		lblApellidos.setBounds(269, 240, 115, 41);
 		pnlCentro.add(lblApellidos);
 
 		JLabel lblUsuario = new JLabel("Usuario:");
-		lblUsuario.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 18));
+		lblUsuario.setFont(new Font("Yu Gothic UI", Font.PLAIN, 18));
 		lblUsuario.setBounds(269, 340, 115, 41);
 		pnlCentro.add(lblUsuario);
 
 		JLabel lblPassword = new JLabel("Contrase\u00F1a:");
-		lblPassword.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 18));
+		lblPassword.setFont(new Font("Yu Gothic UI", Font.PLAIN, 18));
 		lblPassword.setBounds(269, 440, 115, 41);
 		pnlCentro.add(lblPassword);
 
 		JLabel lblCorreo = new JLabel("Correo:");
-		lblCorreo.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 18));
+		lblCorreo.setFont(new Font("Yu Gothic UI", Font.PLAIN, 18));
 		lblCorreo.setBounds(705, 188, 138, 41);
 		pnlCentro.add(lblCorreo);
 
 		JLabel lblDireccion = new JLabel("Direcci\u00F3n:");
-		lblDireccion.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 18));
+		lblDireccion.setFont(new Font("Yu Gothic UI", Font.PLAIN, 18));
 		lblDireccion.setBounds(705, 288, 138, 41);
 		pnlCentro.add(lblDireccion);
 
 		JLabel lblTelefono = new JLabel("Tel\u00E9fono:");
-		lblTelefono.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 18));
+		lblTelefono.setFont(new Font("Yu Gothic UI", Font.PLAIN, 18));
 		lblTelefono.setBounds(705, 388, 138, 41);
 		pnlCentro.add(lblTelefono);
 		
@@ -128,7 +128,6 @@ public class PnlPerfil extends JPanel {
 		pnlCentro.add(pnlNombre);
 		
 		txtNombre = new JTextField();
-		txtNombre.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 11));
 		txtNombre.setBorder(null);
 		txtNombre.setBounds(10, 11, 230, 28);
 		txtNombre.setEditable(false);
@@ -142,7 +141,6 @@ public class PnlPerfil extends JPanel {
 		pnlCentro.add(pnlApellidos);
 		
 		txtApellidos = new JTextField();
-		txtApellidos.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 11));
 		txtApellidos.setEditable(false);
 		txtApellidos.setBorder(null);
 		txtApellidos.setBackground(Color.WHITE);
@@ -156,7 +154,6 @@ public class PnlPerfil extends JPanel {
 		pnlCentro.add(pnlUsuario);
 		
 		txtUsuario = new JTextField();
-		txtUsuario.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 11));
 		txtUsuario.setEditable(false);
 		txtUsuario.setBorder(null);
 		txtUsuario.setBackground(Color.WHITE);
@@ -170,7 +167,6 @@ public class PnlPerfil extends JPanel {
 		pnlCentro.add(pnlPassword);
 		
 		txtPassword = new JPasswordField();
-		txtPassword.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 11));
 		txtPassword.setEditable(false);
 		txtPassword.setBorder(null);
 		txtPassword.setBackground(Color.WHITE);
@@ -184,7 +180,6 @@ public class PnlPerfil extends JPanel {
 		pnlCentro.add(pnlCorreo);
 		
 		txtCorreo = new JTextField();
-		txtCorreo.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 11));
 		txtCorreo.setEditable(false);
 		txtCorreo.setBorder(null);
 		txtCorreo.setBackground(Color.WHITE);
@@ -198,7 +193,6 @@ public class PnlPerfil extends JPanel {
 		pnlCentro.add(pnlDireccion);
 		
 		txtDireccion = new JTextField();
-		txtDireccion.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 11));
 		txtDireccion.setEditable(false);
 		txtDireccion.setBorder(null);
 		txtDireccion.setBackground(Color.WHITE);
@@ -212,7 +206,6 @@ public class PnlPerfil extends JPanel {
 		pnlCentro.add(pnlTelefono);
 		
 		txtTelefono = new JTextField();
-		txtTelefono.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 11));
 		txtTelefono.setEditable(false);
 		txtTelefono.setBorder(null);
 		txtTelefono.setBackground(Color.WHITE);

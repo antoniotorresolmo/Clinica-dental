@@ -34,7 +34,7 @@ public class PnlPacientes extends JPanel {
 		
 		JLabel lblDatosPaciente = new JLabel("Pacientes");
 		lblDatosPaciente.setHorizontalAlignment(SwingConstants.CENTER);
-		lblDatosPaciente.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 25));
+		lblDatosPaciente.setFont(new Font("Yu Gothic", Font.PLAIN, 25));
 		lblDatosPaciente.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlPrincipal.add(lblDatosPaciente, BorderLayout.NORTH);
 		
@@ -42,7 +42,6 @@ public class PnlPacientes extends JPanel {
 		pnlOeste.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlOeste.setLayout(new BorderLayout());
 		listPacientes = new List();
-		listPacientes.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 12));
 		listPacientes.setMultipleSelections(false);
 		listPacientes.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlOeste.add(listPacientes, BorderLayout.CENTER);
@@ -54,7 +53,7 @@ public class PnlPacientes extends JPanel {
 		pnlCentro.setLayout(null);
 		
 		JLabel lblNombre = new JLabel("Nombre:");
-		lblNombre.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 15));
+		lblNombre.setFont(new Font("Yu Gothic Light", Font.PLAIN, 15));
 		// lblNombre.addMouseListener(new MouseAdapter() {
 		// 	public void mouseClicked(MouseEvent e) {
 				
@@ -67,90 +66,88 @@ public class PnlPacientes extends JPanel {
 		pnlCentro.add(lblNombre);
 		
 		txtNombre = new JLabel();
-		txtNombre.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 15));
+		txtNombre.setFont(new Font("Yu Gothic Light", Font.PLAIN, 15));
 		txtNombre.setBounds(100, 9, 266, 32);
 		txtNombre.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlCentro.add(txtNombre);
 		
 		lblApellidos = new JLabel("Apellidos:");
-		lblApellidos.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 15));
+		lblApellidos.setFont(new Font("Yu Gothic Light", Font.PLAIN, 15));
 		lblApellidos.setBounds(10, 52, 62, 29);
 		lblApellidos.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlCentro.add(lblApellidos);
 		
 		txtApellidos = new JLabel();
-		txtApellidos.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 15));
+		txtApellidos.setFont(new Font("Yu Gothic Light", Font.PLAIN, 15));
 		txtApellidos.setBounds(100, 49, 266, 32);
 		txtApellidos.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlCentro.add(txtApellidos);
 		
 		JLabel lblCorreo = new JLabel("Correo:");
-		lblCorreo.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 15));
+		lblCorreo.setFont(new Font("Yu Gothic Light", Font.PLAIN, 15));
 		lblCorreo.setBounds(10, 132, 62, 29);
 		lblCorreo.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlCentro.add(lblCorreo);
 		
 		txtCorreo = new JLabel();
-		txtCorreo.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 15));
+		txtCorreo.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
 		txtCorreo.setBounds(100, 129, 266, 32);
 		txtCorreo.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlCentro.add(txtCorreo);
 		
 		JLabel lblDireccion = new JLabel("Direcci\u00F3n:");
-		lblDireccion.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 15));
+		lblDireccion.setFont(new Font("Yu Gothic Light", Font.PLAIN, 15));
 		lblDireccion.setBounds(10, 92, 80, 29);
 		lblDireccion.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlCentro.add(lblDireccion);
 		
 		txtDireccion = new JLabel();
-		txtDireccion.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 15));
+		txtDireccion.setFont(new Font("Yu Gothic Light", Font.PLAIN, 15));
 		txtDireccion.setBounds(100, 89, 266, 29);
 		txtDireccion.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlCentro.add(txtDireccion);
 		
 		JLabel lblTelefono = new JLabel("Telefono:");
-		lblTelefono.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 15));
+		lblTelefono.setFont(new Font("Yu Gothic Light", Font.PLAIN, 15));
 		lblTelefono.setBounds(10, 172, 80, 29);
 		lblTelefono.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlCentro.add(lblTelefono);
 		
 		txtTelefono = new JLabel();
-		txtTelefono.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 15));
+		txtTelefono.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
 		txtTelefono.setBounds(100, 169, 266, 32);
 		txtTelefono.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlCentro.add(txtTelefono);
 		
 		JLabel lblDni = new JLabel("DNI:");
-		lblDni.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 15));
+		lblDni.setFont(new Font("Yu Gothic Light", Font.PLAIN, 15));
 		lblDni.setBounds(10, 212, 46, 34);
 		lblDni.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlCentro.add(lblDni);
 		
 		txtDni = new JLabel();
-		txtDni.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 15));
+		txtDni.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
 		txtDni.setBounds(100, 209, 266, 37);
 		txtDni.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlCentro.add(txtDni);
 		
 		JLabel lblHistorial = new JLabel("Historial");
-		lblHistorial.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 20));
+		lblHistorial.setFont(new Font("Yu Gothic", Font.BOLD, 20));
 		lblHistorial.setBounds(10, 257, 100, 27);
 		lblHistorial.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlCentro.add(lblHistorial);
 		
 		JLabel lblRecetario = new JLabel("Recetario");
-		lblRecetario.setFont(new Font("Yu Gothic UI Light", Font.BOLD, 20));
+		lblRecetario.setFont(new Font("Yu Gothic", Font.BOLD, 20));
 		lblRecetario.setBounds(400, 257, 107, 27);
 		lblRecetario.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlCentro.add(lblRecetario);
 		
 		textPaneHistorial = new JTextPane();
-		textPaneHistorial.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 11));
 		textPaneHistorial.setBounds(10, 289, 315, 201);
 		pnlCentro.add(textPaneHistorial);
 		
 		textPaneRecetario = new JTextPane();
-		textPaneRecetario.setFont(new Font("Yu Gothic UI Light", Font.PLAIN, 11));
 		textPaneRecetario.setBounds(400, 289, 315, 201);
 		pnlCentro.add(textPaneRecetario);
 
