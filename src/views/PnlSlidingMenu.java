@@ -6,7 +6,6 @@ import java.awt.event.*;
 import javax.swing.border.LineBorder;
 
 public class PnlSlidingMenu extends JPanel implements IColores {
-
 	PnlInicio pnlInicio1 = new PnlInicio();
 	PnlAgenda pnlAgenda1 = new PnlAgenda();
 	public static PnlPacientes pnlPacientes1 = new PnlPacientes();
@@ -17,13 +16,16 @@ public class PnlSlidingMenu extends JPanel implements IColores {
 	public PnlSlidingMenu() {
 		setLayout(new BorderLayout(0, 0));
 		
+		
+		
+		
+		
 		JScrollPane scrollPane = new JScrollPane();
 		add(scrollPane, BorderLayout.CENTER);
 
-		//JPanel pnlPrincipal = new JPanel();
 		GradientPanel pnlPrincipal = new GradientPanel(Color.decode("#4BE392"), Color.decode("#AFFF4E"));
 	
-		//pnlPrincipal.setBackground(azu);
+	
 
 		setPreferredSize(new Dimension(164, 1061));
 
@@ -76,6 +78,26 @@ public class PnlSlidingMenu extends JPanel implements IColores {
 		lblPerfil.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 		pnlPerfil.add(lblPerfil, BorderLayout.CENTER);
 
+		
+		
+		
+		//ocultarPaneles();
+		//pnlInicio1.setVisible(true);
+		
+		FrmPrincipal.pnlCentro.add(pnlInicio1, BorderLayout.CENTER);
+		System.out.println("ENTRA");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		pnlInicio.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -121,10 +143,13 @@ public class PnlSlidingMenu extends JPanel implements IColores {
 
 			}
 		});
+		
+		
 
 	}
 
 	public static void ocultarPaneles() {
+		
 		Component[] c = FrmPrincipal.pnlCentro.getComponents();
 		for (Component o : c) {
 			o.setVisible(false);

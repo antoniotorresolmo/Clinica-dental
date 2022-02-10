@@ -32,15 +32,16 @@ import java.util.*;
 import java.awt.event.*;
 import javax.swing.ImageIcon;
 import java.awt.Component;
+import javax.swing.border.TitledBorder;
 
 public class PnlAgenda extends JPanel {
-
+	
 	Color transparente = new Color(1.0f, 1.0f, 1.0f, 0.0f);
 	DefaultTableModel model;
 	Calendar cal = new GregorianCalendar();
 	JLabel lblFecha;
-	public static java.util.List<Cita> lCitas = new ArrayList<Cita>();
 	public static String sFechaCogida;
+	public static java.util.List<Cita> lCitas = new ArrayList<Cita>();
 	public static List lista;
 	public static JTable table;
 
@@ -72,12 +73,14 @@ public class PnlAgenda extends JPanel {
 		panelLista.setOpaque(false);
 		panelLista.setBackground(transparente);
 		panel_1.add(panelLista, BorderLayout.WEST);
-		panelLista.setBorder(new EmptyBorder(5, 5, 30, 5));
+		panelLista.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "CITAS", TitledBorder.CENTER,
+				TitledBorder.TOP, null, new Color(0, 0, 0)));
 		panelLista.setLayout(new BorderLayout(0, 0));
 
 		lista = new List();
 		panelLista.add(lista);
-
+		
+		
 		lblFecha = new JLabel();
 		lblFecha.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
 		lblFecha.setFont(new Font("Tahoma", Font.BOLD, 16));
@@ -108,10 +111,8 @@ public class PnlAgenda extends JPanel {
 			}
 		});
 
-		// GradientPanel panel = new GradientPanel(Color.decode("#E093A0"),
-		// Color.decode("#E0ACB6"), GradientPanel.HORIZONTAL);
 		JPanel panel = new JPanel();
-		// panel.setOpaque(false);
+
 		panel.setBackground(Color.WHITE);
 		panel.setLayout(new BorderLayout());
 		panel.add(b1, BorderLayout.WEST);
@@ -126,17 +127,13 @@ public class PnlAgenda extends JPanel {
 		};
 
 		table = new JTable(model);
-		table.addMouseListener(new MouseAdapter() {
-			public void mouseClicked(MouseEvent e) {
-
-				lista.removeAll();
-				cogerFecha();
-				controllers.AgendaController.listarPacientesCita();
-
-			}
-		});
+		table.setCellSelectionEnabled(true);
+		table.getTableHeader().setBackground(Color.WHITE);
+		table.setSelectionBackground(Color.PINK);
+		table.setGridColor(Color.BLACK);
 		table.setBorder(null);
 		table.setBackground(Color.WHITE);
+
 		table.setFont(new Font("Yu Gothic UI", Font.BOLD, 25));
 		table.setRowHeight(100);
 
@@ -150,31 +147,25 @@ public class PnlAgenda extends JPanel {
 
 		JButton btnAdd = new JButton("A\u00F1adir Cita");
 
-		btnAdd.addMouseListener(new MouseAdapter() {
-			@Override
+
+
+		table.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
-				try {
-					cogerFecha();
-					JDialogDatosCita.isEditing = false;
-					new JDialogDatosCita();
-					// String sNombre=(String) JDialogDatosCita.cbNombre.getSelectedItem();
 
-					lista.removeAll();
-					controllers.AgendaController.listarPacientesCita();
-
-				} catch (Exception ex) {
-					JOptionPane.showMessageDialog(null, "Selecciona una fecha", "Error", JOptionPane.ERROR_MESSAGE);
-					ex.printStackTrace();
-				}
+				lista.removeAll();
+				cogerFecha();
+				controllers.AgendaController.listarPacientesCita();
 
 			}
 		});
 
 		JScrollPane pane = new JScrollPane();
-		pane.setBorder(null);
+		pane.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "", TitledBorder.LEADING,
+				TitledBorder.TOP, null, null));
 		pane.setOpaque(false);
 
 		pane.setBackground(transparente);
+
 		pane.getViewport().setOpaque(false);
 		pane.getViewport().setBorder(null);
 		pane.setViewportView(table);
@@ -210,33 +201,55 @@ public class PnlAgenda extends JPanel {
 		panelBotones.setBackground(transparente);
 
 		panelCentral.add(panelBotones, BorderLayout.SOUTH);
-		panelBotones.setLayout(new FlowLayout(FlowLayout.RIGHT, 5, 5));
+		panelBotones.setLayout(new BorderLayout(0, 0));
 
 		JPanel panel_2 = new JPanel();
 		panel_2.setBorder(null);
 		panel_2.setOpaque(false);
 		panel_2.setBackground(transparente);
-		panelBotones.add(panel_2);
+		panelBotones.add(panel_2, BorderLayout.EAST);
 
-		panel_2.add(btnAdd);
+		JButton btnAceptar = new JButton("New button");
+		panel_2.add(btnAceptar);
+
+		btnAdd.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				try {
+					cogerFecha();
+					JDialogDatosCita.isEditing = false;
+					new JDialogDatosCita();
+					// String sNombre=(String) JDialogDatosCita.cbNombre.getSelectedItem();
+
+					lista.removeAll();
+					controllers.AgendaController.listarPacientesCita();
+
+				} catch (Exception ex) {
+					JOptionPane.showMessageDialog(null, "Selecciona una fecha", "Error", JOptionPane.ERROR_MESSAGE);
+					ex.printStackTrace();
+				}
+
+			}
+		});
 
 		JButton btnModificar = new JButton("Modificar");
 		btnModificar.addActionListener(v -> {
-			
+
 			cogerFecha();
 			controllers.AgendaController.prepararJDialogDatosCitaActualizar();
 			new JDialogDatosCita();
-			
+
 		});
+		panel_2.add(btnAdd);
 		panel_2.add(btnModificar);
 
 		JButton btnBorrar = new JButton("Borrar");
 		btnBorrar.addActionListener(v -> {
-			
+
 			controllers.AgendaController.borrarCita();
 			lista.removeAll();
 			controllers.AgendaController.listarPacientesCita();
-			
+
 		});
 		panel_2.add(btnBorrar);
 
@@ -244,8 +257,33 @@ public class PnlAgenda extends JPanel {
 
 	}
 
+	void updateMonth() {
+		cal.set(Calendar.DAY_OF_MONTH, 1);
+
+		String month = cal.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.US);
+		int year = cal.get(Calendar.YEAR);
+		lblFecha.setText(month + " " + year);
+
+		int startDay = cal.get(Calendar.DAY_OF_WEEK);
+		int numberOfDays = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
+		int weeks = cal.getActualMaximum(Calendar.WEEK_OF_MONTH);
+
+		model.setRowCount(0);
+		model.setRowCount(6);
+
+		int i = startDay - 1;
+		for (int day = 1; day <= numberOfDays; day++) {
+			model.setValueAt(day, i / 7, i % 7);
+
+			i = i + 1;
+
+		}
+
+	}
+
 	private void cogerFecha() {
 
+		System.out.println(table.getValueAt(table.getSelectedRow(), table.getSelectedColumn()));
 		int bNumero = (int) table.getValueAt(table.getSelectedRow(), table.getSelectedColumn());
 		String sNumero;
 		int iMes = cal.get(Calendar.MONTH) + 1;
@@ -263,29 +301,6 @@ public class PnlAgenda extends JPanel {
 		}
 
 		sFechaCogida = sNumero + "/" + sMes + "/" + cal.getWeekYear();
-
-	}
-
-	void updateMonth() {
-		cal.set(Calendar.DAY_OF_MONTH, 1);
-
-		String month = cal.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.US);
-		int year = cal.get(Calendar.YEAR);
-		lblFecha.setText(month + " " + year);
-
-		int startDay = cal.get(Calendar.DAY_OF_WEEK);
-		int numberOfDays = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
-		int weeks = cal.getActualMaximum(Calendar.WEEK_OF_MONTH);
-
-		model.setRowCount(0);
-		model.setRowCount(weeks);
-
-		int i = startDay - 1;
-		for (int day = 1; day <= numberOfDays; day++) {
-			model.setValueAt(day, i / 7, i % 7);
-			i = i + 1;
-
-		}
 
 	}
 

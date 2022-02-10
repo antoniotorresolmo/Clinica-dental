@@ -16,6 +16,7 @@ public class CtrlPacientes {
 				+ id;
 		String requestHttp = CtrlPrincipal.peticionHttp(url);
 
+		//System.out.println(stringToNombreApellidos(requestHttp)+" eeeeee paciente");
 		return stringToNombreApellidos(requestHttp);
 	}
 

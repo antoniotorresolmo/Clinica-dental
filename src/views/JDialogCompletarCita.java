@@ -10,12 +10,15 @@ import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import controllers.PnlInicioController;
 import models.Cita;
 
 import javax.swing.JComboBox;
 import javax.swing.JTextArea;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class JDialogCompletarCita extends JDialog {
 
@@ -26,7 +29,7 @@ public class JDialogCompletarCita extends JDialog {
 	public static Cita oCita;
 
 	public JDialogCompletarCita() {
-		
+		setUndecorated(true);
 		int iX, iY;
 
 		Dimension screensize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -39,27 +42,36 @@ public class JDialogCompletarCita extends JDialog {
 		getContentPane().setLayout(null);
 		
 		txtHistorial = new JTextArea();
-		txtHistorial.setBounds(46, 183, 210, 198);
+		txtHistorial.setBounds(10, 101, 210, 198);
 		getContentPane().add(txtHistorial);
 		
 		txtRecetario = new JTextArea();
-		txtRecetario.setBounds(433, 101, 210, 184);
+		txtRecetario.setBounds(481, 101, 210, 198);
 		getContentPane().add(txtRecetario);
 		
 		btnCompletar = new JButton("Completar cita");
-		btnCompletar.setBounds(135, 80, 161, 70);
+		btnCompletar.setBounds(59, 421, 161, 70);
 		getContentPane().add(btnCompletar);
 		
 		JLabel lblNewLabel = new JLabel("popopo");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		lblNewLabel.setBounds(262, 237, 195, 171);
+		lblNewLabel.setBounds(230, 101, 195, 171);
 		getContentPane().add(lblNewLabel);
+		
+		JButton btnCancelar = new JButton("New button");
+		btnCancelar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnCancelar.setBounds(421, 421, 195, 70);
+		getContentPane().add(btnCancelar);
 		contentPanel.setLayout(new FlowLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		
 		btnCompletar.addActionListener(v -> {
 			
 			controllers.CompletarCitaController.completarCita();
+			PnlInicioController.cargarTodo();
 			dispose();
 			
 		});

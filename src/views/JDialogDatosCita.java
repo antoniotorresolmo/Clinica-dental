@@ -22,10 +22,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.awt.event.ActionEvent;
 
+
+
+
 public class JDialogDatosCita extends JDialog {
 
-	GradientPanel contentPanel = new GradientPanel(Color.decode("#e093a0"), Color.decode("#771d32"),
-			GradientPanel.DIAGONAL_DOWN);
+	
+	GradientPanel contentPanel = new GradientPanel(Color.decode("#4BE392"), Color.decode("#AFFF4E"));
+	
 	public static JComboBox cbNombre = new JComboBox();
 	public static JComboBox cbOperacion = new JComboBox();
 	public static JComboBox cbHora = new JComboBox();
@@ -58,6 +62,7 @@ public class JDialogDatosCita extends JDialog {
 
 		cbOperacion.setBounds(30, 130, 390, 22);
 		contentPanel.add(cbOperacion);
+		cbHora.setBackground(Color.WHITE);
 
 		cbHora.setBounds(30, 191, 390, 22);
 		contentPanel.add(cbHora);
@@ -67,8 +72,8 @@ public class JDialogDatosCita extends JDialog {
 		btnAdd.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
 		btnAdd.setBorderPainted(false);
 		btnAdd.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
-		btnAdd.setBackground(new Color(137, 207, 240));
-		btnAdd.setBounds(233, 266, 89, 23);
+		btnAdd.setBackground(Color.WHITE);
+		btnAdd.setBounds(229, 266, 89, 23);
 		contentPanel.add(btnAdd);
 
 		JButton btnCancelar = new JButton("Cancelar");
@@ -76,8 +81,8 @@ public class JDialogDatosCita extends JDialog {
 		btnCancelar.setFont(new Font("Microsoft JhengHei UI", Font.BOLD, 12));
 		btnCancelar.setBorderPainted(false);
 		btnCancelar.setBorder(new MatteBorder(5, 5, 5, 5, (Color) new Color(153, 51, 0)));
-		btnCancelar.setBackground(new Color(137, 207, 240));
-		btnCancelar.setBounds(351, 266, 89, 23);
+		btnCancelar.setBackground(Color.WHITE);
+		btnCancelar.setBounds(331, 266, 89, 23);
 		contentPanel.add(btnCancelar);
 		
 		controllers.DatosCitaController.cargarHoras();
