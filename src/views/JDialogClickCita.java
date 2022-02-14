@@ -14,6 +14,8 @@ import javax.swing.SwingConstants;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import models.Cita;
+import javax.swing.border.TitledBorder;
+import javax.swing.border.LineBorder;
 
 public class JDialogClickCita extends JDialog implements IColores {
 	
@@ -45,86 +47,94 @@ public class JDialogClickCita extends JDialog implements IColores {
 		JLabel lblTitulo = new JLabel("\u00BFQu\u00E9 desea hacer?");
 		lblTitulo.setBounds(0, 0, 522, 38);
 		panel.add(lblTitulo);
-		lblTitulo.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
+		lblTitulo.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 20));
 		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
 		
 		JPanel pnlVerPerfil = new JPanel();
-		pnlVerPerfil.setBounds(22, 54, 135, 38);
+		pnlVerPerfil.setOpaque(false);
+		pnlVerPerfil.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), " ", TitledBorder.LEADING, TitledBorder.ABOVE_TOP, null, null));
+		pnlVerPerfil.setBounds(60, 37, 101, 55);
 		panel.add(pnlVerPerfil);
 		pnlVerPerfil.setBackground(CLR_SECUNDARIO);
-		pnlVerPerfil.setLayout(null);
-		
-		JLabel lblImagenPerfil = new JLabel();
-		lblImagenPerfil.setBounds(15, 8, 25, 25);
 		
 
 		ImageIcon imgIcon = new ImageIcon("images/verPerfil.png");
-		Image imgEscalada = imgIcon.getImage().getScaledInstance(lblImagenPerfil.getWidth(),lblImagenPerfil.getHeight(), Image.SCALE_SMOOTH);
-		Icon iconoEscalado = new ImageIcon(imgEscalada);
-		lblImagenPerfil.setIcon(iconoEscalado);
-		
-		pnlVerPerfil.add(lblImagenPerfil);
+		//Icon iconoEscalado = new ImageIcon(imgEscalada);
+		pnlVerPerfil.setLayout(new BorderLayout(0, 0));
 		
 		
-		JLabel lblVerPerfil = new JLabel("Ver perfil");
-		lblVerPerfil.setFont(new Font("Yu Gothic UI", Font.PLAIN, 14));
-		lblVerPerfil.setBounds(55, 0, 70, 38);
+		JLabel lblVerPerfil = new JLabel("VER PERFIL");
+		
+		lblVerPerfil.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		lblVerPerfil.setOpaque(true);
+		lblVerPerfil.setHorizontalAlignment(SwingConstants.CENTER);
+		lblVerPerfil.setFont(new Font("Yu Gothic UI Semilight", Font.BOLD, 13));
 		pnlVerPerfil.add(lblVerPerfil);
 		
-		JPanel pnlCompletarCita = new JPanel();
-		pnlCompletarCita.setBounds(193, 54, 135, 38);
-		panel.add(pnlCompletarCita);
-		pnlCompletarCita.setBackground(CLR_SECUNDARIO);
-		pnlCompletarCita.setLayout(null);
+		JLabel lblImagenPerfil = new JLabel();
+		lblImagenPerfil.setHorizontalAlignment(SwingConstants.CENTER);
+		lblImagenPerfil.setBounds(10, 49, 50, 43);
+		panel.add(lblImagenPerfil);
+		Image imgEscalada = imgIcon.getImage().getScaledInstance(lblImagenPerfil.getWidth(),lblImagenPerfil.getHeight(), Image.SCALE_SMOOTH);
+		lblImagenPerfil.setIcon(new ImageIcon(JDialogClickCita.class.getResource("/images/ojito.png")));
+		
+		JPanel pnlComp = new JPanel();
+		pnlComp.setOpaque(false);
+		pnlComp.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), " ", TitledBorder.LEADING, TitledBorder.ABOVE_TOP, null, null));
+		pnlComp.setBackground(new Color(224, 147, 160));
+		pnlComp.setBounds(239, 37, 101, 55);
+		panel.add(pnlComp);
+		pnlComp.setLayout(new BorderLayout(0, 0));
+		
+		JLabel lblCompletar = new JLabel("COMPLETAR");
+		lblCompletar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				controllers.ClickCitaController.completarCita();
+				
+				dispose();
+				
+			}
+		});
+		lblCompletar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		lblCompletar.setOpaque(true);
+		lblCompletar.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCompletar.setFont(new Font("Yu Gothic UI Semilight", Font.BOLD, 13));
+		pnlComp.add(lblCompletar, BorderLayout.CENTER);
 		
 		JLabel lblImagenCompletada = new JLabel();
-		lblImagenCompletada.setBounds(15, 8, 20, 20);
+		lblImagenCompletada.setHorizontalAlignment(SwingConstants.CENTER);
+		lblImagenCompletada.setBounds(190, 49, 50, 43);
+		panel.add(lblImagenCompletada);
 		imgEscalada = imgIcon.getImage().getScaledInstance(lblImagenCompletada.getWidth(),lblImagenCompletada.getHeight(), Image.SCALE_SMOOTH);
-		lblImagenCompletada.setIcon(iconoEscalado);
+		lblImagenCompletada.setIcon(new ImageIcon(JDialogClickCita.class.getResource("/images/manita.png")));
 		
-		pnlCompletarCita.add(lblImagenCompletada);
+		JPanel pnlCancel = new JPanel();
+		pnlCancel.setOpaque(false);
+		pnlCancel.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), " ", TitledBorder.LEADING, TitledBorder.ABOVE_TOP, null, null));
+		pnlCancel.setBackground(new Color(224, 147, 160));
+		pnlCancel.setBounds(410, 37, 101, 55);
+		panel.add(pnlCancel);
+		pnlCancel.setLayout(new BorderLayout(0, 0));
 		
-		JLabel lblCompletarCita = new JLabel("Completar");
-		lblCompletarCita.setFont(new Font("Yu Gothic UI", Font.PLAIN, 14));
-		lblCompletarCita.setBounds(55, 0, 80, 38);
-		pnlCompletarCita.add(lblCompletarCita);
-		
-		JPanel pnlEliminar = new JPanel();
-		pnlEliminar.setBounds(364, 54, 135, 38);
-		panel.add(pnlEliminar);
-		pnlEliminar.setBackground(CLR_SECUNDARIO);
-		pnlEliminar.setLayout(null);
-		
-		JLabel lblImagenEliminar = new JLabel();
-		lblImagenEliminar.setBounds(15, 11, 17, 17);
-		imgEscalada = imgIcon.getImage().getScaledInstance(lblImagenEliminar.getWidth(),lblImagenEliminar.getHeight(), Image.SCALE_SMOOTH);
-		lblImagenEliminar.setIcon(iconoEscalado);
-		
-		pnlEliminar.add(lblImagenEliminar);
-		
-		JLabel lblEliminar = new JLabel("Eliminar");
-		lblEliminar.setFont(new Font("Yu Gothic UI", Font.PLAIN, 14));
-		lblEliminar.setBounds(55, 0, 80, 38);
-		pnlEliminar.add(lblEliminar);
-		
-		pnlEliminar.addMouseListener(new MouseAdapter() {
+		JLabel lblCancelar = new JLabel("CANCELAR");
+		lblCancelar.addMouseListener(new MouseAdapter() {
+			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				controllers.ClickCitaController.eliminar();
-				controllers.PnlInicioController.cargarTodo();
 				dispose();
-				
 			}
 		});
+		lblCancelar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		lblCancelar.setOpaque(true);
+		lblCancelar.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCancelar.setFont(new Font("Yu Gothic UI Semilight", Font.BOLD, 13));
+		pnlCancel.add(lblCancelar, BorderLayout.CENTER);
 		
-		pnlCompletarCita.addMouseListener(new MouseAdapter() {
-			public void mouseClicked(MouseEvent e) {
-				
-				controllers.ClickCitaController.completarCita();
-				dispose();
-				
-			}
-		});
+		JLabel lblImgCancel = new JLabel();
+		lblImgCancel.setIcon(new ImageIcon(JDialogClickCita.class.getResource("/images/dislike.png")));
+		lblImgCancel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblImgCancel.setBounds(360, 49, 50, 43);
+		panel.add(lblImgCancel);
 		
 		// Eventos
 		
