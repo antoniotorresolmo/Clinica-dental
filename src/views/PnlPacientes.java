@@ -27,15 +27,16 @@ public class PnlPacientes extends JPanel {
 	public static JTextPane textPaneRecetario;
 
 	public PnlPacientes() {
-		Color transparente = new Color (1.0f, 1.0f, 1.0f, 0.0f);
+		Color transparente = new Color(1.0f, 1.0f, 1.0f, 0.0f);
 		setLayout(new BorderLayout(0, 0));
-		
+
 		GradientPanel pnlPrincipal = new GradientPanel(Color.decode("#3CE6DB"), Color.decode("#4FFFA5"));
-		//pnlPrincipal.setBackground(Color.WHITE);
+		// pnlPrincipal.setBackground(Color.WHITE);
 		pnlPrincipal.setLayout(new BorderLayout(0, 0));
-		
+
 		JPanel pnlOeste = new JPanel();
-		pnlOeste.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "LISTA PACIENTES", TitledBorder.CENTER, TitledBorder.TOP, null, null));
+		pnlOeste.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "LISTA PACIENTES",
+				TitledBorder.CENTER, TitledBorder.TOP, null, null));
 		pnlOeste.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlOeste.setLayout(new BorderLayout());
 		listPacientes = new List();
@@ -43,39 +44,41 @@ public class PnlPacientes extends JPanel {
 		listPacientes.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlOeste.add(listPacientes, BorderLayout.CENTER);
 		pnlPrincipal.add(pnlOeste, BorderLayout.WEST);
-		
+
 		GradientPanel pnlCentro = new GradientPanel(Color.decode("#3CE6DB"), Color.decode("#4FFFA5"));
 		pnlCentro.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		pnlPrincipal.add(pnlCentro, BorderLayout.CENTER);
 		pnlCentro.setLayout(new GridLayout(0, 1, 50, 50));
-		
+
 		JPanel panel_1 = new JPanel();
 		panel_1.setOpaque(false);
 		pnlCentro.add(panel_1);
 		panel_1.setLayout(new GridLayout(0, 2, 50, 70));
-		
+
 		JPanel pnlNombre = new JPanel();
 		panel_1.add(pnlNombre);
-		
-		pnlNombre.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "NOMBRE", TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, null));
+
+		pnlNombre.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "NOMBRE", TitledBorder.CENTER,
+				TitledBorder.ABOVE_TOP, null, null));
 		pnlNombre.setBackground(transparente);
 		pnlNombre.setLayout(new BorderLayout(0, 0));
-		
+
 		txtNombre = new JLabel();
 		txtNombre.setOpaque(true);
 		txtNombre.setFont(new Font("Tahoma", Font.PLAIN, 20));
-	
+
 		txtNombre.setBorder(null);
 		txtNombre.setBackground(Color.WHITE);
 		pnlNombre.add(txtNombre, BorderLayout.CENTER);
-		
+
 		JPanel pnlDirección = new JPanel();
 		panel_1.add(pnlDirección);
-		
-		pnlDirección.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "DIRECCI\u00D3N", TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, new Color(0, 0, 0)));
+
+		pnlDirección.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "DIRECCI\u00D3N",
+				TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, new Color(0, 0, 0)));
 		pnlDirección.setBackground(transparente);
 		pnlDirección.setLayout(new BorderLayout(0, 0));
-		
+
 		txtDireccion = new JLabel();
 		txtDireccion.setOpaque(true);
 		txtDireccion.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -83,15 +86,16 @@ public class PnlPacientes extends JPanel {
 		txtDireccion.setBorder(null);
 		txtDireccion.setBackground(Color.WHITE);
 		pnlDirección.add(txtDireccion, BorderLayout.CENTER);
-		
+
 		JPanel pnlApellidos = new JPanel();
 		pnlApellidos.setOpaque(false);
 		panel_1.add(pnlApellidos);
-		
-		pnlApellidos.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "APELLIDOS", TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, new Color(0, 0, 0)));
+
+		pnlApellidos.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "APELLIDOS",
+				TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, new Color(0, 0, 0)));
 		pnlApellidos.setBackground(Color.WHITE);
 		pnlApellidos.setLayout(new BorderLayout(0, 0));
-		
+
 		txtApellidos = new JLabel();
 		txtApellidos.setOpaque(true);
 		txtApellidos.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -99,81 +103,86 @@ public class PnlPacientes extends JPanel {
 		txtApellidos.setBorder(null);
 		txtApellidos.setBackground(Color.WHITE);
 		pnlApellidos.add(txtApellidos, BorderLayout.CENTER);
-		
+
 		JPanel pnlTeléfono = new JPanel();
 		pnlTeléfono.setOpaque(false);
 		panel_1.add(pnlTeléfono);
-	
-		pnlTeléfono.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "TEL\u00C9FONO", TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, new Color(0, 0, 0)));
+
+		pnlTeléfono.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "TEL\u00C9FONO",
+				TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, new Color(0, 0, 0)));
 		pnlTeléfono.setBackground(Color.WHITE);
 		pnlTeléfono.setLayout(new BorderLayout(0, 0));
-		
+
 		txtTelefono = new JLabel();
 		txtTelefono.setOpaque(true);
 		txtTelefono.setFont(new Font("Tahoma", Font.PLAIN, 20));
-	
+
 		txtTelefono.setBorder(null);
 		txtTelefono.setBackground(Color.WHITE);
 		pnlTeléfono.add(txtTelefono, BorderLayout.CENTER);
-		
+
 		JPanel pnlCorreo = new JPanel();
 		pnlCorreo.setOpaque(false);
 		panel_1.add(pnlCorreo);
-	
-		pnlCorreo.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "CORREO", TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, new Color(0, 0, 0)));
+
+		pnlCorreo.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "CORREO", TitledBorder.CENTER,
+				TitledBorder.ABOVE_TOP, null, new Color(0, 0, 0)));
 		pnlCorreo.setBackground(Color.WHITE);
 		pnlCorreo.setLayout(new BorderLayout(0, 0));
-		
+
 		txtCorreo = new JLabel();
 		txtCorreo.setOpaque(true);
 		txtCorreo.setFont(new Font("Tahoma", Font.PLAIN, 20));
-	
+
 		txtCorreo.setBorder(null);
 		txtCorreo.setBackground(Color.WHITE);
 		pnlCorreo.add(txtCorreo, BorderLayout.CENTER);
-		
+
 		JPanel pnlDNI = new JPanel();
 		pnlDNI.setOpaque(false);
 		panel_1.add(pnlDNI);
 
-		pnlDNI.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "DNI", TitledBorder.CENTER, TitledBorder.ABOVE_TOP, null, new Color(0, 0, 0)));
+		pnlDNI.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "DNI", TitledBorder.CENTER,
+				TitledBorder.ABOVE_TOP, null, new Color(0, 0, 0)));
 		pnlDNI.setBackground(Color.WHITE);
 		pnlDNI.setLayout(new BorderLayout(0, 0));
-		
+
 		txtDni = new JLabel();
 		txtDni.setOpaque(true);
 		txtDni.setFont(new Font("Tahoma", Font.PLAIN, 20));
-	
+
 		txtDni.setBorder(null);
 		txtDni.setBackground(Color.WHITE);
 		pnlDNI.add(txtDni, BorderLayout.CENTER);
-		
+
 		JPanel panel = new JPanel();
 		panel.setOpaque(false);
 		pnlCentro.add(panel);
 		panel.setLayout(new GridLayout(0, 2, 40, 40));
-		
+
 		JPanel panel_2 = new JPanel();
-		panel_2.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "HISTORIAL", TitledBorder.CENTER, TitledBorder.TOP, null, null));
+		panel_2.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "HISTORIAL",
+				TitledBorder.CENTER, TitledBorder.TOP, null, null));
 		panel_2.setOpaque(false);
 		panel.add(panel_2);
 		panel_2.setLayout(new BorderLayout(0, 0));
-		
+
 		textPaneHistorial = new JTextPane();
 		panel_2.add(textPaneHistorial);
-		
-				textPaneHistorial.setEditable(false);
-		
+
+		textPaneHistorial.setEditable(false);
+
 		JPanel panel_3 = new JPanel();
 		panel_3.setOpaque(false);
-		panel_3.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "RECETARIO", TitledBorder.CENTER, TitledBorder.TOP, null, null));
+		panel_3.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "RECETARIO",
+				TitledBorder.CENTER, TitledBorder.TOP, null, null));
 		panel.add(panel_3);
 		panel_3.setLayout(new BorderLayout(0, 0));
-		
+
 		textPaneRecetario = new JTextPane();
 		panel_3.add(textPaneRecetario);
 		textPaneRecetario.setEditable(false);
-		
+
 		add(pnlPrincipal);
 
 		controllers.PnlPacientesController.cargarLista();

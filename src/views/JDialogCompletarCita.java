@@ -92,6 +92,10 @@ public class JDialogCompletarCita extends JDialog {
 		btnCompletar.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				
+				controllers.CompletarCitaController.completarCita();
+				dispose();
+				
 			}
 		});
 		btnCompletar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));

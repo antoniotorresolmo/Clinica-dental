@@ -31,7 +31,6 @@ public class PnlInicioController {
 	public static void rellenarBotones() throws Exception {
 		views.PnlInicio.lblFecha.setText(views.PnlInicio.sFecha);
 		for (int i = 0; i < views.PnlInicio.lstCitas.size(); i++) {
-			System.out.println(views.PnlInicio.lstCitas.get(i).getHora()+" eeeeeeeeeee");
 			switch (views.PnlInicio.lstCitas.get(i).getHora()) {
 			
 			
@@ -40,9 +39,6 @@ public class PnlInicioController {
 
 				views.PnlInicio.btnCita10.setText(
 						CtrlPacientes.getNombreApellidosPaciente(views.PnlInicio.lstCitas.get(i).getID_Paciente())
-								+ " - " + views.PnlInicio.lstCitas.get(i).getOperacion());
-				
-				System.out.println(CtrlPacientes.getNombreApellidosPaciente(views.PnlInicio.lstCitas.get(i).getID_Paciente())
 								+ " - " + views.PnlInicio.lstCitas.get(i).getOperacion());
 				
 				if(views.PnlInicio.lstCitas.get(i).getTerminada() == 1) {

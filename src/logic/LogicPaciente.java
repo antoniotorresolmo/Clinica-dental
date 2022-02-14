@@ -9,7 +9,7 @@ public class LogicPaciente implements ILogic{
     public static Paciente getById(int iID_Paciente) throws Exception{
 
         String url = URI + "proyecto/Paciente/get_paciente.php?iID_Paciente=" + iID_Paciente;
-        
+                
         return stringToPaciente(controllers.CtrlPrincipal.peticionHttp(url));
 
     }

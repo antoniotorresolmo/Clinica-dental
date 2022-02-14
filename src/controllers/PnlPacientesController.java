@@ -55,10 +55,13 @@ public class PnlPacientesController {
             List<Historial> lHistorial = logic.LogicHistorial.getByIdPaciente(oPaciente.getID_Paciente());
 
             StringBuilder sbHistorial = new StringBuilder();
+            
+            System.out.println("Size historial: " + lHistorial.size());
 
             lHistorial.forEach(oHistorial -> {
-
-                sbHistorial.append(oHistorial.getOperacion() + "\n" + oHistorial.getObservacines() + "\n\n");
+            	
+            	System.out.println(oHistorial.getObservacines());
+                sbHistorial.append(oHistorial.getOperacion() + ":\n" + oHistorial.getObservacines() + "\n\n");
 
             });
 
@@ -66,7 +69,7 @@ public class PnlPacientesController {
 
         } catch (Exception e) {
             views.PnlPacientes.textPaneHistorial.setText("Vacío.");
-            //e.printStackTrace();
+            e.printStackTrace();
         }
 
         // Cargar recetario

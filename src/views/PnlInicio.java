@@ -281,7 +281,6 @@ public class PnlInicio extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					sFecha=changeDay(sFecha, 1);
-					System.out.println(sFecha);
 					PnlInicioController.cargarTodo();
 				
 				} catch (ParseException e1) {
@@ -296,7 +295,6 @@ public class PnlInicio extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					sFecha=changeDay(sFecha, -1);
-					System.out.println(sFecha);
 				
 					PnlInicioController.cargarTodo();
 				

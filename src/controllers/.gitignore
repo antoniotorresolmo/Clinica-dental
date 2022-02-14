@@ -6,3 +6,8 @@
 /RegistroController.class
 /PerfilController.class
 /PnlPacientesController.class
+/AgendaController.class
+/ClickCitaController.class
+/CompletarCitaController.class
+/DatosCitaController.class
+/PnlInicioController.class
