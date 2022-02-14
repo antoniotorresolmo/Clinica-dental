@@ -22,7 +22,10 @@ import com.example.clinicadental.R;
 import com.example.clinicadental.controllers.BottomNav;
 import com.example.clinicadental.controllers.Registro;
 import com.example.clinicadental.logic.LogicPaciente;
+import com.example.clinicadental.logic.LogicPacienteMedico;
+import com.example.clinicadental.models.Medico;
 import com.example.clinicadental.models.Paciente;
+import com.example.clinicadental.models.Paciente_Medico;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -36,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     TextInputLayout txtPassword;
     Paciente oPaciente;
     CheckBox chbRecordar;
+    boolean recienRegistrado = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

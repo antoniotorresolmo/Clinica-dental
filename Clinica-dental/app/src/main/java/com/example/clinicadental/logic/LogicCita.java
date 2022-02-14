@@ -37,7 +37,6 @@ public class LogicCita {
     public static void listByPaciente(Paciente oPaciente, Context oContext, View view){
 
         String url = ILogic.hosting + "proyecto/Cita/lst_cita_by_idpaciente.php?iID_Paciente=" + oPaciente.getID_Paciente();
-        Log.d("juan", url);
 
         Volley.newRequestQueue(oContext).add(new StringRequest(Request.Method.GET, url,
                 s -> {

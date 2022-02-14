@@ -13,7 +13,9 @@ import com.android.volley.toolbox.Volley;
 import com.example.clinicadental.R;
 import com.example.clinicadental.controllers.BottomNav;
 import com.example.clinicadental.controllers.MainActivity;
+import com.example.clinicadental.models.Medico;
 import com.example.clinicadental.models.Paciente;
+import com.example.clinicadental.models.Paciente_Medico;
 import com.google.android.material.bottomappbar.BottomAppBarTopEdgeTreatment;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -42,6 +44,7 @@ public class LogicPaciente {
                     } else {
                         Toast.makeText(oContext, "El usuario ha sido creado con éxito", Toast.LENGTH_SHORT).show();
                         BottomNav.oPaciente = oPaciente;
+                        //BottomNav.recienRegistrado = true;
                         getByIdUser(oContext);
                         Intent ventana = new Intent(oContext, BottomNav.class);
                         oContext.startActivity(ventana);
@@ -65,6 +68,7 @@ public class LogicPaciente {
                     } else {
                         BottomNav.oPaciente = new Gson().fromJson(s, new TypeToken<Paciente>() {}.getType());
                         Log.d("PEPITO", BottomNav.oPaciente.getID_Paciente()+"");
+                        LogicPacienteMedico.insertar(new Paciente_Medico(new Medico(1), new Paciente(BottomNav.oPaciente.getID_Paciente())), oContext);
                     }
                 }, volleyError -> {
             Toast.makeText(oContext, volleyError.getMessage(), Toast.LENGTH_SHORT).show();
