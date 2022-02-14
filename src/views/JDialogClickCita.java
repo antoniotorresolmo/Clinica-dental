@@ -22,6 +22,7 @@ public class JDialogClickCita extends JDialog implements IColores {
 	public static Cita oCita;
 
 	public JDialogClickCita() {
+		setUndecorated(true);
 		getContentPane().setBackground(Color.YELLOW);
 		
 		GradientPanel panel = new GradientPanel(Color.decode("#4BE392"), Color.decode("#AFFF4E"));
@@ -39,26 +40,30 @@ public class JDialogClickCita extends JDialog implements IColores {
 		setResizable(false);
 		getContentPane().setLayout(null);
 		
+		panel.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		
-		panel.setBounds(0, 0, 522, 123);
+		panel.setBounds(0, 0, 538, 162);
 		getContentPane().add(panel);
 		panel.setLayout(null);
 		
 		JLabel lblTitulo = new JLabel("\u00BFQu\u00E9 desea hacer?");
-		lblTitulo.setBounds(0, 0, 522, 38);
+		lblTitulo.setBounds(10, 0, 512, 38);
 		panel.add(lblTitulo);
 		lblTitulo.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 20));
 		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
 		
+		JPanel pnlConjPerfil = new JPanel();
+		pnlConjPerfil.setOpaque(false);
+		pnlConjPerfil.setBounds(10, 66, 151, 55);
+		panel.add(pnlConjPerfil);
+		pnlConjPerfil.setLayout(null);
+		
 		JPanel pnlVerPerfil = new JPanel();
+		pnlVerPerfil.setBounds(50, 0, 101, 55);
+		pnlConjPerfil.add(pnlVerPerfil);
 		pnlVerPerfil.setOpaque(false);
 		pnlVerPerfil.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), " ", TitledBorder.LEADING, TitledBorder.ABOVE_TOP, null, null));
-		pnlVerPerfil.setBounds(60, 37, 101, 55);
-		panel.add(pnlVerPerfil);
 		pnlVerPerfil.setBackground(CLR_SECUNDARIO);
-		
-
-		ImageIcon imgIcon = new ImageIcon("images/verPerfil.png");
 		//Icon iconoEscalado = new ImageIcon(imgEscalada);
 		pnlVerPerfil.setLayout(new BorderLayout(0, 0));
 		
@@ -72,18 +77,38 @@ public class JDialogClickCita extends JDialog implements IColores {
 		pnlVerPerfil.add(lblVerPerfil);
 		
 		JLabel lblImagenPerfil = new JLabel();
+		lblImagenPerfil.setBounds(0, 12, 50, 43);
+		pnlConjPerfil.add(lblImagenPerfil);
 		lblImagenPerfil.setHorizontalAlignment(SwingConstants.CENTER);
-		lblImagenPerfil.setBounds(10, 49, 50, 43);
-		panel.add(lblImagenPerfil);
-		Image imgEscalada = imgIcon.getImage().getScaledInstance(lblImagenPerfil.getWidth(),lblImagenPerfil.getHeight(), Image.SCALE_SMOOTH);
+		
 		lblImagenPerfil.setIcon(new ImageIcon(JDialogClickCita.class.getResource("/images/ojito.png")));
 		
+		// Eventos
+		
+		pnlVerPerfil.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				
+				controllers.ClickCitaController.verPerfil();
+				dispose();
+				
+			}
+		});
+		
+
+		ImageIcon imgIcon = new ImageIcon("images/verPerfil.png");
+		
+		JPanel pnlConjCompl = new JPanel();
+		pnlConjCompl.setOpaque(false);
+		pnlConjCompl.setBounds(189, 66, 150, 55);
+		panel.add(pnlConjCompl);
+		pnlConjCompl.setLayout(null);
+		
 		JPanel pnlComp = new JPanel();
+		pnlComp.setBounds(49, 0, 101, 55);
+		pnlConjCompl.add(pnlComp);
 		pnlComp.setOpaque(false);
 		pnlComp.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), " ", TitledBorder.LEADING, TitledBorder.ABOVE_TOP, null, null));
 		pnlComp.setBackground(new Color(224, 147, 160));
-		pnlComp.setBounds(239, 37, 101, 55);
-		panel.add(pnlComp);
 		pnlComp.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblCompletar = new JLabel("COMPLETAR");
@@ -103,18 +128,24 @@ public class JDialogClickCita extends JDialog implements IColores {
 		pnlComp.add(lblCompletar, BorderLayout.CENTER);
 		
 		JLabel lblImagenCompletada = new JLabel();
+		lblImagenCompletada.setBounds(0, 12, 50, 43);
+		pnlConjCompl.add(lblImagenCompletada);
 		lblImagenCompletada.setHorizontalAlignment(SwingConstants.CENTER);
-		lblImagenCompletada.setBounds(190, 49, 50, 43);
-		panel.add(lblImagenCompletada);
-		imgEscalada = imgIcon.getImage().getScaledInstance(lblImagenCompletada.getWidth(),lblImagenCompletada.getHeight(), Image.SCALE_SMOOTH);
+		
 		lblImagenCompletada.setIcon(new ImageIcon(JDialogClickCita.class.getResource("/images/manita.png")));
 		
+		JPanel pnlConjCanc = new JPanel();
+		pnlConjCanc.setOpaque(false);
+		pnlConjCanc.setBounds(371, 66, 151, 55);
+		panel.add(pnlConjCanc);
+		pnlConjCanc.setLayout(null);
+		
 		JPanel pnlCancel = new JPanel();
+		pnlCancel.setBounds(50, 0, 101, 55);
+		pnlConjCanc.add(pnlCancel);
 		pnlCancel.setOpaque(false);
 		pnlCancel.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), " ", TitledBorder.LEADING, TitledBorder.ABOVE_TOP, null, null));
 		pnlCancel.setBackground(new Color(224, 147, 160));
-		pnlCancel.setBounds(410, 37, 101, 55);
-		panel.add(pnlCancel);
 		pnlCancel.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblCancelar = new JLabel("CANCELAR");
@@ -131,21 +162,10 @@ public class JDialogClickCita extends JDialog implements IColores {
 		pnlCancel.add(lblCancelar, BorderLayout.CENTER);
 		
 		JLabel lblImgCancel = new JLabel();
+		lblImgCancel.setBounds(0, 12, 50, 43);
+		pnlConjCanc.add(lblImgCancel);
 		lblImgCancel.setIcon(new ImageIcon(JDialogClickCita.class.getResource("/images/dislike.png")));
 		lblImgCancel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblImgCancel.setBounds(360, 49, 50, 43);
-		panel.add(lblImgCancel);
-		
-		// Eventos
-		
-		pnlVerPerfil.addMouseListener(new MouseAdapter() {
-			public void mouseClicked(MouseEvent e) {
-				
-				controllers.ClickCitaController.verPerfil();
-				dispose();
-				
-			}
-		});
 		
 		
 		
