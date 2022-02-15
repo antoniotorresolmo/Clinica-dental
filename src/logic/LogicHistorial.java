@@ -15,9 +15,7 @@ public class LogicHistorial implements ILogic{
 		String sUrl = URI + "proyecto/Historial/ins_historial.php?sOperacion=" + oHistorial.getOperacion()
 		+ "&sObservaciones=" + oHistorial.getObservacines()
 		+ "&iID_Paciente=" + oHistorial.getId_Paciente();
-		
-		System.out.println(sUrl);
-		
+				
 		controllers.CtrlPrincipal.peticionHttp(sUrl);
 		
 	}
@@ -25,9 +23,7 @@ public class LogicHistorial implements ILogic{
     public static List<Historial> getByIdPaciente(int iID_Paciente) throws Exception{
 
         String url = URI + "proyecto/Historial/get_historial_by_idpaciente.php?iID_Paciente=" + iID_Paciente;
-        
-        System.out.println(url);
-        
+                
         return stringToListHistorial(controllers.CtrlPrincipal.peticionHttp(url));
 
     }
@@ -36,9 +32,7 @@ public class LogicHistorial implements ILogic{
 
         List<Historial> lHistorial = new ArrayList<>();
 	
-        System.out.println(requestHttp);
 		JSONArray jsonArray = new JSONArray(requestHttp);
-		System.out.println(jsonArray.length());
 		
 		
 		for(int i = 0; i < jsonArray.length(); i++) {

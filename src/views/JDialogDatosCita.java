@@ -9,11 +9,14 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
+
 import java.awt.Toolkit;
 import javax.swing.JSpinner;
 import java.awt.Font;
 import javax.swing.JComboBox;
 import javax.swing.border.MatteBorder;
+import javax.swing.border.TitledBorder;
 
 import models.Paciente;
 
@@ -29,7 +32,7 @@ public class JDialogDatosCita extends JDialog {
 
 	
 	GradientPanel contentPanel = new GradientPanel(Color.decode("#4BE392"), Color.decode("#AFFF4E"));
-	
+		
 	public static JComboBox cbNombre = new JComboBox();
 	public static JComboBox cbOperacion = new JComboBox();
 	public static JComboBox cbHora = new JComboBox();
@@ -56,6 +59,7 @@ public class JDialogDatosCita extends JDialog {
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
+		contentPanel.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
 
 		cbNombre.setBounds(30, 67, 390, 22);
 		contentPanel.add(cbNombre);

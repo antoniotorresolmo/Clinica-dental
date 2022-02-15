@@ -271,7 +271,6 @@ public class JDialogRegistro extends JFrame {
 		btnEntrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String sResultado = controllers.RegistroController.registrarse();
-				System.out.println(sResultado);
 				if (sResultado.equals("Correcto")) {
 					try {
 						controllers.LoginController.getPaciente(txtUsuario.getText(), txtPassword.getText());

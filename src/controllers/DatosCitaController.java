@@ -22,6 +22,20 @@ public class DatosCitaController {
 		views.JDialogDatosCita.cbHora.addItem("16:00");
 		views.JDialogDatosCita.cbHora.addItem("17:00");
 		
+		try {
+			List<Cita> lCitas = CtrlCitas.getCitas(views.PnlAgenda.sFechaCogida);
+			
+			lCitas.forEach(oCita -> {
+				
+				views.JDialogDatosCita.cbHora.removeItem(oCita.getHora());
+				
+			});
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 	
 	public static void cargarOperaciones() {
@@ -51,7 +65,7 @@ public class DatosCitaController {
 					JDialogDatosCita.lPacientes.add(logic.LogicPaciente.getById(oPacienteMedico.getID_Paciente()));
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					//e.printStackTrace();
 				}
 			});
 			

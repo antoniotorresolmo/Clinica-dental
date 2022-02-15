@@ -35,7 +35,7 @@ import java.awt.Component;
 import javax.swing.border.TitledBorder;
 
 public class PnlAgenda extends JPanel {
-	
+
 	Color transparente = new Color(1.0f, 1.0f, 1.0f, 0.0f);
 	DefaultTableModel model;
 	Calendar cal = new GregorianCalendar();
@@ -79,8 +79,7 @@ public class PnlAgenda extends JPanel {
 
 		lista = new List();
 		panelLista.add(lista);
-		
-		
+
 		lblFecha = new JLabel();
 		lblFecha.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
 		lblFecha.setFont(new Font("Tahoma", Font.BOLD, 16));
@@ -133,7 +132,6 @@ public class PnlAgenda extends JPanel {
 		table.setGridColor(Color.BLACK);
 		table.setBorder(null);
 		table.setBackground(Color.WHITE);
-
 		table.setFont(new Font("Yu Gothic UI", Font.BOLD, 25));
 		table.setRowHeight(100);
 
@@ -144,20 +142,6 @@ public class PnlAgenda extends JPanel {
 		for (int columnIndex = 0; columnIndex < model.getColumnCount(); columnIndex++) {
 			table.getColumnModel().getColumn(columnIndex).setCellRenderer(centerRenderer);
 		}
-
-		JButton btnAdd = new JButton("A\u00F1adir Cita");
-
-
-
-		table.addMouseListener(new MouseAdapter() {
-			public void mouseClicked(MouseEvent e) {
-
-				lista.removeAll();
-				cogerFecha();
-				controllers.AgendaController.listarPacientesCita();
-
-			}
-		});
 
 		JScrollPane pane = new JScrollPane();
 		pane.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), "", TitledBorder.LEADING,
@@ -209,11 +193,75 @@ public class PnlAgenda extends JPanel {
 		panel_2.setBackground(transparente);
 		panelBotones.add(panel_2, BorderLayout.EAST);
 
-		JButton btnAceptar = new JButton("New button");
-		panel_2.add(btnAceptar);
+		JPanel pnlBorrar = new JPanel();
+		pnlBorrar.setOpaque(false);
+		pnlBorrar.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), " ", TitledBorder.LEADING,
+				TitledBorder.ABOVE_TOP, null, null));
+		pnlBorrar.setBackground(new Color(224, 147, 160));
+		pnlBorrar.setVisible(false);
+		panel_2.add(pnlBorrar);
+		pnlBorrar.setLayout(new BorderLayout(0, 0));
 
-		btnAdd.addMouseListener(new MouseAdapter() {
-			@Override
+		JLabel lblBorrar = new JLabel("BORRAR");
+		lblBorrar.setForeground(Color.RED);
+		lblBorrar.setOpaque(true);
+		lblBorrar.setHorizontalAlignment(SwingConstants.CENTER);
+		lblBorrar.setFont(new Font("Yu Gothic UI Semilight", Font.BOLD, 13));
+		pnlBorrar.add(lblBorrar, BorderLayout.NORTH);
+
+		JPanel pnlMod = new JPanel();
+		pnlMod.setOpaque(false);
+		pnlMod.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), " ", TitledBorder.LEADING,
+				TitledBorder.ABOVE_TOP, null, null));
+		pnlMod.setBackground(new Color(224, 147, 160));
+		pnlMod.setVisible(false);
+		panel_2.add(pnlMod);
+		pnlMod.setLayout(new BorderLayout(0, 0));
+
+		JLabel lblMod = new JLabel("MODIFICAR");
+		lblMod.setOpaque(true);
+		lblMod.setHorizontalAlignment(SwingConstants.CENTER);
+		lblMod.setForeground(Color.BLACK);
+		lblMod.setFont(new Font("Yu Gothic UI Semilight", Font.BOLD, 13));
+		pnlMod.add(lblMod, BorderLayout.NORTH);
+
+		JPanel pnlAdd = new JPanel();
+		pnlAdd.setOpaque(false);
+		pnlAdd.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0), 2, true), " ", TitledBorder.LEADING,
+				TitledBorder.ABOVE_TOP, null, null));
+		pnlAdd.setBackground(new Color(224, 147, 160));
+		panel_2.add(pnlAdd);
+		pnlAdd.setLayout(new BorderLayout(0, 0));
+
+		JLabel lblAdd = new JLabel("A\u00D1ADIR CITA");
+		lblAdd.setOpaque(true);
+		lblAdd.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAdd.setForeground(Color.BLACK);
+		lblAdd.setFont(new Font("Yu Gothic UI Semilight", Font.BOLD, 13));
+		pnlAdd.add(lblAdd, BorderLayout.NORTH);
+
+		table.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+
+				lista.removeAll();
+				cogerFecha();
+				controllers.AgendaController.listarPacientesCita();
+				pnlBorrar.setVisible(false);
+				pnlMod.setVisible(false);
+
+			}
+		});
+
+		lista.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				pnlMod.setVisible(true);
+				pnlBorrar.setVisible(true);
+
+			}
+		});
+
+		lblAdd.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					cogerFecha();
@@ -232,26 +280,25 @@ public class PnlAgenda extends JPanel {
 			}
 		});
 
-		JButton btnModificar = new JButton("Modificar");
-		btnModificar.addActionListener(v -> {
+		lblMod.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
 
-			cogerFecha();
-			controllers.AgendaController.prepararJDialogDatosCitaActualizar();
-			new JDialogDatosCita();
+				cogerFecha();
+				controllers.AgendaController.prepararJDialogDatosCitaActualizar();
+				new JDialogDatosCita();
 
+			}
 		});
-		panel_2.add(btnAdd);
-		panel_2.add(btnModificar);
 
-		JButton btnBorrar = new JButton("Borrar");
-		btnBorrar.addActionListener(v -> {
+		lblBorrar.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
 
-			controllers.AgendaController.borrarCita();
-			lista.removeAll();
-			controllers.AgendaController.listarPacientesCita();
+				controllers.AgendaController.borrarCita();
+				lista.removeAll();
+				controllers.AgendaController.listarPacientesCita();
 
+			}
 		});
-		panel_2.add(btnBorrar);
 
 		this.updateMonth();
 
@@ -283,7 +330,6 @@ public class PnlAgenda extends JPanel {
 
 	private void cogerFecha() {
 
-		System.out.println(table.getValueAt(table.getSelectedRow(), table.getSelectedColumn()));
 		int bNumero = (int) table.getValueAt(table.getSelectedRow(), table.getSelectedColumn());
 		String sNumero;
 		int iMes = cal.get(Calendar.MONTH) + 1;

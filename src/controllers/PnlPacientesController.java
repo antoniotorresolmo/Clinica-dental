@@ -25,7 +25,7 @@ public class PnlPacientesController {
                     PnlPacientes.listPacientes
                             .add(CtrlPacientes.getNombreApellidosPaciente(oPacienteMedico.getID_Paciente()));
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    //e.printStackTrace();
                 }
 
             });
@@ -56,11 +56,8 @@ public class PnlPacientesController {
 
             StringBuilder sbHistorial = new StringBuilder();
             
-            System.out.println("Size historial: " + lHistorial.size());
-
             lHistorial.forEach(oHistorial -> {
             	
-            	System.out.println(oHistorial.getObservacines());
                 sbHistorial.append(oHistorial.getOperacion() + ":\n" + oHistorial.getObservacines() + "\n\n");
 
             });

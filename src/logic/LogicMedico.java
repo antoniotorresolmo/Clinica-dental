@@ -41,8 +41,6 @@ public class LogicMedico implements ILogic{
 				+ "&sUsuario=" + usuario + "&sPassword=" + password + "&sCorreo=" + correo + "&sDireccion=" + direccion
 				+ "&sTelefono=" + telefono;
 		
-		System.out.println(url);
-
 		if (controllers.CtrlPrincipal.peticionHttp(url).equals("Correcto")) {
 			
 			views.FrmPrincipal.oMedico.setNombre(nombre);

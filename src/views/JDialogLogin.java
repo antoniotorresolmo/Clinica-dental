@@ -179,7 +179,6 @@ public class JDialogLogin extends JFrame {
 
 					if(!sPassword.isEmpty() && !sUsuario.isEmpty()){
 						controllers.LoginController.getPaciente(sUsuario, sPassword);
-						//System.out.println("E");
 						new FrmPrincipal();
 						dispose();
 					}else{

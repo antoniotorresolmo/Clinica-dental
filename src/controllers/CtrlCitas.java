@@ -20,7 +20,6 @@ public class CtrlCitas {
 		
 		
 		String url ="http://loschavalesdental.atwebpages.com/proyecto/Cita/lst_cita_dia.php?ID_Medico="+views.FrmPrincipal.oMedico.getId_Medico()+"&Dia="+Date;
-	System.out.println(url);
 		String requestHttp = peticionHttp(url);
 		List<Cita> lstCitas = stringToListCitas(requestHttp);
 		
@@ -33,7 +32,6 @@ public class CtrlCitas {
 		List<Cita> lstCitas = new ArrayList<>();
 	
 		JSONArray jsonArray = new JSONArray(requestHttp);
-		System.out.println(jsonArray.length());
 		
 		
 		for(int i = 0; i < jsonArray.length(); i++) {
@@ -47,7 +45,6 @@ public class CtrlCitas {
 	
 	public static Cita objJson2Citas(JSONObject jsonObj) {
 		//Extraer los values del objeto JSON
-		//System.out.println(jsonObj);
 		Integer ID_Cita = jsonObj.getInt("ID_Cita"); //PK
 		String Dia = jsonObj.getString("Dia"); //NN
 		String Hora = jsonObj.getString("Hora"); //NN

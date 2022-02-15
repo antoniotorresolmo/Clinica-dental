@@ -16,7 +16,6 @@ public class CtrlPacientes {
 				+ id;
 		String requestHttp = CtrlPrincipal.peticionHttp(url);
 
-		//System.out.println(stringToNombreApellidos(requestHttp)+" eeeeee paciente");
 		return stringToNombreApellidos(requestHttp);
 	}
 
@@ -55,7 +54,6 @@ public class CtrlPacientes {
 		List<Paciente> lstPacientes = new ArrayList<>();
 
 		JSONArray jsonArray = new JSONArray("[" + requestHttp + "]");
-		System.out.println(jsonArray.length());
 		for (int i = 0; i < jsonArray.length(); i++) {
 			JSONObject jsonObj = jsonArray.getJSONObject(i);
 			Paciente p = objJson2Paciente(jsonObj);

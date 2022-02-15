@@ -85,18 +85,6 @@ public class PnlSlidingMenu extends JPanel implements IColores {
 		//pnlInicio1.setVisible(true);
 		
 		FrmPrincipal.pnlCentro.add(pnlInicio1, BorderLayout.CENTER);
-		System.out.println("ENTRA");
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		pnlInicio.addMouseListener(new MouseAdapter() {
 			@Override

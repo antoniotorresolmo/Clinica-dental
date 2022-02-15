@@ -21,9 +21,7 @@ public class LogicRecetario implements ILogic{
 
         List<Receta> lRecetas = new ArrayList<>();
 	
-		JSONArray jsonArray = new JSONArray(requestHttp);
-		System.out.println(jsonArray.length());
-		
+		JSONArray jsonArray = new JSONArray(requestHttp);		
 		
 		for(int i = 0; i < jsonArray.length(); i++) {
 			JSONObject jsonObj = jsonArray.getJSONObject(i);
@@ -56,9 +54,7 @@ public class LogicRecetario implements ILogic{
 		String sUrl = URI + "proyecto/Receta/ins_receta.php?sDescripcion=" + oReceta.getDescripcion()
 		+ "&iID_Medico=" + oReceta.getID_Medico()
 		+ "&iID_Paciente=" + oReceta.getID_Paciente();
-		
-		System.out.println(sUrl);
-		
+				
 		controllers.CtrlPrincipal.peticionHttp(sUrl);
 		
 	}

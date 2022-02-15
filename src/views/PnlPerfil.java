@@ -213,8 +213,8 @@ public class PnlPerfil extends JPanel {
 			btnGuardar.setVisible(false);
 			btnCancelar.setVisible(false);
 			btnModificar.setVisible(true);
+			quitarEditables();
 			
-			String sResultado;
 			try {
 				
 				logic.LogicMedico.actualizar();
@@ -232,6 +232,7 @@ public class PnlPerfil extends JPanel {
 			btnGuardar.setVisible(false);
 			btnCancelar.setVisible(false);
 			btnModificar.setVisible(true);
+			quitarEditables();
 			
 			controllers.PerfilController.cargarDatos();
 			

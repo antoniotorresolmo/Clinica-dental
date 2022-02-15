@@ -15,9 +15,13 @@ public class LogicPaciente implements ILogic{
     }
 
     public static Paciente stringToPaciente(String requestHttp) throws Exception{
-        
-		JSONObject jsonObject = new JSONObject(requestHttp);
 
+    	JSONObject jsonObject = null;
+    	
+    	if(!requestHttp.equals("null")) {
+    		jsonObject = new JSONObject(requestHttp);
+    	}
+		
 		return objJson2Paciente(jsonObject);
 		
 	}

@@ -22,7 +22,6 @@ public class LogicPacienteMedico implements ILogic{
 		List<Paciente_Medico> lPacienteMedico = new ArrayList<>();
 	
 		JSONArray jsonArray = new JSONArray(requestHttp);
-		System.out.println(jsonArray.length());
 		
 		
 		for(int i = 0; i < jsonArray.length(); i++) {
