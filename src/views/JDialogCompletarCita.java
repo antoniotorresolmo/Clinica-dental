@@ -90,11 +90,12 @@ public class JDialogCompletarCita extends JDialog {
 		panel_1.add(panel_3);
 		panel_3.setLayout(new BorderLayout(0, 0));
 		
-		JLabel lblNewLabel = new JLabel("PASTILLAS JUANOLA");
+		JLabel lblNewLabel = new JLabel();
+		lblNewLabel.setText("INTRODUCIR OBSERVACIONES Y RECETAS");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setOpaque(true);
 		panel_3.add(lblNewLabel);
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		lblNewLabel.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 30));
 		
 		JPanel pnlCompletar = new JPanel();
 		pnlCompletar.setOpaque(false);
