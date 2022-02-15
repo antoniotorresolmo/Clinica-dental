@@ -121,6 +121,7 @@ public class JDialogDatosCita extends JDialog {
 			}
 		});
 		
+		setModal(true);
 		setVisible(true);
 		
 	}

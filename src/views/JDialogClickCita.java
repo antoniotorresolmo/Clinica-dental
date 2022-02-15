@@ -168,7 +168,7 @@ public class JDialogClickCita extends JDialog implements IColores {
 		lblImgCancel.setHorizontalAlignment(SwingConstants.CENTER);
 		
 		
-		
+		setModal(true);
 		setVisible(true);
 	}
 }
