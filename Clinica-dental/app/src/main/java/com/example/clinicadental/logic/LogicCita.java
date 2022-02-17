@@ -50,12 +50,44 @@ public class LogicCita {
                         RecyclerView recyclerView = view.findViewById(R.id.rvCitasInicio);
 
                         if(CitaStore.listCita.size() > 0){
+
+                            // Obtener citas terminadas
+
+                            int iContador;
+                            int iSize = CitaStore.listCita.size();
+                            List<Integer> lIdCita = new ArrayList<Integer>();
+
+                            for(iContador = 0;iContador < iSize;iContador++){
+
+                                if(CitaStore.listCita.get(iContador).getTerminada() == 1){
+                                    lIdCita.add(CitaStore.listCita.get(iContador).getId_Cita());
+                                }
+
+                            }
+
+                            for (iContador = 0;iContador < lIdCita.size();iContador++){
+
+                                iSize = CitaStore.listCita.size();
+                                for(int iContador2 = 0;iContador2 < iSize;iContador2++){
+
+                                    if(CitaStore.listCita.get(iContador2).getId_Cita() == lIdCita.get(iContador)){
+                                        CitaStore.listCita.remove(iContador2);
+                                        iContador2 = iSize;
+                                    }
+
+                                }
+
+                            }
+
+                            // Add al recyclerView
+
                             view.findViewById(R.id.lblCitasInicio).setVisibility(View.INVISIBLE);
 
                             recyclerView.setLayoutManager(new LinearLayoutManager(oContext));
 
                             CitaAdapter oCitaAdapter = new CitaAdapter(oContext);
                             recyclerView.setAdapter(oCitaAdapter);
+
                         }else{
                             view.findViewById(R.id.lblCitasInicio).setVisibility(View.VISIBLE);
 
