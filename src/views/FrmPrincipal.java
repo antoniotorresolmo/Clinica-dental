@@ -17,6 +17,7 @@ public class FrmPrincipal extends JFrame implements IColores{
     PnlInicio pnlInicio = new PnlInicio();
 
 	public FrmPrincipal() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Usuario\\Documents\\GitHub\\Clinica-dental\\src\\images\\dentista.png"));
 
 		 
 		setUndecorated(true);
